@@ -1,0 +1,9 @@
+[ID]
+PoBuilder Project=5.0
+SaveDate=11/2/2015 21:05:58
+
+[General]
+RSJFile=C:\codetyphon\typhon\components\lz_SynEditDsg\lib\i386-win32\win32\syndesignstringconstants.rsj
+PoFilesPrefix=syndesignstringconstants
+PoFilesDir=C:\codetyphon\typhon\components\lz_SynEditDsg\languages\
+PoFile=C:\codetyphon\typhon\components\lz_SynEditDsg\languages\syndesignstringconstants.es.po

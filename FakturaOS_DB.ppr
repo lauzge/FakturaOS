@@ -1,0 +1,183 @@
+{CAO-Faktura für Windows Version 1.0
+Copyright (C) 2003 Jan Pokrandt / Jan@JP-SOFT.de
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+
+
+******* CAO-Faktura comes with ABSOLUTELY NO WARRANTY ***************
+}
+
+{
+
+Programm     : CAO-Faktura
+Modul        : Projektmodul
+Stand        : 16.05.2004
+Version      : 1.2.5.4
+
+01.01.2021 für FreePascal und CodeTyphon von Volker Stark lauzge@gmail.com portiert
+Dieses Programm spaltet sich ab dieser Version von CAO-Faktura ab heist ab jetzt FakturaOS
+(Faktura Open Source)
+
+Programm     : FakturaOS
+Modul        : Projektmodul
+Stand        : 01.01.2021
+Version      : 0.0.1.0  // über die Versionsvergabe sollte eventuell noch im Vorfeld diskutiert werden ;)
+}
+
+{$DESCRIPTION 'freie Warenwirtschaft FakturaOS'}
+
+program FakturaOS_DB;
+
+{$IFDEF FPC}{$MODE DELPHI}{$ENDIF}
+{$I .\src\CAO32.INC}
+
+uses
+  {$IFDEF UNIX}
+  cthreads,
+  {$ENDIF}
+  {$IFDEF HASAMIGA}
+  athreads,
+  {$ENDIF}
+  Interfaces, // this includes the CT adLCL widgetset
+  Controls, Forms, lz_tachart, CAO_MAIN, cao_var_const, CAO_DM, CAO_StartUp,
+  cao_progress, cao_mandantaw, CAO_Logging, CAO_Link, CAO_RegEdit, CAO_Setup,
+  CAO_About, CAO_Backup, CAO_Restore, CAO_Info, cao_dbgrid_layout, CAO_Pim,
+  CAO_Kunde, JvFunctions, CAO_DBOptimize, CAO_ShopSetup, CAO_Export,
+  CAO_ARTIKEL1, CAO_ShopImageUpload, CAO_KFZ1, CAO_Statistic, CAO_Vertreter,
+  JvWndProcHook, CAO_Mitarbeiter, CAO_PLZ, CAO_BLZ, CAO_Hersteller,
+  CAO_ShopTrans, CAO_FibuKassenbuch, CAO_FibuKassenbuch_AB_Dlg,
+  CAO_ManKassBuchungDlg, CAO_ZahlungseingangDlg, CAO_Journal_EKRE,
+  CAO_MakeVKRech, cao_teillieferdlg, cao_adressen_lief, CAO_MakeVertragRech,
+  CAO_MakeEKRech, CAO_MakeEKBest;
+
+{$R *.res}
+
+begin
+  Application.Title:='FakturaOS';
+  Application.Scaled:=True;
+  Application.Initialize;
+  Application.Name  :='Faktura';
+  Screen.Cursor :=crHourGlass;
+
+
+  SScreen :=tStartBox.Create (nil);
+  SScreen.Visible :=True;
+
+  SScreen.PBar.Max :=43;
+  SScreen.PBar.Position :=1;
+  SScreen.PBar.Visible :=True;
+  SScreen.Invalidate;
+  SScreen.Show;
+
+  //Allgemein
+  Application.CreateForm(TMainForm, MainForm);
+
+  SScreen.PBar.Position :=2;  SScreen.Update;
+  Application.CreateForm(TLinkForm, LinkForm);
+  SScreen.PBar.Position :=3;  SScreen.Update;
+  Application.CreateForm(TProgressForm, ProgressForm);
+  SScreen.PBar.Position :=4;  SScreen.Update;
+  Application.CreateForm(TDM1, DM1);
+  SScreen.PBar.Position :=5;  SScreen.Update;
+
+  //
+
+  SScreen.PBar.Position :=7;  SScreen.Update;
+  Application.CreateForm(TVisibleSpaltenForm, VisibleSpaltenForm);
+  SScreen.PBar.Position :=8;  SScreen.Update;
+  Application.CreateForm(TAboutBox, AboutBox);
+  SScreen.PBar.Position :=9;  SScreen.Update;
+  Application.CreateForm(TExportForm, ExportForm);
+  SScreen.PBar.Position :=10;  SScreen.Update;
+  Application.CreateForm(TFileUpload, FileUpload);
+  SScreen.PBar.Position :=11;  SScreen.Update;
+
+  // Stammdaten
+  Application.CreateForm(TAdressForm, AdressForm);
+  SScreen.PBar.Position :=12;  SScreen.Update;
+  Application.CreateForm(TArtikelForm, ArtikelForm);
+  SScreen.PBar.Position :=13;  SScreen.Update;
+  Application.CreateForm(TKFZForm, KFZForm);
+  SScreen.PBar.Position :=14;  SScreen.Update;
+  Application.CreateForm(TInfoForm, InfoForm);
+  SScreen.PBar.Position :=15;  SScreen.Update;
+  Application.CreateForm(TPLZForm, PLZForm);
+  SScreen.PBar.Position :=16;  SScreen.Update;
+  Application.CreateForm(TMitarbeiterForm, MitarbeiterForm);
+  SScreen.PBar.Position :=17;  SScreen.Update;
+
+  //FIBU
+  Application.CreateForm(TKassenBuchForm, KassenBuchForm);
+  SScreen.PBar.Position :=18;  SScreen.Update;
+  Application.CreateForm(TZEForm, ZEForm);
+  SScreen.PBar.Position :=19;  SScreen.Update;
+
+  //Journale
+  Application.CreateForm(TJournalEKREForm, JournalEKREForm);
+  SScreen.PBar.Position :=20;  SScreen.Update;
+//  Application.CreateForm(TJournalVKKasseForm, JournalVKKasseForm);
+  SScreen.PBar.Position :=21;  SScreen.Update;
+//  Application.CreateForm(TJournalVKAGBForm, JournalVKAGBForm);
+  SScreen.PBar.Position :=22;  SScreen.Update;
+//  Application.CreateForm(TJournalVKLiefForm, JournalVKLiefForm);
+  SScreen.PBar.Position :=23;  SScreen.Update;
+//  Application.CreateForm(TJournalVKREForm, JournalVKREForm);
+  SScreen.PBar.Position :=24;  SScreen.Update;
+//  Application.CreateForm(TJournalEKBestForm, JournalEKBestForm);
+  SScreen.PBar.Position :=24;  SScreen.Update;
+
+
+  // Belege
+  Application.CreateForm(TMakeVKReForm, MakeVKReForm);
+  SScreen.PBar.Position :=26;  SScreen.Update;
+  Application.CreateForm(TMakeEKReForm, MakeEKReForm);
+  SScreen.PBar.Position :=27;  SScreen.Update;
+//  Application.CreateForm(TSNErfassenForm, SNErfassenForm);
+  SScreen.PBar.Position :=28;  SScreen.Update;
+//  Application.CreateForm(TSNAuswahlForm, SNAuswahlForm);
+  SScreen.PBar.Position :=29;  SScreen.Update;
+  Application.CreateForm(TMakeVertragReForm, MakeVertragReForm); //NEU
+  SScreen.PBar.Position :=31;  SScreen.Update;
+  Application.CreateForm(TMakeVKReForm, MakeAGBForm);
+  SScreen.PBar.Position :=32;  SScreen.Update;
+  Application.CreateForm(TMakeEKBestForm, MakeEKBestForm);
+  SScreen.PBar.Position :=33;  SScreen.Update;
+//  Application.CreateForm(TEKRechFertigDlg, EKRechFertigDlg);
+  SScreen.PBar.Position :=34;  SScreen.Update;
+  {$IFDEF REPORTBUILDER}
+  Application.CreateForm(TPrintRechForm, PrintRechForm);
+  SScreen.PBar.Position :=35;  SScreen.Update;
+  {$ENDIF}
+  Application.CreateForm(TBLZForm, BLZForm);
+  SScreen.PBar.Position :=37;  SScreen.Update;
+
+  Application.CreateForm(TVertreterForm, VertreterForm);
+  SScreen.PBar.Position :=38;  SScreen.Update;
+
+  Application.CreateForm(TPimForm, PimForm);
+  SScreen.PBar.Position :=39;  SScreen.Update;
+  Application.CreateForm(TAdressenLiefForm, AdressenLiefForm);
+  SScreen.PBar.Position :=41;  SScreen.Update;
+  Application.CreateForm(TShopTransForm, ShopTransForm);
+  SScreen.PBar.Position :=42;  SScreen.Update;
+  Application.CreateForm(TTeilLieferForm, TeilLieferForm);
+  SScreen.PBar.Position :=43;  SScreen.Update;
+  Application.CreateForm(TLogForm, LogForm);
+
+  Screen.Cursor :=crDefault;
+
+  Application.Run;
+end.
+

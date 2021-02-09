@@ -1,0 +1,77 @@
+[Box:  - ::cao_var_const]
+X=535
+Y=295
+
+[Box:  - ::CAO_About]
+X=2090
+Y=125
+
+[Box:  - ::CAO_Artikel1]
+X=300
+Y=210
+
+[Box:  - ::CAO_Backup]
+X=1870
+Y=125
+
+[Box:  - ::CAO_KFZ1]
+X=300
+Y=125
+
+[Box:  - ::CAO_Kunde]
+X=770
+Y=210
+
+[Box:  - ::CAO_MakeEKRech]
+X=520
+Y=125
+
+[Box:  - ::CAO_MAIN]
+X=1088
+Y=40
+
+[Box:  - ::CAO_ShopSetup]
+X=1650
+Y=125
+
+[Box:  - ::CAO_ShopTrans]
+X=990
+Y=125
+
+[Box:  - ::CAO_Startup]
+X=1210
+Y=125
+
+[Box:  - ::CAO_Statistic]
+X=1430
+Y=125
+
+[Box:  - ::JvFunctions]
+X=770
+Y=295
+
+[Box:  - ::MSXML2_TLB]
+X=1240
+Y=210
+
+[Diagram: ]
+OffsetX=0
+OffsetY=0
+Visibility=0
+ShowAssoc=1
+PathStyle=0
+
+[Box: ::CAO_About - ::«Unknown»::TForm]
+X=50
+Y=40
+
+[Box: ::CAO_About - ::CAO_About::TAboutBox]
+X=50
+Y=157
+
+[Diagram: ::CAO_About]
+OffsetX=0
+OffsetY=0
+Visibility=0
+ShowAssoc=1
+PathStyle=2

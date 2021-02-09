@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="CAO_Faktura"/>
+    <Type Value="RunAndDesignTime"/>
+    <HasRegisterProc Value="True"/>
+    <ComponentCount Value="4"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)\$(LCLWidgetType)"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Version Release="1" Build="2"/>
+    <Files>
+      <Item>
+        <Filename Value="caosecurity.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="CaoSecurity"/>
+      </Item>
+      <Item>
+        <Filename Value="eurodmedit.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="EuroDMEdit"/>
+      </Item>
+    </Files>
+    <RequiredPkgs>
+      <Item>
+        <PackageName Value="bs_IDEIntf"/>
+      </Item>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

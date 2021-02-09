@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <MultiProject FileVersion="1">
+    <Elements Count="5">
+      <Element0 FileName="components\FakturaOS\FakturaOS.ctpkg"/>
+      <Element1 FileName="components\VolgaPak\volgapak.ctpkg"/>
+      <Element2 FileName="components\lz_SynEditDsg\lz_syneditdsgn.ctpkg"/>
+      <Element3 FileName="components\pl_VisualPlanIt\pl_visualplanit.ctpkg"/>
+      <Element4 FileName="FakturaOS_DB.ctpr">
+        <BuildModes Count="1"/>
+        <Mode1 Name="Default"/>
+      </Element4>
+    </Elements>
+  </MultiProject>
+</CONFIG>

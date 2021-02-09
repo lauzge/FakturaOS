@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="VolgaPak"/>
+    <Type Value="RunAndDesignTime"/>
+    <Author Value="Vlasova Olga"/>
+    <HasRegisterProc Value="True"/>
+    <ComponentCount Value="4"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)\$(LCLWidgetType)"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Description Value="TVolgaDBGrid is improved DBGrid and fully replaces standard TDBGrid. Column button style of TVolgaDBGrid may be:
+- cbsCombo - dropdown list of predefined text items from property PickList, with corresponding values in PickValues;
+- cbsLookup - dropdown list from lookup table; you don&apos;t need to create new calculated or lookup field in viewing table;
+- cbsCalendar - dropdown calendar for date field, used TVolgaCalendar;
+- cbsCheck - check box in grid cell;
+- cbsEllipsis - custom dialog is called;
+- cbsNone - simple edit cell.
+Other features: can edit calculated fields, title cells as buttons, long text as hint, Enter as Tab, can use special Selected column (with checkbox) in multiselected grids, properties FixedCols, RowsHeight, export to HTML,etc...
+-----------------------------
+TVolgaDBEdit replaces TDBEdit, TDBComboBox, TDBLookupCombo, TDBLookupTree andTDBDatePicker in one component. TVolgaDBEdit may be DB-aware and non DB-aware. It has following dialog styles:
+vdsEdit - simple edit box;
+vdsCustomDlg - simple edit box with [...] button for custom dialog call;
+vdsCombo - dropdown list with predefined Items and corresponding Values;
+vdsLookup - dropdown list with lookup Items from lookuptable;
+vdsCalendar - dropdown calendar for date editing;
+vdsCalculator - dropdown calculator;
+vdsTree - dropdown treeview filled from lookup table.
+TVolgaDBEdit supports ENTER and Up/Down keys for navigating between several TVolgaTable components and Space key to drop dropdown list.
+-----------------------------
+TVolgaCalendar - component for date choice from calendar. It contains full calendar for one month with buttons for change date.You may change current month, current year, select month directly from dropdown list of months (by clicking on month name), select today date (by clicking on today panel) or select date from calendar. 
+-----------------------------
+TVolgaPeriod is component for change period (range) of date. It can turns over months, quarters, half years and whole years. Start and end date of current range are saved in properties. Kind of turned range may be changed at run time from popup menu.
+-----------------------------
+TVolgaFindEdit is component for incremental searching or filtering data in linked dataset.
+-----------------------------
+TVolgaMeter is simple progress abr with text.
+"/>
+    <License Value="VolgaDB Controls Library is freeware and includes full source code."/>
+    <Version Build="3"/>
+    <Files>
+      <Item>
+        <Filename Value="volperiod.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="VolPeriod"/>
+      </Item>
+      <Item>
+        <Filename Value="VolDBConst.pas"/>
+        <UnitName Value="VolDBConst"/>
+      </Item>
+      <Item>
+        <Filename Value="volcalend.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="VolCalend"/>
+      </Item>
+      <Item>
+        <Filename Value="voldbedit.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="VolDBEdit"/>
+      </Item>
+      <Item>
+        <Filename Value="VolCalc.pas"/>
+        <UnitName Value="VolCalc"/>
+      </Item>
+      <Item>
+        <Filename Value="volcalc.res"/>
+        <Type Value="Binary"/>
+        <FRMtype Value="0"/>
+      </Item>
+      <Item>
+        <Filename Value="VolDBEdit.res"/>
+        <Type Value="Binary"/>
+        <FRMtype Value="0"/>
+      </Item>
+      <Item>
+        <Filename Value="VolDBgrid.res"/>
+        <Type Value="Binary"/>
+        <FRMtype Value="0"/>
+      </Item>
+      <Item>
+        <Filename Value="VolgaTree.res"/>
+        <Type Value="Binary"/>
+        <FRMtype Value="0"/>
+      </Item>
+    </Files>
+    <RequiredPkgs>
+      <Item>
+        <PackageName Value="bs_IDEIntf"/>
+      </Item>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

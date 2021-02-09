@@ -1,0 +1,345 @@
+object StatisticForm: TStatisticForm
+  Left = 373
+  Height = 480
+  Top = 256
+  Width = 650
+  Caption = 'CAO-Statistik'
+  ClientHeight = 480
+  ClientWidth = 650
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Microsoft Sans Serif'
+  Font.Quality = fqAntialiased
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnDeactivate = FormDeactivate
+  LCLVersion = '7.2'
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 457
+    Width = 650
+    Panels = <>
+  end
+  object MainPanel: TPanel
+    Left = 0
+    Height = 457
+    Top = 0
+    Width = 650
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 457
+    ClientWidth = 650
+    TabOrder = 1
+    object Panel1: TPanel
+      Left = 0
+      Height = 30
+      Top = 0
+      Width = 650
+      Align = alTop
+      BevelOuter = bvNone
+      BorderStyle = bsSingle
+      ClientHeight = 26
+      ClientWidth = 646
+      Color = clBtnShadow
+      ParentColor = False
+      TabOrder = 0
+      object ComboBox1: TComboBox
+        Left = 8
+        Height = 21
+        Top = 3
+        Width = 254
+        Color = clWindow
+        ItemHeight = 13
+        Items.Strings = (
+          'Umsatz nach Warengruppen'
+          'Verkauf Monatsübersicht'
+          'Einkauf Monatsübersicht'
+          'Kunden / Top 10'
+          'Artikel / Top 10'
+        )
+        OnChange = ComboBox1Change
+        Style = csDropDownList
+        TabOrder = 0
+      end
+      object RefreshBtn: TSpeedButton
+        Left = 264
+        Height = 22
+        Hint = 'aktualisieren'
+        Top = 2
+        Width = 23
+        Flat = True
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000064000000640000000000000000000000590053000000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF5900530059005300590053008686
+          86FFCCCCCCFFCCCCCCFFCCCCCCFFCCCCCCFFCCCCCCFFCCCCCCFFCCCCCCFFCCCC
+          CCFFCCCCCCFFCCCCCCFFCCCCCCFF000000FF5900530059005300590053008686
+          86FFF8F8F8FFF8F8F8FF99FFFFFFF8F8F8FF99FFFFFF009933FF99FFFFFFF8F8
+          F8FF99FFFFFFF8F8F8FFCCCCCCFF000000FF5900530059005300590053008686
+          86FFF8F8F8FF99FFFFFFF8F8F8FF99FFFFFF009933FF009933FFF8F8F8FF99FF
+          FFFFF8F8F8FF99FFFFFFCCCCCCFF000000FF5900530059005300590053008686
+          86FFF8F8F8FFF8F8F8FF99FFFFFF009933FF009933FF009933FF009933FF0099
+          33FF99FFFFFFF8F8F8FFCCCCCCFF000000FF5900530059005300590053008686
+          86FFF8F8F8FF99FFFFFFF8F8F8FF99FFFFFF009933FF009933FFF8F8F8FF6699
+          00FF666600FF99FFFFFFCCCCCCFF000000FF5900530059005300590053008686
+          86FFF8F8F8FFF8F8F8FF99FFFFFFF8F8F8FF99FFFFFF009933FF99FFFFFFF8F8
+          F8FF666600FFF8F8F8FFCCCCCCFF000000FF5900530059005300590053008686
+          86FFF8F8F8FF99FFFFFF666600FF99FFFFFFF8F8F8FF99FFFFFFF8F8F8FF99FF
+          FFFF666600FF99FFFFFFCCCCCCFF000000FF5900530059005300590053008686
+          86FFF8F8F8FFF8F8F8FF666600FFF8F8F8FF99FFFFFF009933FF99FFFFFFF8F8
+          F8FF99FFFFFFF8F8F8FFCCCCCCFF000000FF5900530059005300590053008686
+          86FFF8F8F8FF99FFFFFF666600FF669900FFF8F8F8FF009933FF009933FF99FF
+          FFFFF8F8F8FF99FFFFFFCCCCCCFF000000FF5900530059005300590053008686
+          86FFF8F8F8FFF8F8F8FF99FFFFFF009933FF009933FF009933FF009933FF0099
+          33FF99FFFFFFF8F8F8FFCCCCCCFF000000FF5900530059005300590053008686
+          86FFF8F8F8FFF8F8F8FFF8F8F8FFF8F8F8FFF8F8F8FF009933FF009933FF99FF
+          FFFFF8F8F8FFCCCCCCFFCCCCCCFF000000FF5900530059005300590053008686
+          86FFF8F8F8FFF8F8F8FFF8F8F8FFF8F8F8FFF8F8F8FF009933FF99FFFFFFF8F8
+          F8FF000000FF000000FF000000FF000000FF5900530059005300590053008686
+          86FFF8F8F8FFF8F8F8FFF8F8F8FFF8F8F8FFF8F8F8FF99FFFFFFF8F8F8FF99FF
+          FFFF868686FFFFFFFFFF000000FF590053005900530059005300590053008686
+          86FFF8F8F8FFF8F8F8FFF8F8F8FFF8F8F8FFF8F8F8FFF8F8F8FFF8F8F8FFF8F8
+          F8FF868686FF000000FF59005300590053005900530059005300590053008686
+          86FF868686FF868686FF868686FF868686FF868686FF868686FF868686FF8686
+          86FF868686FF5900530059005300590053005900530059005300
+        }
+        OnClick = ComboBox1Change
+        ShowHint = True
+        ParentShowHint = False
+      end
+      object PrintBtn: TSpeedButton
+        Left = 288
+        Height = 22
+        Hint = 'drucken'
+        Top = 2
+        Width = 23
+        Flat = True
+        Glyph.Data = {
+          76060000424D7606000000000000360000002800000014000000140000000100
+          2000000000004006000064000000640000000000000000000000984750009847
+          5000984750009847500098475000984750009847500098475000984750009847
+          5000984750009847500098475000984750009847500098475000984750009847
+          5000984750009847500098475000984750009847500098475000984750009847
+          5000984750009847500098475000984750009847500098475000984750009847
+          5000984750009847500098475000984750009847500098475000984750009847
+          5000000000FF000000FF000000FF984750009847500098475000984750009847
+          50009847500098475000984750009847500098475000000000FF000000FF0000
+          00FF984750009847500098475000000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF98475000984750000000
+          00FFFFFFFFFFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0
+          C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0
+          C0FF000000FF9847500098475000000000FFFFFFFFFFC0C0C0FFC0C0C0FFC0C0
+          C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0
+          C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FF000000FF98475000984750000000
+          00FFFFFFFFFFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0C0FFC0C0
+          C0FFC0C0C0FF008000FF008000FFC0C0C0FF0000FFFF0000FFFFC0C0C0FFC0C0
+          C0FF000000FF9847500098475000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF98475000984750008080
+          80FF000000FF000000FF808080FF808080FF808080FF808080FF808080FF8080
+          80FF808080FF808080FF808080FF808080FF808080FF808080FF000000FF0000
+          00FF808080FF98475000984750009847500098475000000000FF000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF000000FF984750009847500098475000984750009847
+          500098475000000000FF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF000000FF9847
+          5000984750009847500098475000984750009847500098475000000000FFFFFF
+          FFFF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FFFFFFFFFF000000FF98475000984750009847500098475000984750009847
+          50009847500098475000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF984750009847
+          5000984750009847500098475000984750009847500098475000000000FFFFFF
+          FFFF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FFFFFFFFFF000000FF98475000984750009847500098475000984750009847
+          50009847500098475000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF984750009847
+          5000984750009847500098475000984750009847500098475000000000FFFFFF
+          FFFF000000FF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFF000000FF98475000984750009847500098475000984750009847
+          50009847500098475000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF984750009847
+          5000984750009847500098475000984750009847500098475000000000FF0000
+          00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+          00FF000000FF000000FF98475000984750009847500098475000984750009847
+          5000984750009847500098475000984750009847500098475000984750009847
+          5000984750009847500098475000984750009847500098475000984750009847
+          5000984750009847500098475000984750009847500098475000984750009847
+          5000984750009847500098475000984750009847500098475000984750009847
+          5000984750009847500098475000984750009847500098475000
+        }
+        OnClick = PrintBtnClick
+        ShowHint = True
+        ParentShowHint = False
+      end
+      object ZVon: TDateTimePicker
+        Left = 448
+        Height = 21
+        Top = 3
+        Width = 79
+        CenturyFrom = 1941
+        MaxDate = 2958465
+        MinDate = -53780
+        TabOrder = 1
+        TrailingSeparator = False
+        TextForNullDate = 'NULL'
+        LeadingZeros = True
+        Anchors = [akRight, akBottom]
+        Kind = dtkDate
+        TimeFormat = tf24
+        TimeDisplay = tdHMS
+        DateMode = dmComboBox
+        Date = 44196
+        Time = 0.251600509262062
+        UseDefaultSeparators = True
+        HideDateTimeParts = []
+        MonthNames = 'Long'
+        OnChange = ZVonChange
+      end
+      object Label1: TLabel
+        Left = 344
+        Height = 16
+        Top = 3
+        Width = 97
+        Anchors = [akRight, akBottom]
+        Caption = 'Zeitraum : von'
+        Font.Color = clWhite
+        Font.Height = -13
+        Font.Name = 'Microsoft Sans Serif'
+        Font.Quality = fqAntialiased
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label2: TLabel
+        Left = 536
+        Height = 16
+        Top = 4
+        Width = 21
+        Anchors = [akRight, akBottom]
+        Caption = 'bis'
+        Font.Color = clWhite
+        Font.Height = -13
+        Font.Name = 'Microsoft Sans Serif'
+        Font.Quality = fqAntialiased
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object ZBis: TDateTimePicker
+        Left = 560
+        Height = 21
+        Top = 3
+        Width = 79
+        CenturyFrom = 1941
+        MaxDate = 2958465
+        MinDate = -53780
+        TabOrder = 2
+        TrailingSeparator = False
+        TextForNullDate = 'NULL'
+        LeadingZeros = True
+        Anchors = [akRight, akBottom]
+        Kind = dtkDate
+        TimeFormat = tf24
+        TimeDisplay = tdHMS
+        DateMode = dmComboBox
+        Date = 44196
+        Time = 0.253676261570945
+        UseDefaultSeparators = True
+        HideDateTimeParts = []
+        MonthNames = 'Long'
+        OnChange = ZBisChange
+      end
+    end
+    object DBChart1: TChart
+      Left = 0
+      Height = 427
+      Top = 30
+      Width = 650
+      AxisList = <      
+        item
+          Marks.LabelBrush.Style = bsClear
+          Minors = <>
+          Title.LabelFont.Orientation = 900
+          Title.LabelBrush.Style = bsClear
+        end      
+        item
+          Alignment = calBottom
+          Marks.LabelBrush.Style = bsClear
+          Minors = <>
+          Title.LabelBrush.Style = bsClear
+        end>
+      Foot.Brush.Color = clBtnFace
+      Foot.Font.Color = clBlue
+      Title.Brush.Color = clBtnFace
+      Title.Font.Color = clBlue
+      Title.Font.Height = -16
+      Title.Font.Name = 'Arial'
+      Title.Font.Quality = fqAntialiased
+      Title.Font.Style = [fsBold]
+      Title.Text.Strings = (
+        'Umsatz nach Warengruppen'
+        ''
+      )
+      Title.Visible = True
+      Align = alClient
+      object Series1: TBoxAndWhiskerSeries
+        BoxBrush.Color = clDefault
+        BoxWidth = 70
+        Marks.Arrow.Width = 1
+        Marks.Format = '%2:s'
+        Marks.Style = smsLabel
+      end
+    end
+  end
+  object PrintDialog1: TPrintDialog
+    Left = 184
+    Top = 56
+  end
+  object Query1: TZQuery
+    Connection = DM1.DB1
+    SQL.Strings = (
+      'select   A.WARENGRUPPE,   W.NAME,   ROUND(SUM((JP.EPREIS - (JP.EPREIS / 100 * JP.RABATT))* JP.MENGE),2) as UMSATZ_GES,   SUM(JP.MENGE) as MENGE_GES '
+      'from   ARTIKEL A,   JOURNAL J,   JOURNALPOS JP,   WARENGRUPPEN W  '
+      'where  J.QUELLE=3 and   JP.QUELLE=3 and   J.RDATUM>= :ZV and J.RDATUM <=:ZB and   J.REC_ID=JP.JOURNAL_ID and   A.REC_ID=JP.ARTIKEL_ID and  '
+      'A.WARENGRUPPE=W.ID group by  A.WARENGRUPPE Having  UMSATZ_GES !=0 order by UMSATZ_GES DESC LIMIT 0,100'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'ZV'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ZB'
+        ParamType = ptUnknown
+      end>
+    Left = 104
+    Top = 54
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'ZV'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ZB'
+        ParamType = ptUnknown
+      end>
+  end
+  object QueryDS: TDataSource
+    DataSet = Query1
+    Left = 104
+    Top = 120
+  end
+  object DbChartSource1: TDbChartSource
+    DataSource = QueryDS
+    Left = 30
+    Top = 59
+  end
+end

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <Name Value="pl_VisualPlanIt"/>
+    <Type Value="RunAndDesignTime"/>
+    <Author Value="PilotLogic Software House"/>
+    <HasRegisterProc Value="True"/>
+    <ComponentCount Value="62"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <SearchPaths>
+        <IncludeFiles Value="source"/>
+        <OtherUnitFiles Value="source"/>
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)/$(LCLWidgetType)"/>
+      </SearchPaths>
+      <Parsing>
+        <SyntaxOptions>
+          <CStyleOperator Value="False"/>
+          <UseAnsiStrings Value="False"/>
+        </SyntaxOptions>
+      </Parsing>
+      <Other>
+        <Verbosity>
+          <ShowWarn Value="False"/>
+          <ShowNotes Value="False"/>
+          <ShowHints Value="False"/>
+        </Verbosity>
+      </Other>
+    </CompilerOptions>
+    <Description Value="TurboPower Visual PlanIt
+for CodeTyphon Studio"/>
+    <License Value="Mozilla Public License 1.1"/>
+    <Version Major="6" Minor="7" Release="2" Build="2"/>
+    <Files>
+      <Item>
+        <Filename Value="source/AllVisualPlanItRegister.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="AllVisualPlanItRegister"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpalarmdlg.pas"/>
+        <FRMtype Value="200"/>
+        <UnitName Value="VpAlarmDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpbase.pas"/>
+        <UnitName Value="VpBase"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpbaseds.pas"/>
+        <UnitName Value="VpBaseDS"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpbufds.pas"/>
+        <UnitName Value="VpBufDS"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpcalendar.pas"/>
+        <UnitName Value="VpCalendar"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpcanvasutils.pas"/>
+        <UnitName Value="VpCanvasUtils"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpconst.pas"/>
+        <UnitName Value="VpConst"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpcontactbuttons.pas"/>
+        <UnitName Value="VpContactButtons"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpcontacteditdlg.pas"/>
+        <FRMtype Value="200"/>
+        <UnitName Value="VpContactEditDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpcontactgrid.pas"/>
+        <UnitName Value="VpContactGrid"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpdata.pas"/>
+        <UnitName Value="VpData"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpdateedit.pas"/>
+        <UnitName Value="VpDateEdit"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpdatepropedit.pas"/>
+        <FRMtype Value="200"/>
+        <UnitName Value="VpDatePropEdit"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpdayview.pas"/>
+        <UnitName Value="VpDayView"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpdbds.pas"/>
+        <UnitName Value="VpDBDS"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpdlg.pas"/>
+        <UnitName Value="VpDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpedelem.pas"/>
+        <FRMtype Value="200"/>
+        <UnitName Value="VpEdElem"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpedfmt.pas"/>
+        <FRMtype Value="200"/>
+        <UnitName Value="VpEdFmt"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpedpop.pas"/>
+        <UnitName Value="VpEdPop"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpedshape.pas"/>
+        <FRMtype Value="200"/>
+        <UnitName Value="VpEdShape"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpeventrpt.pas"/>
+        <UnitName Value="VpEventRpt"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpevnteditdlg.pas"/>
+        <FRMtype Value="200"/>
+        <UnitName Value="VpEvntEditDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpexception.pas"/>
+        <UnitName Value="VpException"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpfbds.pas"/>
+        <UnitName Value="VpFBDS"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpflxds.pas"/>
+        <UnitName Value="VpFlxDS"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpflxdsed1.pas"/>
+        <FRMtype Value="200"/>
+        <UnitName Value="VpFlxDsEd1"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpinids.pas"/>
+        <UnitName Value="VpIniDs"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpledlabel.pas"/>
+        <UnitName Value="VpLEDLabel"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vplocalize.pas"/>
+        <UnitName Value="VpLocalize"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpmisc.pas"/>
+        <UnitName Value="VpMisc"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpmonthview.pas"/>
+        <UnitName Value="VpMonthView"/>
+      </Item>
+      <Item>
+        <Filename Value="source/VpCaoDS.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="VpCaoDS"/>
+      </Item>
+      <Item>
+        <Filename Value="source/VpCaoEvntEditDlg.pas"/>
+        <HasRegisterProc Value="True"/>
+        <FRMtype Value="200"/>
+        <UnitName Value="VpCaoEvntEditDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="source/VpCaoTaskEditDlg.pas"/>
+        <HasRegisterProc Value="True"/>
+        <FRMtype Value="200"/>
+        <UnitName Value="VpCaoTaskEditDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpnabed.pas"/>
+        <FRMtype Value="200"/>
+        <UnitName Value="VpNabEd"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpnavbar.pas"/>
+        <UnitName Value="VpNavBar"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpprtfmt.pas"/>
+        <UnitName Value="VpPrtFmt"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpprtfmtcbox.pas"/>
+        <UnitName Value="VpPrtFmtCBox"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpprtfmtdlg.pas"/>
+        <UnitName Value="VpPrtFmtDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpprtfmted.pas"/>
+        <UnitName Value="VpPrtFmtEd"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpprtprv.pas"/>
+        <UnitName Value="VpPrtPrv"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpprtprvdlg.pas"/>
+        <FRMtype Value="200"/>
+        <UnitName Value="VpPrtPrvDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpreseditdlg.pas"/>
+        <FRMtype Value="200"/>
+        <UnitName Value="VpResEditDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpselresdlg.pas"/>
+        <FRMtype Value="200"/>
+        <UnitName Value="VpSelResDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpsqlite3ds.pas"/>
+        <UnitName Value="VpSQLite3DS"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpsr.pas"/>
+        <UnitName Value="VpSR"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vptaskeditdlg.pas"/>
+        <FRMtype Value="200"/>
+        <UnitName Value="VpTaskEditDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vptasklist.pas"/>
+        <UnitName Value="VpTaskList"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vptimerpool.pas"/>
+        <UnitName Value="VpTimerPool"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpwavdlg.pas"/>
+        <FRMtype Value="200"/>
+        <UnitName Value="VpWavDlg"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpwavpe.pas"/>
+        <UnitName Value="VpWavPE"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpweekview.pas"/>
+        <UnitName Value="VpWeekView"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpxbase.pas"/>
+        <UnitName Value="VpXBase"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpxchrflt.pas"/>
+        <UnitName Value="VpXChrFlt"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpxmlds.pas"/>
+        <UnitName Value="VpXmlDs"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpxparsr.pas"/>
+        <UnitName Value="VpXParsr"/>
+      </Item>
+      <Item>
+        <Filename Value="source/vpzeosds.pas"/>
+        <UnitName Value="VpZeosDs"/>
+      </Item>
+    </Files>
+    <RequiredPkgs>
+      <Item>
+        <PackageName Value="pl_zeosdbo"/>
+      </Item>
+      <Item>
+        <PackageName Value="adFCL"/>
+        <MinVersion Major="1" Valid="True"/>
+      </Item>
+      <Item>
+        <PackageName Value="adLCL"/>
+      </Item>
+      <Item>
+        <PackageName Value="bs_ideintf"/>
+      </Item>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

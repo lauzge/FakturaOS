@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="FakturaOS"/>
+    <Type Value="RunAndDesignTime"/>
+    <Author Value=" (C) 2003 Jan Pokrandt / Jan@JP-SOFT.de"/>
+    <HasRegisterProc Value="True"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)\$(LCLWidgetType)"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Description Value="Mit diese Komponente sollen die Userrechte implementiert werden und gehört noch auf die TODO-Liste"/>
+    <License Value="DELPHI-CLASS  TEuroDMEdit Version 1.0
+Copyright (C) 2003 Jan Pokrandt / Jan@JP-SOFT.de
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+"/>
+    <Version Release="1" Build="4"/>
+    <Files>
+      <Item>
+        <Filename Value="caosecurity.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="CaoSecurity"/>
+      </Item>
+      <Item>
+        <Filename Value="eurodmedit.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="EuroDMEdit"/>
+      </Item>
+    </Files>
+    <RequiredPkgs>
+      <Item>
+        <PackageName Value="bs_IDEIntf"/>
+      </Item>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>
