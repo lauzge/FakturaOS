@@ -1,0 +1,13 @@
+Install the sources:
+
+Download and install MariaDB 10.4 from https://mariadb.org/download/ on a host in your intranet
+copy on the client host the file libmariadb.dll in the directory C:\Windows\SysWOW64 on 64bit PC or in the directory C:\Windows\System32 on 32 bit PC
+Create a user with all rights on the database server
+Download CodeTyphon 7.20 from https://www.pilotlogic.com/sitejoom/index.php/wiki/84-wiki/codetyphon-studio/80-codetyphon-download
+Install the BigVersion from CodeTyphon
+Download the Sources and install it on your work directory
+Modify or delete the file "FakturOS_DB.CFG"
+Start CodeTyphon and install the component packages first
+Enable in the unit C:\codetyphon\typhon\components\pl_JVCL\source\JvJCLUtils.pas the function "DaysInAMonth" and the function "DaysPerMonth"
+Load the Multiproject "FakturaOS.ctmpr"
+Now you can compile this project
