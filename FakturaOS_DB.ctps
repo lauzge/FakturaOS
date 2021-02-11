@@ -41,7 +41,7 @@
         <ComponentName Value="DM1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="3"/>
         <TopLine Value="93"/>
         <CursorPos X="84" Y="109"/>
         <UsageCount Value="200"/>
@@ -262,10 +262,12 @@
         <ComponentName Value="AdressForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="75"/>
-        <CursorPos X="14" Y="85"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="1167"/>
+        <CursorPos X="26" Y="1183"/>
         <UsageCount Value="201"/>
+        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -356,8 +358,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="1179"/>
-        <CursorPos X="28" Y="159"/>
+        <TopLine Value="204"/>
+        <CursorPos X="33" Y="221"/>
         <UsageCount Value="208"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -655,7 +657,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="13"/>
         <CursorPos Y="36"/>
-        <UsageCount Value="183"/>
+        <UsageCount Value="189"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -668,7 +670,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="17"/>
         <CursorPos Y="37"/>
-        <UsageCount Value="182"/>
+        <UsageCount Value="188"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -681,7 +683,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="28"/>
         <CursorPos X="85" Y="44"/>
-        <UsageCount Value="181"/>
+        <UsageCount Value="187"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -694,7 +696,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="40"/>
         <CursorPos X="86" Y="46"/>
-        <UsageCount Value="179"/>
+        <UsageCount Value="185"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -706,7 +708,22 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="19"/>
         <CursorPos Y="40"/>
-        <UsageCount Value="151"/>
+        <UsageCount Value="157"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\CAO_MahnlaufDlg.pas"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MahnForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="320"/>
+        <CursorPos X="6" Y="338"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -718,7 +735,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="44"/>
         <CursorPos Y="1261"/>
-        <UsageCount Value="117"/>
+        <UsageCount Value="116"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -727,7 +744,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="165"/>
         <CursorPos X="20" Y="52"/>
-        <UsageCount Value="68"/>
+        <UsageCount Value="67"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\include\application.inc"/>
@@ -735,14 +752,14 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="2100"/>
         <CursorPos Y="2121"/>
-        <UsageCount Value="4"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\pl_ZeosDBO\source\component\ZAbstractRODataset.pas"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="58"/>
-        <UsageCount Value="2"/>
+        <UsageCount Value="1"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\pl_JVCL\source\JvJCLUtils.pas"/>
@@ -750,7 +767,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="526"/>
         <CursorPos X="22" Y="540"/>
-        <UsageCount Value="26"/>
+        <UsageCount Value="25"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\include\dblookuplistbox.inc"/>
@@ -758,14 +775,14 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="99"/>
         <CursorPos Y="116"/>
-        <UsageCount Value="2"/>
+        <UsageCount Value="1"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\include\pagecontrol.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <CursorPos Y="27"/>
-        <UsageCount Value="1"/>
+        <UsageCount Value="0"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\include\customform.inc"/>
@@ -773,7 +790,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="3172"/>
         <CursorPos Y="3189"/>
-        <UsageCount Value="4"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\include\wincontrol.inc"/>
@@ -781,7 +798,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5662"/>
         <CursorPos Y="5679"/>
-        <UsageCount Value="1"/>
+        <UsageCount Value="0"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\include\customcontrol.inc"/>
@@ -789,7 +806,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="58"/>
         <CursorPos Y="75"/>
-        <UsageCount Value="4"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\dbctrls.pp"/>
@@ -798,7 +815,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="1634"/>
         <CursorPos Y="1651"/>
-        <UsageCount Value="4"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\dbgrids.pas"/>
@@ -807,7 +824,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="930"/>
         <CursorPos Y="948"/>
-        <UsageCount Value="4"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\grids.pas"/>
@@ -816,13 +833,13 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5629"/>
         <CursorPos Y="5647"/>
-        <UsageCount Value="4"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="Komponenten\lz_SynEditDsg\source\SynDBEdit.pas"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="20"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -831,139 +848,136 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="24"/>
         <CursorPos X="3" Y="134"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="src\cao_progress.frm"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="2"/>
+        <UsageCount Value="1"/>
         <DefaultSyntaxHighlighter Value="FRM"/>
       </Unit>
-      <Unit>
-        <Filename Value="src\CAO_MahnlaufDlg.pas"/>
-        <FRMtype Value="0"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="MahnForm"/>
-        <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="3"/>
-        <TopLine Value="86"/>
-        <CursorPos Y="122"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="26">
+    <JumpHistory HistoryIndex="29">
       <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="1667" Column="66" TopLine="1015"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="109" Column="85" TopLine="97"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="1025" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="1855" Column="72" TopLine="1826"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="1886" Column="93" TopLine="1857"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="1914" Column="67" TopLine="1884"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="1924" Column="62" TopLine="1894"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="2485" Column="67" TopLine="2455"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="2497" Column="62" TopLine="2467"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="69" Column="60" TopLine="51"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="82" Column="34" TopLine="52"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="1855" Column="72" TopLine="1826"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="1886" Column="60" TopLine="1857"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="1914" Column="67" TopLine="1884"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="1924" Column="62" TopLine="1894"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="2485" Column="67" TopLine="2455"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="2497" Column="62" TopLine="2467"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="69" Column="60" TopLine="51"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="82" Column="34" TopLine="52"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="1855" Column="72" TopLine="1826"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="1886" Column="60" TopLine="1857"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="1914" Column="67" TopLine="1884"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="1924" Column="62" TopLine="1894"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="2485" Column="67" TopLine="2455"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="2497" Column="62" TopLine="2467"/>
+        <Filename Value="src\CAO_MahnlaufDlg.pas"/>
+        <Caret Line="354" TopLine="318"/>
       </Position>
       <Position>
         <Filename Value="src\CAO_MahnlaufDlg.pas"/>
-        <Caret Line="49" Column="2" TopLine="24"/>
+        <Caret Line="342" TopLine="319"/>
       </Position>
       <Position>
         <Filename Value="src\CAO_MahnlaufDlg.pas"/>
-        <Caret Line="52" Column="21" TopLine="24"/>
+        <Caret Line="337" TopLine="319"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MahnlaufDlg.pas"/>
+        <Caret Line="340" Column="6" TopLine="320"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MahnlaufDlg.pas"/>
+        <Caret Line="406" TopLine="391"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MahnlaufDlg.pas"/>
+        <Caret Line="487" TopLine="476"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MahnlaufDlg.pas"/>
+        <Caret Line="422" TopLine="402"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MahnlaufDlg.pas"/>
+        <Caret Line="423" TopLine="403"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MahnlaufDlg.pas"/>
+        <Caret Line="439" TopLine="403"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MAIN.pas"/>
+        <Caret Line="47" Column="3" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MAIN.pas"/>
+        <Caret Line="221" Column="33" TopLine="192"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MAIN.pas"/>
+        <Caret Line="281" Column="11" TopLine="251"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MAIN.pas"/>
+        <Caret Line="452" Column="63" TopLine="423"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MAIN.pas"/>
+        <Caret Line="694" TopLine="659"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MAIN.pas"/>
+        <Caret Line="893" TopLine="861"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MAIN.pas"/>
+        <Caret Line="221" Column="33" TopLine="204"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MAIN.pas"/>
+        <Caret Line="281" Column="11" TopLine="251"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MAIN.pas"/>
+        <Caret Line="452" Column="63" TopLine="423"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MAIN.pas"/>
+        <Caret Line="686" Column="26" TopLine="657"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MAIN.pas"/>
+        <Caret Line="687" Column="51" TopLine="658"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MAIN.pas"/>
+        <Caret Line="688" Column="51" TopLine="659"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MAIN.pas"/>
+        <Caret Line="689" Column="55" TopLine="660"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MAIN.pas"/>
+        <Caret Line="690" Column="51" TopLine="661"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MAIN.pas"/>
+        <Caret Line="885" Column="37" TopLine="856"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MAIN.pas"/>
+        <Caret Line="886" Column="40" TopLine="857"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MAIN.pas"/>
+        <Caret Line="888" Column="21" TopLine="859"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MAIN.pas"/>
+        <Caret Line="889" Column="32" TopLine="860"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MAIN.pas"/>
+        <Caret Line="890" Column="21" TopLine="861"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MAIN.pas"/>
+        <Caret Line="891" Column="21" TopLine="862"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MAIN.pas"/>
+        <Caret Line="221" Column="33" TopLine="204"/>
       </Position>
     </JumpHistory>
     <RunParams>
