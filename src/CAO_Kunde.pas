@@ -1180,7 +1180,7 @@ begin
                      'abgeändert und dann die zugefügte Adresse gelöscht.'+#13#10+#13#10+
                      'Wollen Sie den Vorgang fortsetzen ?',mtconfirmation,mbyesnocancel,0)=mryes then
       begin
-         if not assigned(MainForm.AddrForm) then
+         if not assigned(@MainForm.AddrForm) then
          begin
             MainForm.AddrForm :=TAdressForm.Create (Self{MainForm});
             with MainForm.AddrForm do

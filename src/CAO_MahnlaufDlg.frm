@@ -4,7 +4,7 @@ object MahnForm: TMahnForm
   Top = 256
   Width = 811
   Caption = 'MahnForm'
-  ClientHeight = 526
+  ClientHeight = 546
   ClientWidth = 811
   Color = clBtnFace
   Font.Color = clWindowText
@@ -12,18 +12,15 @@ object MahnForm: TMahnForm
   Font.Name = 'Microsoft Sans Serif'
   Font.Quality = fqAntialiased
   Menu = MainMenu1
-  OnActivate = FormActivate
-  OnCreate = FormCreate
-  OnDeactivate = FormDeactivate
   LCLVersion = '7.2'
   object MainPanel: TPanel
     Left = 0
-    Height = 526
+    Height = 546
     Top = 0
     Width = 811
     Align = alClient
     BevelOuter = bvNone
-    ClientHeight = 526
+    ClientHeight = 546
     ClientWidth = 811
     TabOrder = 0
     object TopPan: TPanel
@@ -86,9 +83,6 @@ object MahnForm: TMahnForm
         Font.Height = -11
         Font.Name = 'Microsoft Sans Serif'
         Font.Quality = fqAntialiased
-        OnClick = MahnErfassenBtnClick
-        OnMouseEnter = MahnDruckenBtnMouseEnter
-        OnMouseLeave = MahnDruckenBtnMouseLeave
         ParentFont = False
       end
       object MahnDruckenBtn: TSpeedButton
@@ -102,30 +96,26 @@ object MahnForm: TMahnForm
         Font.Height = -11
         Font.Name = 'Microsoft Sans Serif'
         Font.Quality = fqAntialiased
-        OnClick = MahnDruckenBtnClick
-        OnMouseEnter = MahnDruckenBtnMouseEnter
-        OnMouseLeave = MahnDruckenBtnMouseLeave
         ParentFont = False
       end
     end
     object PC1: TPageControl
       Left = 0
-      Height = 499
+      Height = 519
       Top = 27
       Width = 811
-      ActivePage = TabSheet3
+      ActivePage = TabSheet1
       Align = alClient
-      TabIndex = 1
+      TabIndex = 0
       TabOrder = 1
-      OnChange = PC1Change
       object TabSheet1: TTabSheet
         Caption = 'TabSheet1'
-        ClientHeight = 473
+        ClientHeight = 493
         ClientWidth = 803
         object ToolBar2: TToolBar
           Left = 0
           Height = 26
-          Top = 447
+          Top = 467
           Width = 803
           Align = alBottom
           AutoSize = True
@@ -171,9 +161,7 @@ object MahnForm: TMahnForm
             Top = 0
             AutoSize = True
             Caption = 'alle Freigeben'
-            Enabled = False
             ImageIndex = 18
-            MenuItem = Allesmarkieren1
           end
           object KeineFreigebenBtn: TToolButton
             Left = 236
@@ -181,13 +169,12 @@ object MahnForm: TMahnForm
             AutoSize = True
             Caption = 'keine Freigeben'
             ImageIndex = 19
-            MenuItem = keineMarkieren1
           end
-          object ToolButton3: TToolButton
+          object ToolButton2: TToolButton
             Left = 338
             Height = 26
             Top = 0
-            Caption = 'ToolButton3'
+            Caption = 'ToolButton2'
             Style = tbsSeparator
           end
           object MahnenBtn: TToolButton
@@ -196,12 +183,11 @@ object MahnForm: TMahnForm
             AutoSize = True
             Caption = 'Mahnen'
             ImageIndex = 12
-            MenuItem = mahnen1
           end
         end
-        object MahnGrid: TDBGrid
+        object DBGrid1: TDBGrid
           Left = 0
-          Height = 447
+          Height = 467
           Top = 0
           Width = 803
           Align = alClient
@@ -269,195 +255,15 @@ object MahnForm: TMahnForm
           DataSource = MahnDS
           Flat = True
           TabOrder = 1
-          OnDblClick = MahnGridDblClick
         end
       end
-      object TabSheet3: TTabSheet
-        Caption = 'TabSheet3'
-        ClientHeight = 473
-        ClientWidth = 803
-        object MahnPrintToolBar: TToolBar
-          Left = 0
-          Height = 26
-          Top = 447
-          Width = 803
-          Align = alBottom
-          AutoSize = True
-          BorderWidth = 2
-          ButtonHeight = 26
-          ButtonWidth = 23
-          Caption = 'ToolBar2'
-          EdgeBorders = []
-          Images = MainForm.ImageList1
-          List = True
-          ShowCaptions = True
-          TabOrder = 0
-          Wrapable = False
-          object DBNavigator2: TDBNavigator
-            Left = 1
-            Height = 26
-            Top = 0
-            Width = 135
-            BevelOuter = bvNone
-            ChildSizing.EnlargeHorizontal = crsScaleChilds
-            ChildSizing.EnlargeVertical = crsScaleChilds
-            ChildSizing.ShrinkHorizontal = crsScaleChilds
-            ChildSizing.ShrinkVertical = crsScaleChilds
-            ChildSizing.Layout = cclLeftToRightThenTopToBottom
-            ChildSizing.ControlsPerLine = 100
-            ClientHeight = 26
-            ClientWidth = 135
-            DataSource = MahnPrintDS
-            Flat = True
-            Options = []
-            TabOrder = 0
-            VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbRefresh]
-          end
-          object ToolButton2: TToolButton
-            Left = 136
-            Height = 26
-            Top = 0
-            Caption = 'ToolButton2'
-            Style = tbsSeparator
-          end
-          object B1: TToolButton
-            Left = 144
-            Top = 0
-            AutoSize = True
-            Caption = 'alle &drucken'
-            ImageIndex = 11
-            OnClick = B1Click
-          end
-          object ToolButton5: TToolButton
-            Left = 228
-            Height = 26
-            Top = 0
-            Caption = 'ToolButton5'
-            Style = tbsSeparator
-          end
-          object ToolButton8: TToolButton
-            Left = 236
-            Top = 0
-            AutoSize = True
-            Caption = 'ausgewählte drucken'
-            ImageIndex = 11
-            OnClick = ToolButton8Click
-          end
-          object ToolButton4: TToolButton
-            Left = 364
-            Height = 26
-            Top = 0
-            Caption = 'ToolButton4'
-            Style = tbsSeparator
-          end
-          object ToolButton6: TToolButton
-            Left = 372
-            Top = 0
-            AutoSize = True
-            Caption = 'ausgewählte als gedruckt markieren'
-            ImageIndex = 12
-            OnClick = ToolButton6Click
-          end
-          object ToolButton9: TToolButton
-            Left = 568
-            Height = 26
-            Top = 0
-            Caption = 'ToolButton9'
-            Style = tbsSeparator
-          end
-          object ToolButton7: TToolButton
-            Left = 576
-            Top = 0
-            AutoSize = True
-            Caption = 'alle als gedruckt markieren'
-            Enabled = False
-            ImageIndex = 12
-            OnClick = ToolButton7Click
-          end
-        end
-        object MahnPrintGrid: TDBGrid
-          Left = 0
-          Height = 447
-          Top = 0
-          Width = 803
-          Align = alClient
-          Color = clWindow
-          Columns = <          
-            item
-              Title.Caption = 'Beleg'
-              Width = 50
-              FieldName = 'VRENUM'
-            end          
-            item
-              Title.Caption = 'Datum'
-              Width = 61
-              FieldName = 'RDATUM'
-            end          
-            item
-              Title.Caption = 'Ku.-Nr.'
-              Width = 39
-              FieldName = 'KUN_NUM'
-            end          
-            item
-              Title.Caption = 'Name des Kunden'
-              Width = 244
-              FieldName = 'KUN_NAME1'
-            end          
-            item
-              Title.Caption = 'Brutto'
-              Width = 59
-              FieldName = 'BSUMME'
-            end          
-            item
-              Title.Caption = 'Mahnkosten'
-              FieldName = 'MAHNKOSTEN'
-            end          
-            item
-              Title.Caption = 'Saldo'
-              FieldName = 'SALDO'
-            end          
-            item
-              Title.Caption = 'WA'
-              Width = 24
-              FieldName = 'WAEHRUNG'
-            end          
-            item
-              Title.Caption = 'Stadium'
-              Visible = False
-              FieldName = 'STADIUM'
-            end          
-            item
-              Title.Caption = 'Ziel'
-              Width = 50
-              FieldName = 'SOLL_NTAGE'
-            end          
-            item
-              Title.Caption = 'Tage offen'
-              Width = 60
-              FieldName = 'TAGE_OFFEN'
-            end          
-            item
-              Title.Caption = 'MS'
-              Width = 23
-              FieldName = 'MAHNSTUFE'
-            end          
-            item
-              Title.Caption = 'G-Kto.'
-              Width = 38
-              FieldName = 'GEGENKONTO'
-            end>
-          DataSource = MahnPrintDS
-          Flat = True
-          TabOrder = 1
-        end
+      object TabSheet2: TTabSheet
+        Caption = 'TabSheet2'
       end
     end
   end
   object MahnTab: TZQuery
     Connection = DM1.DB1
-    AfterOpen = MahnTabAfterOpen
-    AfterScroll = MahnTabAfterScroll
-    BeforeDelete = MahnPrintTabBeforeDelete
     SQL.Strings = (
       'select '
       'REC_ID, QUELLE, VRENUM, RDATUM, KUN_NAME1, BSUMME, SOLL_NTAGE, STADIUM, '
@@ -680,9 +486,6 @@ object MahnForm: TMahnForm
   end
   object MahnPrintTab: TZQuery
     Connection = DM1.DB1
-    AfterOpen = MahnPrintTabAfterOpen
-    AfterScroll = MahnPrintTabAfterOpen
-    BeforeDelete = MahnPrintTabBeforeDelete
     SQL.Strings = (
       'select '
       'REC_ID, QUELLE, VRENUM, RDATUM, ADDR_ID,'
@@ -858,7 +661,6 @@ object MahnForm: TMahnForm
   end
   object SumTab: TZQuery
     Connection = DM1.DB1
-    AfterOpen = SumTabAfterOpen
     SQL.Strings = (
       'select FREIGABE1_FLAG, COUNT(*) as ANZAHL from JOURNAL '
       'where QUELLE=3 and YEAR(RDATUM) > 2000 and  STADIUM BETWEEN 20 and 79'
@@ -879,105 +681,7 @@ object MahnForm: TMahnForm
     Top = 276
   end
   object MainMenu1: TMainMenu
-    Images = MainForm.ImageList1
     Left = 312
     Top = 212
-    object Bearbeiten1: TMenuItem
-      Caption = '&Bearbeiten'
-      GroupIndex = 2
-      object Suchen1: TMenuItem
-        Caption = 'Suchen'
-        ImageIndex = 10
-        ShortCut = 16454
-      end
-      object N1: TMenuItem
-        Caption = '-'
-      end
-      object Allesmarkieren1: TMenuItem
-        Caption = 'alle Freigeben'
-        Enabled = False
-        ImageIndex = 18
-        ShortCut = 16449
-        OnClick = Allesmarkieren1Click
-      end
-      object keineMarkieren1: TMenuItem
-        Caption = 'keine Freigeben'
-        ImageIndex = 19
-        ShortCut = 16459
-        OnClick = keineMarkieren1Click
-      end
-      object N2: TMenuItem
-        Caption = '-'
-      end
-      object mahnen1: TMenuItem
-        Caption = 'Mahnen'
-        ImageIndex = 12
-        OnClick = mahnen1Click
-      end
-      object N5: TMenuItem
-        Caption = '-'
-      end
-      object SichtbareSpalten1: TMenuItem
-        Caption = 'Sichtbare Spalten'
-        ImageIndex = 15
-        OnClick = SichtbareSpalten1Click
-      end
-      object Layoutspeichern1: TMenuItem
-        Caption = 'Layout speichern'
-        ImageIndex = 16
-        OnClick = Layoutspeichern1Click
-      end
-    end
-    object Sortierung1: TMenuItem
-      Caption = '&Sortierung'
-      Enabled = False
-      GroupIndex = 3
-      object Belegnummer1: TMenuItem
-        Tag = 1
-        Caption = 'Belegnummer'
-        Checked = True
-        Default = True
-        GroupIndex = 5
-        RadioItem = True
-      end
-      object Datum1: TMenuItem
-        Tag = 2
-        Caption = 'Datum'
-        GroupIndex = 5
-        RadioItem = True
-      end
-      object Name1: TMenuItem
-        Tag = 3
-        Caption = 'Name'
-        GroupIndex = 5
-        RadioItem = True
-      end
-      object Stadium1: TMenuItem
-        Tag = 4
-        Caption = 'Stadium'
-        GroupIndex = 5
-        RadioItem = True
-      end
-      object Preis1: TMenuItem
-        Tag = 5
-        Caption = 'Preis'
-        GroupIndex = 5
-        RadioItem = True
-      end
-    end
-    object Drucken1: TMenuItem
-      Caption = '&Drucken'
-      Enabled = False
-      GroupIndex = 4
-    end
-    object Ansicht1: TMenuItem
-      Caption = '&Ansicht'
-      GroupIndex = 5
-      object Aktualisieren1: TMenuItem
-        Caption = 'Aktualisieren'
-        ImageIndex = 13
-        ShortCut = 116
-      end
-    end
   end
 end
