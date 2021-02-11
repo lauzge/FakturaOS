@@ -65,7 +65,7 @@ uses
   Windows, Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ComCtrls,
   ExtCtrls, Buttons, Menus, JvOutlookBar, JvLED, PrintersDlgs, ZSqlMonitor,
   CAO_Kunde, CAO_Artikel1, CAO_About, CAO_Startup, CAO_ShopSetup, CAO_Backup,
-  CAO_KFZ1, CAO_Statistic, CAO_MakeEKRech;
+  CAO_KFZ1, CAO_Statistic, CAO_MakeEKRech, CAO_MahnlaufDlg;
 
 type
 
@@ -218,7 +218,7 @@ type
 
 //    InventurForm     : TInventurForm;
 //    ExportFibuForm   : TExportFibuForm;
-//    MahnForm         : TMahnForm;
+    MahnForm         : TMahnForm;
     {$IFDEF AVE}
     ShopMainForm     : TShopMainForm;
     AVEShopTransForm : TAVEShopTransForm;
@@ -278,7 +278,7 @@ begin
 
 //  InventurForm     :=nil;
 //  ExportFibuForm   :=nil;
-//  MahnForm         :=nil;
+  MahnForm         :=nil;
 
   {$IFDEF WPTOOLS}
   TextEditForm :=nil;
@@ -449,7 +449,7 @@ begin
 //       if assigned(ZahlForm)         then FreeAndNil (ZahlForm);
 //       if assigned(ZahlAusForm)      then FreeAndNil (ZahlAusForm);
 //       if assigned(InventurForm)     then FreeAndNil (InventurForm);
-//       if assigned(MahnForm)         then FreeAndNil (MahnForm);
+       if assigned(MahnForm)         then FreeAndNil (MahnForm);
 //       if assigned(UeberweisungForm) then FreeAndNil (UeberweisungForm);
 //       if assigned(ExportFibuForm)   then FreeAndNil (ExportFibuForm);
 //       if assigned(WartungsForm)     then FreeAndNil (WartungsForm);
@@ -683,13 +683,13 @@ begin
 //                                          ExportFibuForm :=nil;
 //                                          Continue;
 //                                        end;
-//        if Owner=MahnForm          then begin
-//                                          MahnForm.FormDeactivate (Sender);
-//                                          MahnForm.OnUpdateStatusBar :=nil;
-//                                          try MahnForm.Free; except end;
-//                                          MahnForm :=nil;
-//                                          Continue;
-//                                        end;
+        if Owner=MahnForm          then begin
+                                          MahnForm.FormDeactivate (Sender);
+                                          MahnForm.OnUpdateStatusBar :=nil;
+                                          try MahnForm.Free; except end;
+                                          MahnForm :=nil;
+                                          Continue;
+                                        end;
 
 //        if assigned(InventurForm) and
 //           (Owner=InventurForm)    then begin
@@ -880,16 +880,16 @@ begin
          end;
          {$ENDIF}
 
-//         2080: //Mahnungen
-//         begin
-//            if not assigned(MahnForm)
-//              then MahnForm :=tMahnForm.Create(Self);
+         2080: //Mahnungen
+         begin
+            if not assigned(MahnForm)
+              then MahnForm :=tMahnForm.Create(Self);
 
-//            MahnForm.OnUpdateStatusBar :=OnUpdateStatusBar;
-//            LastMenu :=MahnForm.Mainmenu1;
-//            MahnForm.MainPanel.Parent := MainPanel;
-//            MahnForm.FormActivate(Sender);
-//         end;
+            MahnForm.OnUpdateStatusBar :=OnUpdateStatusBar;
+            LastMenu :=MahnForm.Mainmenu1;
+            MahnForm.MainPanel.Parent := MainPanel;
+            MahnForm.FormActivate(Sender);
+         end;
          {$IFDEF WPTOOLS}
          2090: //Textverarbeitung
          begin
