@@ -9,8 +9,8 @@
         <Filename Value="FakturaOS_DB.ppr"/>
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
-        <TopLine Value="67"/>
-        <CursorPos X="22" Y="73"/>
+        <TopLine Value="51"/>
+        <CursorPos X="33" Y="63"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -41,10 +41,9 @@
         <ComponentName Value="DM1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="102"/>
-        <CursorPos X="59" Y="69"/>
+        <TopLine Value="93"/>
+        <CursorPos X="84" Y="109"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -357,7 +356,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="1180"/>
+        <TopLine Value="1179"/>
         <CursorPos X="28" Y="159"/>
         <UsageCount Value="208"/>
         <Loaded Value="True"/>
@@ -643,7 +642,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="24"/>
         <CursorPos Y="43"/>
-        <UsageCount Value="160"/>
+        <UsageCount Value="218"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -656,7 +655,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="13"/>
         <CursorPos Y="36"/>
-        <UsageCount Value="124"/>
+        <UsageCount Value="183"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -669,7 +668,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="17"/>
         <CursorPos Y="37"/>
-        <UsageCount Value="123"/>
+        <UsageCount Value="182"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -682,7 +681,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="28"/>
         <CursorPos X="85" Y="44"/>
-        <UsageCount Value="122"/>
+        <UsageCount Value="181"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -695,7 +694,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="40"/>
         <CursorPos X="86" Y="46"/>
-        <UsageCount Value="120"/>
+        <UsageCount Value="179"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -707,7 +706,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="19"/>
         <CursorPos Y="40"/>
-        <UsageCount Value="92"/>
+        <UsageCount Value="151"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -719,14 +718,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="44"/>
         <CursorPos Y="1261"/>
-        <UsageCount Value="123"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit>
-      <Unit>
-        <Filename Value="..\Komponenten\lz_SynEditDsg\source\SynDBEdit.pas"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <UsageCount Value="4"/>
+        <UsageCount Value="117"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -735,7 +727,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="165"/>
         <CursorPos X="20" Y="52"/>
-        <UsageCount Value="74"/>
+        <UsageCount Value="68"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\include\application.inc"/>
@@ -743,22 +735,22 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="2100"/>
         <CursorPos Y="2121"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\pl_ZeosDBO\source\component\ZAbstractRODataset.pas"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="58"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="2"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\pl_JVCL\source\JvJCLUtils.pas"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="526"/>
-        <CursorPos X="57" Y="540"/>
-        <UsageCount Value="27"/>
+        <CursorPos X="22" Y="540"/>
+        <UsageCount Value="26"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\include\dblookuplistbox.inc"/>
@@ -766,14 +758,14 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="99"/>
         <CursorPos Y="116"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="2"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\include\pagecontrol.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <CursorPos Y="27"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="1"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\include\customform.inc"/>
@@ -781,7 +773,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="3172"/>
         <CursorPos Y="3189"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\include\wincontrol.inc"/>
@@ -789,7 +781,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5662"/>
         <CursorPos Y="5679"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="1"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\include\customcontrol.inc"/>
@@ -797,7 +789,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="58"/>
         <CursorPos Y="75"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\dbctrls.pp"/>
@@ -806,7 +798,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="1634"/>
         <CursorPos Y="1651"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\dbgrids.pas"/>
@@ -815,7 +807,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="930"/>
         <CursorPos Y="948"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\grids.pas"/>
@@ -824,13 +816,13 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5629"/>
         <CursorPos Y="5647"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="Komponenten\lz_SynEditDsg\source\SynDBEdit.pas"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="27"/>
+        <UsageCount Value="21"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -839,17 +831,32 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="24"/>
         <CursorPos X="3" Y="134"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="src\cao_progress.frm"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="2"/>
         <DefaultSyntaxHighlighter Value="FRM"/>
       </Unit>
+      <Unit>
+        <Filename Value="src\CAO_MahnlaufDlg.pas"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MahnForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="86"/>
+        <CursorPos Y="122"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="24">
+    <JumpHistory HistoryIndex="26">
       <Position>
         <Filename Value="src\CAO_DM.pas"/>
         <Caret Line="1667" Column="66" TopLine="1015"/>
@@ -949,6 +956,14 @@
       <Position>
         <Filename Value="src\CAO_DM.pas"/>
         <Caret Line="2497" Column="62" TopLine="2467"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MahnlaufDlg.pas"/>
+        <Caret Line="49" Column="2" TopLine="24"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_MahnlaufDlg.pas"/>
+        <Caret Line="52" Column="21" TopLine="24"/>
       </Position>
     </JumpHistory>
     <RunParams>

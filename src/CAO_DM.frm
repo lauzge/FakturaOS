@@ -17,7 +17,7 @@ object DM1: TDM1
     User = 'ssluser'
     Password = 'Natur2000'
     Protocol = 'mysql'
-    LibraryLocation = 'C:\Users\Volker Stark\Documents\Development\Pascal\CodeTyphon\CAOFaktura\DLLs\32bit\libmariadb.dll'
+    LibraryLocation = 'C:\Windows\SysWOW64\libmariadb.dll'
     Left = 35
     Top = 29
   end
