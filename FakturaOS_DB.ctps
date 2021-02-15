@@ -41,7 +41,8 @@
         <ComponentName Value="DM1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <EditorIndex Value="3"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
         <TopLine Value="5455"/>
         <CursorPos Y="5491"/>
         <UsageCount Value="200"/>
@@ -354,7 +355,7 @@
         <ComponentName Value="MainForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="1"/>
         <TopLine Value="244"/>
         <CursorPos X="38" Y="262"/>
         <UsageCount Value="208"/>
@@ -722,6 +723,18 @@
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
+        <Filename Value="src\CAO_Journal_VKKASSE.pas"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="JournalVKKasseForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="668"/>
+        <CursorPos Y="677"/>
+        <UsageCount Value="29"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
         <Filename Value="src\CAO_MAIN_OLD.pas"/>
         <FRMtype Value="0"/>
         <ComponentName Value="MainForm"/>
@@ -754,7 +767,7 @@
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="58"/>
-        <UsageCount Value="0"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\pl_JVCL\source\JvJCLUtils.pas"/>
@@ -770,7 +783,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="99"/>
         <CursorPos Y="116"/>
-        <UsageCount Value="0"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\include\pagecontrol.inc"/>
@@ -849,30 +862,11 @@
         <Filename Value="src\cao_progress.frm"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="0"/>
+        <UsageCount Value="10"/>
         <DefaultSyntaxHighlighter Value="FRM"/>
       </Unit>
-      <Unit>
-        <Filename Value="src\CAO_Journal_VKKASSE.pas"/>
-        <FRMtype Value="0"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="JournalVKKasseForm"/>
-        <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="668"/>
-        <CursorPos Y="677"/>
-        <UsageCount Value="29"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="src\CAO_Journal_VKKASSE.pas"/>
-        <Caret Line="535" Column="50" TopLine="517"/>
-      </Position>
+    <JumpHistory HistoryIndex="20">
       <Position>
         <Filename Value="src\CAO_MAIN.pas"/>
         <Caret Line="9" Column="16"/>
@@ -956,38 +950,6 @@
       <Position>
         <Filename Value="src\CAO_MAIN.pas"/>
         <Caret Line="646" Column="36" TopLine="629"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_Journal_VKKASSE.pas"/>
-        <Caret Line="42" Column="25" TopLine="39"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_Journal_VKKASSE.pas"/>
-        <Caret Line="360" TopLine="324"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_Journal_VKKASSE.pas"/>
-        <Caret Line="366" TopLine="331"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_Journal_VKKASSE.pas"/>
-        <Caret Line="215" Column="5" TopLine="193"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_Journal_VKKASSE.pas"/>
-        <Caret Line="213" Column="65" TopLine="195"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_Journal_VKKASSE.pas"/>
-        <Caret Line="216" Column="56" TopLine="195"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_Journal_VKKASSE.pas"/>
-        <Caret Line="213" Column="53" TopLine="195"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_Journal_VKKASSE.pas"/>
-        <Caret Line="224" TopLine="189"/>
       </Position>
     </JumpHistory>
     <RunParams>
