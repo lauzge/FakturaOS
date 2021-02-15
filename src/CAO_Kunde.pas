@@ -2505,7 +2505,7 @@ begin
     SetSort (tmenuitem (sender).tag);
   end;
 end;
-
+//------------------------------------------------------------------------------
 procedure TAdressForm.SuchBegChange(Sender: TObject);
 begin
   searchtime :=15;

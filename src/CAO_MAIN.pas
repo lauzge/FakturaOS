@@ -259,7 +259,7 @@ uses
   CAO_RegEdit, CAO_Setup, Inifiles, shellapi, filectrl,  CAO_DBOptimize,
   Cao_Tool1, CAO_Pim, CAO_Export, CAO_Restore, CAO_Mitarbeiter, CAO_Vertreter,
   CAO_FibuKassenbuch, CAO_Journal_EKRE, CAO_MakeVKRech, CAO_MakeVertragRech,
-  CAO_MakeEKBest;
+  CAO_MakeEKBest, CAO_Journal_VKKASSE;
 
 { TMainForm }
 
@@ -643,10 +643,10 @@ begin
                                           Continue;
                                           }
 //                                        end;
-//        if Owner=JournalVKKasseForm then begin
-//                                          JournalVKKasseForm.FormDeactivate (Sender);
-//                                          JournalVKKasseForm.OnUpdateStatusBar :=nil;
-//                                        end;
+        if Owner=JournalVKKasseForm then begin
+                                          JournalVKKasseForm.FormDeactivate (Sender);
+                                          JournalVKKasseForm.OnUpdateStatusBar :=nil;
+                                        end;
 
         if Owner=MakeAGBForm       then begin
                                           MakeAGBForm.FormDeactivate       (Sender);
@@ -916,13 +916,13 @@ begin
 //              JournalVKLIEFForm.FormActivate (Self);
 //              LastMenu :=JournalVKLIEFForm.Mainmenu1;
 //         end;
-//         3050: //Kasse
-//         begin
-//              JournalVKKasseForm.OnUpdateStatusBar :=OnUpdateStatusBar;
-//              JournalVKKasseForm.JournalPanel.Parent := MainPanel;
-//              JournalVKKasseForm.FormActivate (Self);
-//              LastMenu :=JournalVKKasseForm.Mainmenu1;
-//         end;
+         3050: //Kasse
+         begin
+              JournalVKKasseForm.OnUpdateStatusBar :=OnUpdateStatusBar;
+              JournalVKKasseForm.JournalPanel.Parent := MainPanel;
+              JournalVKKasseForm.FormActivate (Self);
+              LastMenu :=JournalVKKasseForm.Mainmenu1;
+         end;
 //         3040: //Rechnung
 //         begin
 //              JournalVKREForm.OnUpdateStatusBar :=OnUpdateStatusBar;
@@ -1689,12 +1689,12 @@ begin
 //    end;
 
     // Journale -- Kasse
-//    with JournalVKKasseForm do
-//    begin
-//        MainPanel.HelpContext       := 6750;
-//        TabSheet1.HelpContext       := 6750;
-//        TabSheet2.HelpContext       := 6800;
-//    end;
+    with JournalVKKasseForm do
+    begin
+        MainPanel.HelpContext       := 6750;
+        TabSheet1.HelpContext       := 6750;
+        TabSheet2.HelpContext       := 6800;
+    end;
 
     // Journale -- Rechnung
 //    with JournalVKREForm do

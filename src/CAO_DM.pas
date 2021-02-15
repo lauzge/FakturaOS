@@ -903,6 +903,7 @@ type
 
     // Diverse Funktionen zum Stornieren von Vorgängen
     function Storno_Einkauf (Journal_ID : Integer):Boolean; // True, Wenn OK
+    function Storno_Verkauf (Journal_ID : Integer):Boolean; // True, Wenn OK
     function Storno_Lieferschein (Journal_ID : Integer):Boolean; // True, Wenn OK
 
     // Export-Funktionen
@@ -5386,6 +5387,104 @@ begin
      finally
        Transact1.AutoCommit :=True;
        //Transact1.TransactSafe :=False;
+     end;
+end;
+//------------------------------------------------------------------------------
+function tDM1.Storno_Verkauf (Journal_ID : Integer):Boolean; // True, Wenn OK
+begin
+     Result :=False;
+     try
+        JourTab.Close;
+        JourTab.ParamByName ('ID').Value :=Journal_ID;
+        JourTab.Open;
+
+        if JourTabZahlArt.Value = 1 then  // Kassenbuchung stornieren
+        begin
+           with UniQuery do
+           begin
+              Close;
+              SQL.Clear;
+              SQL.Add ('delete from FIBU_KASSE');
+              SQL.Add ('where JOURNAL_ID='+Inttostr(Journal_ID));
+              ExecSql;
+              SQL.Clear;
+           end;
+        end;
+
+        // ggf. Seriennummer freigeben
+        with UniQuery do
+        begin
+           Close;
+           SQL.Clear;
+           SQL.Add ('update ARTIKEL_SERNUM set VK_JOURNAL_ID=-1, ');
+           SQL.Add ('VK_JOURNALPOS_ID=-1 where VK_JOURNAL_ID='+Inttostr(Journal_ID));
+           ExecSql;
+           SQL.Clear;
+        end;
+
+        JPosTab.Close;
+        JPosTab.ParamByName ('ID').Value :=Journal_ID;
+        JPosTab.Open;
+
+        while not JPosTab.Eof do
+        begin
+           // Artikel Buchen
+           if (JPosTabArtikelTyp.Value='N')and
+              (JPosTabARTIKEL_ID.Value>-1) then
+           begin
+              // Menge erhöhen (VK STORNO)
+              ArtMengeTab.Close;
+              ArtMengeTab.ParamByName ('ID').Value :=JPosTabARTIKEL_ID.Value;
+              ArtMengeTab.ParamByName ('SUBMENGE').Value :=JPosTabMenge.Value*-1;
+              ArtMengeTab.ParamByName ('BMENGE').Value :=0;
+              ArtMengeTab.ExecSql;
+              //JPosTabGebucht.Value :=True;
+           end
+              else
+           if (JPosTabArtikelTyp.Value='S')and
+              (JPosTabARTIKEL_ID.Value>-1) then
+           begin
+              // Stückliste, Unterartikel Menge korregieren
+              STListTab.Close;
+              STListTab.ParamByName('ID').AsInteger :=JPosTabARTIKEL_ID.Value;
+              STListTab.Open;
+              while not STListTab.Eof do
+              begin
+                 // Menge erhöhen (VK STORNO)
+                 ArtMengeTab.Close;
+                 ArtMengeTab.ParamByName ('ID').Value :=STListTabART_ID.AsInteger;
+                 ArtMengeTab.ParamByName ('SUBMENGE').Value :=STListTabMENGE.Value*JPosTabMenge.Value*-1;
+                 ArtMengeTab.ParamByName ('BMENGE').Value :=0;
+                 ArtMengeTab.ExecSql;
+
+                 STListTab.Next;
+              end;
+              STListTab.Close;
+           end;
+
+
+           // Verweise löschen
+           UniQuery.Sql.Text :='UPDATE JOURNALPOS SET QUELLE_SRC=-1 '+
+                               'where QUELLE_SRC='+
+                               Inttostr(JPosTabRec_ID.AsInteger);
+           UniQuery.ExecSql;
+
+
+           // Daten aktualisieren
+           JPosTab.Delete;
+        end;
+        JPosTab.Close;
+
+        JourTab.Delete;
+        JourTab.Close;
+
+        //Datei-Links löschen
+        LinkForm.DelLinks (VK_RECH, JOURNAL_ID);
+
+        Result :=True;
+     except
+        MessageDlg ('Fehler beim Storno der VK-Rechnung !',mterror,[mbok],0);
+        Result :=False;
      end;
 end;
 //------------------------------------------------------------------------------

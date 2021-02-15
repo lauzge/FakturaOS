@@ -569,6 +569,13 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
+      <Unit>
+        <Filename Value="src\CAO_Journal_VKKASSE.pas"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="JournalVKKasseForm"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

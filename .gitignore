@@ -78,3 +78,4 @@ lib/x86_64-win64/FakturaOS_DB.res
 lib/x86_64-win64/libimpCAO_Tool1.a
 lib/x86_64-win64/msxml2_tlb.rsj
 lib/x86_64-win64/CAO_MahnlaufDlg.frm
+lib/x86_64-win64/CAO_Journal_VKKASSE.frm
