@@ -259,7 +259,7 @@ uses
   CAO_RegEdit, CAO_Setup, Inifiles, shellapi, filectrl,  CAO_DBOptimize,
   Cao_Tool1, CAO_Pim, CAO_Export, CAO_Restore, CAO_Mitarbeiter, CAO_Vertreter,
   CAO_FibuKassenbuch, CAO_Journal_EKRE, CAO_MakeVKRech, CAO_MakeVertragRech,
-  CAO_MakeEKBest, CAO_Journal_VKKASSE;
+  CAO_MakeEKBest, CAO_Journal_VKKASSE, CAO_Journal_VKAGB, VolPeriod;
 
 { TMainForm }
 
@@ -626,10 +626,10 @@ begin
                                           JournalEKREForm.FormDeactivate   (Sender);
                                           JournalEKREForm.OnUpdateStatusBar :=nil;
                                         end;
-//        if Owner=JournalVKAGBForm  then begin
-//                                          JournalVKAGBForm.FormDeactivate  (Sender);
-//                                          JournalVKAGBForm.OnUpdateStatusBar :=nil;
-//                                        end;
+        if Owner=JournalVKAGBForm  then begin
+                                          JournalVKAGBForm.FormDeactivate  (Sender);
+                                          JournalVKAGBForm.OnUpdateStatusBar :=nil;
+                                        end;
 //        if Owner=JournalVKLIEFForm then begin
 //                                          JournalVKLIEFForm.FormDeactivate (Sender);
 //                                          JournalVKLIEFForm.OnUpdateStatusBar :=nil;
@@ -902,13 +902,13 @@ begin
             LastMenu :=TextEditForm.Mainmenu1;
          end;
          {$ENDIF}
-//         3010: //Angebot
-//         begin
-//              JournalVKAGBForm.OnUpdateStatusBar :=OnUpdateStatusBar;
-//              JournalVKAGBForm.JournalPanel.Parent := MainPanel;
-//              JournalVKAGBForm.FormActivate (Self);
-//              LastMenu :=JournalVKAGBForm.Mainmenu1;
-//         end;
+         3010: //Angebot
+         begin
+              JournalVKAGBForm.OnUpdateStatusBar :=OnUpdateStatusBar;
+              JournalVKAGBForm.JournalPanel.Parent := MainPanel;
+              JournalVKAGBForm.FormActivate (Self);
+              LastMenu :=JournalVKAGBForm.Mainmenu1;
+         end;
 //         3030: //Lieferschein
 //         begin
 //              JournalVKLIEFForm.OnUpdateStatusBar :=OnUpdateStatusBar;
@@ -1670,14 +1670,14 @@ begin
     end;
 
     // Journale -- Angebot
-//    with JournalVKAGBForm do
-//    begin
-//        MainPanel.HelpContext       := 6500;
-//        JourGrid.HelpContext        := 6500;
-//        Allgemein.HelpContext       := 6525;
-//        TabSheet1.HelpContext       := 6550;
-//        JourInfoTS.HelpContext      := 6600;
-//    end;
+    with JournalVKAGBForm do
+    begin
+        MainPanel.HelpContext       := 6500;
+        JourGrid.HelpContext        := 6500;
+        Allgemein.HelpContext       := 6525;
+        TabSheet1.HelpContext       := 6550;
+        JourInfoTS.HelpContext      := 6600;
+    end;
 
     // Journale -- Lieferschein
 //    with JournalVKLiefForm do
@@ -1812,10 +1812,10 @@ begin
        Application.ProcessMessages;
        OLBarButtonClick (Self,3010);
        Application.ProcessMessages;
-//       JournalVKAGBForm.DatumAW.Year :=Jahr;
-//       JournalVKAGBForm.DatumAW.KindRange :=ksYear;
+       JournalVKAGBForm.DatumAW.Year :=Jahr;
+       JournalVKAGBForm.DatumAW.KindRange :=ksYear;
        Application.ProcessMessages;
-//       JournalVKAGBForm.JQuery.Locate ('REC_ID',Id,[]);
+       JournalVKAGBForm.JQuery.Locate ('REC_ID',Id,[]);
      end
         else
      if Modul=VK_RECH then

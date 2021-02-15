@@ -122,7 +122,6 @@ object JournalVKKasseForm: TJournalVKKasseForm
         Caption = 'Details'
         ImageIndex = 5
         MenuItem = Positionen1
-        Style = tbsCheck
       end
       object ViewSumBtn: TToolButton
         Left = 214
@@ -131,7 +130,6 @@ object JournalVKKasseForm: TJournalVKKasseForm
         Caption = 'Summen'
         ImageIndex = 7
         MenuItem = Summen1
-        Style = tbsCheck
       end
       object SuchenBtn: TToolButton
         Left = 281
@@ -808,6 +806,7 @@ object JournalVKKasseForm: TJournalVKKasseForm
       ReadOnly = False
       Required = False
       BlobType = ftMemo
+      Transliterate = False
     end
     object JoArtTabMENGE: TFloatField
       DisplayLabel = 'Menge'

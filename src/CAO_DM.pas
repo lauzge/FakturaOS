@@ -904,6 +904,7 @@ type
     // Diverse Funktionen zum Stornieren von Vorgängen
     function Storno_Einkauf (Journal_ID : Integer):Boolean; // True, Wenn OK
     function Storno_Verkauf (Journal_ID : Integer):Boolean; // True, Wenn OK
+    function Storno_Angebot (Journal_ID : Integer):Boolean; // True, Wenn OK
     function Storno_Lieferschein (Journal_ID : Integer):Boolean; // True, Wenn OK
 
     // Export-Funktionen
@@ -5484,6 +5485,34 @@ begin
         Result :=True;
      except
         MessageDlg ('Fehler beim Storno der VK-Rechnung !',mterror,[mbok],0);
+        Result :=False;
+     end;
+end;
+//------------------------------------------------------------------------------
+function tDM1.Storno_Angebot (Journal_ID : Integer):Boolean; // True, Wenn OK
+begin
+     Result :=False;
+     try
+        JourTab.Close;
+        JourTab.ParamByName ('ID').Value :=Journal_ID;
+        JourTab.Open;
+
+        JPosTab.Close;
+        JPosTab.ParamByName ('ID').Value :=Journal_ID;
+        JPosTab.Open;
+
+        while not JPosTab.Eof do JPosTab.Delete;
+        JPosTab.Close;
+
+        JourTab.Delete;
+        JourTab.Close;
+
+        //Datei-Links löschen
+        LinkForm.DelLinks (VK_AGB, JOURNAL_ID);
+
+        Result :=True;
+     except
+        MessageDlg ('Fehler beim Storno des Angebotes !',mterror,[mbok],0);
         Result :=False;
      end;
 end;
