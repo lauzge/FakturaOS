@@ -60,7 +60,7 @@ uses
   CAO_ShopTrans, CAO_FibuKassenbuch, CAO_FibuKassenbuch_AB_Dlg,
   CAO_ManKassBuchungDlg, CAO_ZahlungseingangDlg, CAO_Journal_EKRE,
   CAO_MakeVKRech, cao_teillieferdlg, cao_adressen_lief, CAO_MakeVertragRech,
-  CAO_MakeEKRech, CAO_MakeEKBest, CAO_Journal_VKKASSE;
+  CAO_MakeEKRech, CAO_MakeEKBest, CAO_Journal_VKKASSE, CAO_Journal_VKAGB;
 
 {$R *.res}
 
@@ -129,7 +129,7 @@ begin
   SScreen.PBar.Position :=20;  SScreen.Update;
   Application.CreateForm(TJournalVKKasseForm, JournalVKKasseForm);
   SScreen.PBar.Position :=21;  SScreen.Update;
-//  Application.CreateForm(TJournalVKAGBForm, JournalVKAGBForm);
+  Application.CreateForm(TJournalVKAGBForm, JournalVKAGBForm);
   SScreen.PBar.Position :=22;  SScreen.Update;
 //  Application.CreateForm(TJournalVKLiefForm, JournalVKLiefForm);
   SScreen.PBar.Position :=23;  SScreen.Update;
