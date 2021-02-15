@@ -1022,7 +1022,7 @@ begin
   {$IFDEF CPU64}
   DB1.LibraryLocation:='C:\Windows\SysWOW64\libmariadb.dll';
   {$ELSE}
-//  DB1.LibraryLocation:='C:\Windows\System32\libmariadb.dll';  // funktioniert komischerweise nur unter einer anderen Pfadangabe
+  DB1.LibraryLocation:='C:\Windows\System32\libmariadb.dll';  // funktioniert komischerweise nur unter einer anderen Pfadangabe
   {$ENDIF}
 
   TermID      :=-1;
@@ -1396,7 +1396,7 @@ begin
 
              if DefaultFormatSettings.DecimalSeparator<>'.' then
                while (Pos('.',S)>0) do S[Pos('.',S)] :=DefaultFormatSettings.DecimalSeparator;
-             {$IFDEF WIN64}
+             {$IFDEF CPU64}
              V :=Double(StrToFloat(FormatFloat('0.00',StrToFloat(S))));
              {$ELSE}
              V :=StrToFloat(FormatFloat('0.00',StrToFloat(S)));
@@ -1439,7 +1439,7 @@ begin
              S :=ReadString ('MAIN','DB_VERSION','0.00');
              if DecimalSeparator<>'.' then
                while (Pos('.',S)>0) do S[Pos('.',S)] :=DecimalSeparator;
-             {$IFDEF WIN64}
+             {$IFDEF CPU64}
              V :=Double(StrToFloat(FormatFloat('0.00',StrToFloat(S))));
              {$ELSE}
              V :=StrToFloat(FormatFloat('0.00',StrToFloat(S)));
@@ -1481,7 +1481,7 @@ begin
              S :=ReadString ('MAIN','DB_VERSION','0.00');
              if DecimalSeparator<>'.' then
                while (Pos('.',S)>0) do S[Pos('.',S)] :=DecimalSeparator;
-             {$IFDEF WIN64}
+             {$IFDEF CPU64}
              V :=Double(StrToFloat(FormatFloat('0.00',StrToFloat(S)*100)));
              {$ELSE}
              V :=StrToFloat(FormatFloat('0.00',StrToFloat(S)*100));
@@ -1525,7 +1525,7 @@ begin
              S :=ReadString ('MAIN','DB_VERSION','0.00');
              if DecimalSeparator<>'.' then
                while (Pos('.',S)>0) do S[Pos('.',S)] :=DecimalSeparator;
-             {$IFDEF WIN64}
+             {$IFDEF CPU64}
              V :=Double(StrToFloat(FormatFloat('0.00',StrToFloat(S)*100)));
              {$ELSE}
              V :=StrToFloat(FormatFloat('0.00',StrToFloat(S)*100));
@@ -1568,7 +1568,7 @@ begin
              S :=ReadString ('MAIN','DB_VERSION','0.00');
              if DecimalSeparator<>'.' then
                while (Pos('.',S)>0) do S[Pos('.',S)] :=DecimalSeparator;
-             {$IFDEF WIN64}
+             {$IFDEF CPU64}
              V :=Double(StrToFloat(FormatFloat('0.00',StrToFloat(S)*100)));
              {$ELSE}
              V :=StrToFloat(FormatFloat('0.00',StrToFloat(S)*100));
@@ -1612,7 +1612,7 @@ begin
              S :=ReadString ('MAIN','DB_VERSION','0.00');
              if DecimalSeparator<>'.' then
                while (Pos('.',S)>0) do S[Pos('.',S)] :=DecimalSeparator;
-             {$IFDEF WIN64}
+             {$IFDEF CPU64}
              V :=Double(StrToFloat(FormatFloat('0.00',StrToFloat(S)*100)));
              {$ELSE}
              V :=StrToFloat(FormatFloat('0.00',StrToFloat(S)*100));
@@ -1655,7 +1655,7 @@ begin
              S :=ReadString ('MAIN','DB_VERSION','0.00');
              if DecimalSeparator<>'.' then
                while (Pos('.',S)>0) do S[Pos('.',S)] :=DecimalSeparator;
-             {$IFDEF WIN64}
+             {$IFDEF CPU64}
              V :=Double(StrToFloat(FormatFloat('0.00',StrToFloat(S)*100)));
              {$ELSE}
              V :=StrToFloat(FormatFloat('0.00',StrToFloat(S)*100));
@@ -1698,7 +1698,7 @@ begin
              S :=ReadString ('MAIN','DB_VERSION','0.00');
              if DecimalSeparator<>'.' then
                while (Pos('.',S)>0) do S[Pos('.',S)] :=DecimalSeparator;
-             {$IFDEF WIN64}
+             {$IFDEF CPU64}
              V :=Double(StrToFloat(FormatFloat('0.00',StrToFloat(S)*100)));
              {$ELSE}
              V :=StrToFloat(FormatFloat('0.00',StrToFloat(S)*100));
@@ -1741,7 +1741,7 @@ begin
              S :=ReadString ('MAIN','DB_VERSION','0.00');
              if DecimalSeparator<>'.' then
                while (Pos('.',S)>0) do S[Pos('.',S)] :=DecimalSeparator;
-             {$IFDEF WIN64}
+             {$IFDEF CPU64}
              V :=Double(StrToFloat(FormatFloat('0.00',StrToFloat(S)*100)));
              {$ELSE}
              V :=StrToFloat(FormatFloat('0.00',StrToFloat(S)*100));
@@ -1784,7 +1784,7 @@ begin
              S :=ReadString ('MAIN','DB_VERSION','0.00');
              if DecimalSeparator<>'.' then
                while (Pos('.',S)>0) do S[Pos('.',S)] :=DecimalSeparator;
-             {$IFDEF WIN64}
+             {$IFDEF CPU64}
              V :=Double(StrToFloat(FormatFloat('0.00',StrToFloat(S)*100)));
              {$ELSE}
              V :=StrToFloat(FormatFloat('0.00',StrToFloat(S)*100));
@@ -1827,7 +1827,7 @@ begin
              S :=ReadString ('MAIN','DB_VERSION','0.00');
              if DecimalSeparator<>'.' then
                while (Pos('.',S)>0) do S[Pos('.',S)] :=DecimalSeparator;
-             {$IFDEF WIN64}
+             {$IFDEF CPU64}
              V :=Double(StrToFloat(FormatFloat('0.00',StrToFloat(S)*100)));
              {$ELSE}
              V :=StrToFloat(FormatFloat('0.00',StrToFloat(S)*100));
