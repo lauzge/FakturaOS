@@ -35,6 +35,9 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="FakturaOS"/>
+      </Item>
+      <Item>
         <PackageName Value="VolgaPak"/>
       </Item>
       <Item>

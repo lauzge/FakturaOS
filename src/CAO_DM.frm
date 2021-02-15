@@ -3973,10 +3973,6 @@ object DM1: TDM1
     Left = 336
     Top = 80
   end
-  object CaoSecurity: tCaoSecurity
-    Left = 352
-    Top = 416
-  end
   object FirmaDS: TDataSource
     DataSet = FirmaTab
     Left = 272
@@ -9394,5 +9390,9 @@ object DM1: TDM1
         Name = 'ID'
         ParamType = ptInput
       end>
+  end
+  object CaoSecurity: tCaoSecurity
+    Left = 292
+    Top = 386
   end
 end

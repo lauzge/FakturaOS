@@ -42,8 +42,8 @@
         <ResourceBaseClass Value="DataModule"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="5455"/>
-        <CursorPos X="37" Y="5455"/>
+        <TopLine Value="107"/>
+        <CursorPos X="61" Y="123"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -855,7 +855,7 @@
         <DefaultSyntaxHighlighter Value="FRM"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="20">
+    <JumpHistory HistoryIndex="22">
       <Position>
         <Filename Value="src\CAO_MAIN.pas"/>
         <Caret Line="9" Column="16"/>
@@ -939,6 +939,14 @@
       <Position>
         <Filename Value="src\CAO_MAIN.pas"/>
         <Caret Line="646" Column="36" TopLine="629"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="5455" Column="37" TopLine="5455"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="123" Column="61" TopLine="107"/>
       </Position>
     </JumpHistory>
     <RunParams>
