@@ -68,12 +68,12 @@ object AdressForm: TAdressForm
           TabOrder = 0
           object KommunikationGB: TGroupBox
             Left = 0
-            Height = 216
+            Height = 208
             Top = 0
             Width = 242
             Align = alTop
             Caption = 'Kommunikation'
-            ClientHeight = 198
+            ClientHeight = 190
             ClientWidth = 238
             Font.Color = clWindowText
             Font.Height = -11
@@ -83,9 +83,9 @@ object AdressForm: TAdressForm
             ParentFont = False
             TabOrder = 0
             object TelefonLab: TLabel
-              Left = 4
+              Left = 3
               Height = 13
-              Top = 11
+              Top = 6
               Width = 64
               AutoSize = False
               Caption = 'Telefon:'
@@ -97,9 +97,9 @@ object AdressForm: TAdressForm
               ParentFont = False
             end
             object Telefon2Lab: TLabel
-              Left = 4
+              Left = 3
               Height = 13
-              Top = 33
+              Top = 28
               Width = 62
               AutoSize = False
               Caption = 'Telefon 2:'
@@ -111,9 +111,9 @@ object AdressForm: TAdressForm
               ParentFont = False
             end
             object TelefaxLab: TLabel
-              Left = 4
+              Left = 3
               Height = 13
-              Top = 56
+              Top = 52
               Width = 63
               AutoSize = False
               Caption = 'Telefax:'
@@ -127,7 +127,7 @@ object AdressForm: TAdressForm
             object MobilfunkLab: TLabel
               Left = 4
               Height = 13
-              Top = 80
+              Top = 76
               Width = 61
               AutoSize = False
               Caption = 'Mobilfunk:'
@@ -139,9 +139,9 @@ object AdressForm: TAdressForm
               ParentFont = False
             end
             object EmailLab: TLabel
-              Left = 4
+              Left = 5
               Height = 13
-              Top = 103
+              Top = 98
               Width = 61
               AutoSize = False
               Caption = 'eMail:'
@@ -153,9 +153,9 @@ object AdressForm: TAdressForm
               ParentFont = False
             end
             object EMail2Lab: TLabel
-              Left = 4
+              Left = 5
               Height = 13
-              Top = 127
+              Top = 120
               Width = 64
               AutoSize = False
               Caption = 'eMail 2:'
@@ -169,7 +169,7 @@ object AdressForm: TAdressForm
             object InternetLab: TLabel
               Left = 4
               Height = 13
-              Top = 152
+              Top = 142
               Width = 64
               AutoSize = False
               Caption = 'Internet:'
@@ -181,9 +181,9 @@ object AdressForm: TAdressForm
               ParentFont = False
             end
             object DiversesLab: TLabel
-              Left = 4
+              Left = 3
               Height = 13
-              Top = 176
+              Top = 164
               Width = 64
               AutoSize = False
               Caption = 'Diverses:'
@@ -198,8 +198,8 @@ object AdressForm: TAdressForm
               Tag = 1
               Left = 72
               Height = 21
-              Top = 3
-              Width = 160
+              Top = 2
+              Width = 132
               DataField = 'TELE1'
               DataSource = KS_DS
               Font.Color = clWindowText
@@ -208,7 +208,6 @@ object AdressForm: TAdressForm
               Font.Quality = fqAntialiased
               ItemHeight = 13
               MaxLength = 0
-              OnClick = tele1ButtonClick
               OnEnter = matchEnter
               OnExit = matchExit
               OnKeyDown = matchKeyDown
@@ -220,8 +219,8 @@ object AdressForm: TAdressForm
               Tag = 1
               Left = 72
               Height = 21
-              Top = 25
-              Width = 160
+              Top = 24
+              Width = 132
               DataField = 'TELE2'
               DataSource = KS_DS
               Font.Color = clWindowText
@@ -230,7 +229,6 @@ object AdressForm: TAdressForm
               Font.Quality = fqAntialiased
               ItemHeight = 13
               MaxLength = 0
-              OnClick = tele1ButtonClick
               OnEnter = matchEnter
               OnExit = matchExit
               OnKeyDown = matchKeyDown
@@ -265,7 +263,7 @@ object AdressForm: TAdressForm
               Left = 72
               Height = 21
               Top = 72
-              Width = 160
+              Width = 132
               DataField = 'FUNK'
               DataSource = KS_DS
               Font.Color = clWindowText
@@ -286,8 +284,8 @@ object AdressForm: TAdressForm
               Tag = 1
               Left = 72
               Height = 21
-              Top = 95
-              Width = 160
+              Top = 94
+              Width = 132
               DataField = 'EMAIL'
               DataSource = KS_DS
               Font.Color = clWindowText
@@ -296,7 +294,6 @@ object AdressForm: TAdressForm
               Font.Quality = fqAntialiased
               ItemHeight = 13
               MaxLength = 0
-              OnClick = Email1BtnClick
               OnEnter = matchEnter
               OnExit = matchExit
               OnKeyDown = matchKeyDown
@@ -308,8 +305,8 @@ object AdressForm: TAdressForm
               Tag = 1
               Left = 72
               Height = 21
-              Top = 119
-              Width = 160
+              Top = 116
+              Width = 132
               DataField = 'EMAIL2'
               DataSource = KS_DS
               Font.Color = clWindowText
@@ -318,7 +315,6 @@ object AdressForm: TAdressForm
               Font.Quality = fqAntialiased
               ItemHeight = 13
               MaxLength = 0
-              OnClick = Email2BtnClick
               OnEnter = matchEnter
               OnExit = matchExit
               OnKeyDown = matchKeyDown
@@ -330,8 +326,8 @@ object AdressForm: TAdressForm
               Tag = 1
               Left = 72
               Height = 21
-              Top = 144
-              Width = 160
+              Top = 138
+              Width = 132
               DataField = 'INTERNET'
               DataSource = KS_DS
               Font.Color = clWindowText
@@ -340,7 +336,6 @@ object AdressForm: TAdressForm
               Font.Quality = fqAntialiased
               ItemHeight = 13
               MaxLength = 0
-              OnClick = InternetBtnClick
               OnEnter = matchEnter
               OnExit = matchExit
               OnKeyDown = matchKeyDown
@@ -352,7 +347,7 @@ object AdressForm: TAdressForm
               Tag = 1
               Left = 72
               Height = 21
-              Top = 168
+              Top = 160
               Width = 160
               DataField = 'DIVERSES'
               DataSource = KS_DS
@@ -371,11 +366,358 @@ object AdressForm: TAdressForm
               OnKeyDown = matchKeyDown
               OnKeyPress = matchKeyPress
             end
+            object tele1Btn: TSpeedButton
+              Left = 209
+              Height = 22
+              Hint = 'anrufen (über Tapi)'
+              Top = 1
+              Width = 23
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'Microsoft Sans Serif'
+              Font.Quality = fqAntialiased
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                2000000000000004000064000000640000000000000000000000000080000000
+                8000000080000000800000008000000080000000800000008000000080000000
+                8000000080000000800000008000000080000000800000008000000080000000
+                8000000080000000800000008000000000FF000000FF000000FF000080000000
+                8000000080000000800000008000000080000000800000008000000080000000
+                800000008000000000FF000000FF808000FFFFFF00FF808000FF000000FF0000
+                00FF000080000000800000008000000080000000800000008000000080000000
+                00FF000000FF808000FFFFFF00FFFFFF00FFFFFF00FF808000FF808000FF8080
+                00FF000000FF000000FF00008000000080000000800000008000808000FF8080
+                00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFFFFFFC0C0C0FF808000FF8080
+                00FF808000FF808000FF000000FF000000FF0000800000008000808000FFFFFF
+                00FFFFFF00FFFFFF00FFFFFFFFFFFFFFFFFFC0C0C0FFFFFF00FFC0C0C0FF8080
+                00FF808000FF808000FF000000FF000000FF000000FF00008000808000FFFFFF
+                00FFFFFFFFFFFFFFFFFFC0C0C0FF808000FF808000FFC0C0C0FFFFFF00FFC0C0
+                C0FF808000FF000000FFFFFF00FFC0C0C0FF808000FF000000FF000080008080
+                00FFFFFF00FFC0C0C0FF808000FFC0C0C0FF808000FF808000FFC0C0C0FFFFFF
+                00FFC0C0C0FF000000FFFFFFFFFFFFFF00FF808000FF000000FF000080000000
+                8000808000FFFFFF00FFC0C0C0FF808000FFC0C0C0FF808000FFC0C0C0FFFFFF
+                00FFC0C0C0FFC0C0C0FFFFFF00FFC0C0C0FF808000FF000000FF000080000000
+                800000008000808000FFFFFF00FFC0C0C0FFC0C0C0FFFFFF00FFFFFF00FFFFFF
+                FFFF000000FF000000FFC0C0C0FFFFFF00FFC0C0C0FF808000FF000080000000
+                800000008000808000FF808000FFFFFFFFFFFFFF00FFFFFFFFFF000000FF8080
+                80FF000000FFFFFFFFFFFFFF00FFC0C0C0FF808000FF00008000000080000000
+                8000808000FF000000FF808000FF000000FFC0C0C0FF000000FF808080FF8080
+                80FFFFFF00FFFFFF00FFC0C0C0FF808000FF0000800000008000000080000000
+                8000808000FFC0C0C0FFFFFF00FF808080FF808080FF000000FFFFFF00FFFFFF
+                00FFC0C0C0FF808000FF808000FF000080000000800000008000000080000000
+                800000008000808000FFC0C0C0FFFFFF00FFFFFFFFFFFFFF00FFC0C0C0FF8080
+                00FF808000FF0000800000008000000080000000800000008000000080000000
+                80000000800000008000808000FF808000FF808000FF808000FF808000FF0000
+                8000000080000000800000008000000080000000800000008000000080000000
+                8000000080000000800000008000000080000000800000008000000080000000
+                8000000080000000800000008000000080000000800000008000
+              }
+              OnClick = tele1ButtonClick
+              ShowHint = True
+              ParentFont = False
+              ParentShowHint = False
+            end
+            object tele2Btn: TSpeedButton
+              Left = 209
+              Height = 22
+              Hint = 'anrufen (über Tapi)'
+              Top = 24
+              Width = 23
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'Microsoft Sans Serif'
+              Font.Quality = fqAntialiased
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                2000000000000004000064000000640000000000000000000000000080000000
+                8000000080000000800000008000000080000000800000008000000080000000
+                8000000080000000800000008000000080000000800000008000000080000000
+                8000000080000000800000008000000000FF000000FF000000FF000080000000
+                8000000080000000800000008000000080000000800000008000000080000000
+                800000008000000000FF000000FF808000FFFFFF00FF808000FF000000FF0000
+                00FF000080000000800000008000000080000000800000008000000080000000
+                00FF000000FF808000FFFFFF00FFFFFF00FFFFFF00FF808000FF808000FF8080
+                00FF000000FF000000FF00008000000080000000800000008000808000FF8080
+                00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFFFFFFC0C0C0FF808000FF8080
+                00FF808000FF808000FF000000FF000000FF0000800000008000808000FFFFFF
+                00FFFFFF00FFFFFF00FFFFFFFFFFFFFFFFFFC0C0C0FFFFFF00FFC0C0C0FF8080
+                00FF808000FF808000FF000000FF000000FF000000FF00008000808000FFFFFF
+                00FFFFFFFFFFFFFFFFFFC0C0C0FF808000FF808000FFC0C0C0FFFFFF00FFC0C0
+                C0FF808000FF000000FFFFFF00FFC0C0C0FF808000FF000000FF000080008080
+                00FFFFFF00FFC0C0C0FF808000FFC0C0C0FF808000FF808000FFC0C0C0FFFFFF
+                00FFC0C0C0FF000000FFFFFFFFFFFFFF00FF808000FF000000FF000080000000
+                8000808000FFFFFF00FFC0C0C0FF808000FFC0C0C0FF808000FFC0C0C0FFFFFF
+                00FFC0C0C0FFC0C0C0FFFFFF00FFC0C0C0FF808000FF000000FF000080000000
+                800000008000808000FFFFFF00FFC0C0C0FFC0C0C0FFFFFF00FFFFFF00FFFFFF
+                FFFF000000FF000000FFC0C0C0FFFFFF00FFC0C0C0FF808000FF000080000000
+                800000008000808000FF808000FFFFFFFFFFFFFF00FFFFFFFFFF000000FF8080
+                80FF000000FFFFFFFFFFFFFF00FFC0C0C0FF808000FF00008000000080000000
+                8000808000FF000000FF808000FF000000FFC0C0C0FF000000FF808080FF8080
+                80FFFFFF00FFFFFF00FFC0C0C0FF808000FF0000800000008000000080000000
+                8000808000FFC0C0C0FFFFFF00FF808080FF808080FF000000FFFFFF00FFFFFF
+                00FFC0C0C0FF808000FF808000FF000080000000800000008000000080000000
+                800000008000808000FFC0C0C0FFFFFF00FFFFFFFFFFFFFF00FFC0C0C0FF8080
+                00FF808000FF0000800000008000000080000000800000008000000080000000
+                80000000800000008000808000FF808000FF808000FF808000FF808000FF0000
+                8000000080000000800000008000000080000000800000008000000080000000
+                8000000080000000800000008000000080000000800000008000000080000000
+                8000000080000000800000008000000080000000800000008000
+              }
+              OnClick = tele1ButtonClick
+              ShowHint = True
+              ParentFont = False
+              ParentShowHint = False
+            end
+            object funkBtn: TSpeedButton
+              Left = 209
+              Height = 22
+              Hint = 'anrufen (über Tapi)'
+              Top = 71
+              Width = 23
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'Microsoft Sans Serif'
+              Font.Quality = fqAntialiased
+              Glyph.Data = {
+                36040000424D3604000000000000360000002800000010000000100000000100
+                2000000000000004000064000000640000000000000000000000000080000000
+                8000000080000000800000008000000080000000800000008000000080000000
+                8000000080000000800000008000000080000000800000008000000080000000
+                8000000080000000800000008000000000FF000000FF000000FF000080000000
+                8000000080000000800000008000000080000000800000008000000080000000
+                800000008000000000FF000000FF808000FFFFFF00FF808000FF000000FF0000
+                00FF000080000000800000008000000080000000800000008000000080000000
+                00FF000000FF808000FFFFFF00FFFFFF00FFFFFF00FF808000FF808000FF8080
+                00FF000000FF000000FF00008000000080000000800000008000808000FF8080
+                00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFFFFFFC0C0C0FF808000FF8080
+                00FF808000FF808000FF000000FF000000FF0000800000008000808000FFFFFF
+                00FFFFFF00FFFFFF00FFFFFFFFFFFFFFFFFFC0C0C0FFFFFF00FFC0C0C0FF8080
+                00FF808000FF808000FF000000FF000000FF000000FF00008000808000FFFFFF
+                00FFFFFFFFFFFFFFFFFFC0C0C0FF808000FF808000FFC0C0C0FFFFFF00FFC0C0
+                C0FF808000FF000000FFFFFF00FFC0C0C0FF808000FF000000FF000080008080
+                00FFFFFF00FFC0C0C0FF808000FFC0C0C0FF808000FF808000FFC0C0C0FFFFFF
+                00FFC0C0C0FF000000FFFFFFFFFFFFFF00FF808000FF000000FF000080000000
+                8000808000FFFFFF00FFC0C0C0FF808000FFC0C0C0FF808000FFC0C0C0FFFFFF
+                00FFC0C0C0FFC0C0C0FFFFFF00FFC0C0C0FF808000FF000000FF000080000000
+                800000008000808000FFFFFF00FFC0C0C0FFC0C0C0FFFFFF00FFFFFF00FFFFFF
+                FFFF000000FF000000FFC0C0C0FFFFFF00FFC0C0C0FF808000FF000080000000
+                800000008000808000FF808000FFFFFFFFFFFFFF00FFFFFFFFFF000000FF8080
+                80FF000000FFFFFFFFFFFFFF00FFC0C0C0FF808000FF00008000000080000000
+                8000808000FF000000FF808000FF000000FFC0C0C0FF000000FF808080FF8080
+                80FFFFFF00FFFFFF00FFC0C0C0FF808000FF0000800000008000000080000000
+                8000808000FFC0C0C0FFFFFF00FF808080FF808080FF000000FFFFFF00FFFFFF
+                00FFC0C0C0FF808000FF808000FF000080000000800000008000000080000000
+                800000008000808000FFC0C0C0FFFFFF00FFFFFFFFFFFFFF00FFC0C0C0FF8080
+                00FF808000FF0000800000008000000080000000800000008000000080000000
+                80000000800000008000808000FF808000FF808000FF808000FF808000FF0000
+                8000000080000000800000008000000080000000800000008000000080000000
+                8000000080000000800000008000000080000000800000008000000080000000
+                8000000080000000800000008000000080000000800000008000
+              }
+              OnClick = tele1ButtonClick
+              ShowHint = True
+              ParentFont = False
+              ParentShowHint = False
+            end
+            object emailBtn: TSpeedButton
+              Left = 209
+              Height = 22
+              Hint = 'neue EMail mit dieser Adresse erstellen'
+              Top = 93
+              Width = 23
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'Microsoft Sans Serif'
+              Font.Quality = fqAntialiased
+              Glyph.Data = {
+                BA040000424DBA04000000000000360000002800000011000000110000000100
+                20000000000084040000640000006400000000000000000000000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB00000000FF000000FF000000FF000000FF000000FF0000
+                00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+                00FF000000FF0000BB000000BB00000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF000000FF0000BB000000BB00000000FFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFBF0000FFBF0000FFBF0000FFBF0000FFBF0000FFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFF000000FF0000BB000000BB00000000FFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF0000BB000000BB00000000FFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFBF0000FFBF0000FFBF0000FFBF0000FFBF00
+                00FFBF0000FFFFFFFFFFFFFFFFFFFFFFFFFF000000FF0000BB000000BB000000
+                00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF0000BB000000
+                BB00000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFF0000BFFF0000BFFFFFFFFFFF000000FF0000
+                BB000000BB00000000FFFFFFFFFF000000FF000000FF000000FF000000FFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000BFFF0000BFFFFFFFFFFF0000
+                00FF0000BB000000BB00000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFF000000FF0000BB000000BB00000000FF000000FF000000FF000000FF0000
+                00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+                00FF000000FF000000FF0000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB00
+              }
+              OnClick = Email1BtnClick
+              ShowHint = True
+              ParentFont = False
+              ParentShowHint = False
+            end
+            object email2Btn: TSpeedButton
+              Left = 209
+              Height = 22
+              Hint = 'neue EMail mit dieser Adresse erstellen'
+              Top = 115
+              Width = 23
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'Microsoft Sans Serif'
+              Font.Quality = fqAntialiased
+              Glyph.Data = {
+                BA040000424DBA04000000000000360000002800000011000000110000000100
+                20000000000084040000640000006400000000000000000000000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB00000000FF000000FF000000FF000000FF000000FF0000
+                00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+                00FF000000FF0000BB000000BB00000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF000000FF0000BB000000BB00000000FFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFBF0000FFBF0000FFBF0000FFBF0000FFBF0000FFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFF000000FF0000BB000000BB00000000FFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF0000BB000000BB00000000FFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFBF0000FFBF0000FFBF0000FFBF0000FFBF00
+                00FFBF0000FFFFFFFFFFFFFFFFFFFFFFFFFF000000FF0000BB000000BB000000
+                00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF0000BB000000
+                BB00000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFF0000BFFF0000BFFFFFFFFFFF000000FF0000
+                BB000000BB00000000FFFFFFFFFF000000FF000000FF000000FF000000FFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000BFFF0000BFFFFFFFFFFF0000
+                00FF0000BB000000BB00000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFF000000FF0000BB000000BB00000000FF000000FF000000FF000000FF0000
+                00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+                00FF000000FF000000FF0000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB00
+              }
+              OnClick = Email2BtnClick
+              ShowHint = True
+              ParentFont = False
+              ParentShowHint = False
+            end
+            object internetBtn: TSpeedButton
+              Left = 209
+              Height = 22
+              Hint = 'Internetseite aufrufen'
+              Top = 138
+              Width = 23
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'Microsoft Sans Serif'
+              Font.Quality = fqAntialiased
+              Glyph.Data = {
+                36080000424D3608000000000000360000002800000020000000100000000100
+                2000000000000008000064000000640000000000000000000000985010009850
+                1000985010009850100098501000985010009850100098501000985010009850
+                1000985010009850100098501000985010009850100098501000985010009850
+                100098501000985010009850100098501000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF9850100098501000985010009850100098501000985010009850
+                1000985010009850100098501000800000FF800000FFFF0000FF800000FFFF00
+                00FF985010009850100098501000985010009850100098501000985010009850
+                10009850100098501000FFFFFFFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F
+                7FFF98501000FFFFFFFFFFFFFFFF985010009850100098501000985010009850
+                100098501000800000FFFF0000FF800000FF800000FF800000FFFF0000FF8000
+                00FF800000FF800000FF98501000985010009850100098501000985010009850
+                1000985010007F7F7FFF7F7F7FFF98501000FFFFFFFFFFFFFFFF985010009850
+                10007F7F7FFF7F7F7FFF98501000FFFFFFFF9850100098501000985010009850
+                1000800000FFFF0000FF800000FF008080FF008080FF800000FF800000FF8000
+                00FF800000FF800000FF800000FF985010009850100098501000985010009850
+                10007F7F7FFF98501000985010007F7F7FFF7F7F7FFFFFFFFFFF985010009850
+                100098501000985010007F7F7FFFFFFFFFFFFFFFFFFF98501000985010008000
+                00FFFF0000FF800000FFFF0000FF008080FF008080FF800000FFFF0000FF8000
+                00FFFF0000FF800000FF008080FF008080FF9850100098501000985010007F7F
+                7FFFFFFFFFFF98501000985010007F7F7FFF7F7F7FFFFFFFFFFFFFFFFFFF9850
+                100098501000985010007F7F7FFF7F7F7FFFFFFFFFFF98501000985010008000
+                00FFFF0000FFFF0000FFFF0000FF008080FF008080FF008080FF800000FF8000
+                00FF800000FF800000FF008080FF008080FF9850100098501000985010007F7F
+                7FFF9850100098501000985010007F7F7FFF7F7F7FFF7F7F7FFFFFFFFFFF9850
+                100098501000985010007F7F7FFF7F7F7FFF98501000FFFFFFFFFF0000FFFF00
+                00FFFF0000FFFF0000FFFF0000FF008080FF008080FF008080FFFF0000FFFF00
+                00FFFF0000FF800000FFFF0000FF800000FF800000FF985010007F7F7FFFFFFF
+                FFFF9850100098501000FFFFFFFF7F7F7FFF7F7F7FFF7F7F7FFFFFFFFFFF9850
+                1000985010009850100098501000985010007F7F7FFFFFFFFFFF800000FFFF00
+                00FFFF0000FF008080FF008080FF008080FF008080FF008080FFFF0000FFFF00
+                00FFFF0000FF800000FF800000FF800000FFFF0000FF985010007F7F7FFFFFFF
+                FFFF985010007F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFFFFFFFFFF9850
+                1000FFFFFFFF9850100098501000985010007F7F7FFFFFFFFFFFFF0000FF8000
+                00FF008080FF008080FF008080FF008080FF008080FF008080FFFF0000FF0080
+                80FFFF0000FF800000FFFF0000FFFF0000FFFF0000FF985010007F7F7FFFFFFF
+                FFFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFFFFFFFFFF7F7F
+                7FFFFFFFFFFFFFFFFFFF98501000985010007F7F7FFFFFFFFFFF800000FFFF00
+                00FFFF0000FF008080FF008080FF008080FF008080FF008080FF008080FF0080
+                80FF008080FFFF0000FF800000FFFF0000FF800000FF985010007F7F7FFFFFFF
+                FFFF985010007F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F
+                7FFF7F7F7FFFFFFFFFFF98501000985010007F7F7FFFFFFFFFFFFF0000FFFF00
+                00FFFF0000FF008080FF008080FFFF0000FFFF0000FF800000FF008080FF0080
+                80FF008080FFFF0000FFFF0000FF800000FFFF0000FF985010007F7F7FFF9850
+                1000FFFFFFFF7F7F7FFF7F7F7FFF9850100098501000FFFFFFFF7F7F7FFF7F7F
+                7FFF7F7F7FFFFFFFFFFFFFFFFFFF985010007F7F7FFF9850100098501000FF00
+                00FFFF0000FFFF0000FFFF0000FFFF0000FF008080FF008080FF008080FF0080
+                80FF008080FF008080FF800000FFFF0000FF9850100098501000985010007F7F
+                7FFFFFFFFFFF98501000FFFFFFFFFFFFFFFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F
+                7FFF7F7F7FFF7F7F7FFFFFFFFFFF7F7F7FFFFFFFFFFF98501000985010008000
+                00FFFF0000FF008080FF008080FF008080FF008080FF008080FF008080FF0080
+                80FF008080FF008080FFFF0000FFFF0000FF9850100098501000985010007F7F
+                7FFF985010007F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F
+                7FFF7F7F7FFF7F7F7FFFFFFFFFFF7F7F7FFF9850100098501000985010009850
+                1000008080FF008080FF008080FF008080FFFF0000FFFF0000FF008080FFFF00
+                00FF008080FF008080FFFF0000FF985010009850100098501000985010009850
+                10007F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF98501000985010007F7F7FFF9850
+                10007F7F7FFF7F7F7FFF7F7F7FFF985010009850100098501000985010009850
+                100098501000008080FF008080FFFF0000FFFF0000FF800000FFFF0000FF8000
+                00FFFF0000FFFF0000FF98501000985010009850100098501000985010009850
+                1000985010007F7F7FFF7F7F7FFF98501000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFF7F7F7FFF7F7F7FFF98501000985010009850100098501000985010009850
+                1000985010009850100098501000FF0000FF800000FFFF0000FFFF0000FFFF00
+                00FF985010009850100098501000985010009850100098501000985010009850
+                10009850100098501000985010007F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F
+                7FFF985010009850100098501000985010009850100098501000
+              }
+              NumGlyphs = 2
+              OnClick = InternetBtnClick
+              ShowHint = True
+              ParentFont = False
+              ParentShowHint = False
+            end
           end
           object BriefanredeGB: TGroupBox
             Left = 0
             Height = 49
-            Top = 216
+            Top = 208
             Width = 242
             Align = alTop
             Caption = 'Briefanrede'
@@ -420,7 +762,7 @@ object AdressForm: TAdressForm
           object DatumGB: TGroupBox
             Left = 0
             Height = 128
-            Top = 265
+            Top = 257
             Width = 242
             Align = alTop
             Caption = 'Daten'
@@ -596,12 +938,12 @@ object AdressForm: TAdressForm
           end
           object GroupBox1: TGroupBox
             Left = 0
-            Height = 121
-            Top = 393
+            Height = 129
+            Top = 385
             Width = 242
             Align = alClient
             Caption = 'Zahlungsbedingungen'
-            ClientHeight = 103
+            ClientHeight = 111
             ClientWidth = 238
             Font.Color = clWindowText
             Font.Height = -11
@@ -932,7 +1274,7 @@ object AdressForm: TAdressForm
             object Label24: TLabel
               Left = 8
               Height = 13
-              Top = 11
+              Top = 6
               Width = 80
               AutoSize = False
               Caption = 'Suchbegriff:'
@@ -946,7 +1288,7 @@ object AdressForm: TAdressForm
             object Label25: TLabel
               Left = 8
               Height = 13
-              Top = 33
+              Top = 28
               Width = 80
               AutoSize = False
               Caption = 'Kunden-Nr.:'
@@ -961,7 +1303,7 @@ object AdressForm: TAdressForm
               Tag = 1
               Left = 88
               Height = 21
-              Top = 3
+              Top = 2
               Width = 216
               DataField = 'MATCHCODE'
               DataSource = KS_DS
@@ -983,7 +1325,7 @@ object AdressForm: TAdressForm
             object KunNum1Edit: TDBEdit
               Left = 88
               Height = 21
-              Top = 25
+              Top = 24
               Width = 48
               DataField = 'KUNNUM1'
               DataSource = KS_DS
@@ -1004,7 +1346,7 @@ object AdressForm: TAdressForm
             object Label36: TLabel
               Left = 136
               Height = 13
-              Top = 33
+              Top = 28
               Width = 82
               Caption = 'Ku-Nr. vom Lief. :'
               Font.Color = clWindowText
@@ -1018,7 +1360,7 @@ object AdressForm: TAdressForm
               Tag = 1
               Left = 215
               Height = 21
-              Top = 25
+              Top = 24
               Width = 89
               DataField = 'KUNNUM2'
               DataSource = KS_DS
@@ -1620,7 +1962,7 @@ object AdressForm: TAdressForm
       object Zuweis_TS: TTabSheet
         Tag = 2
         Caption = 'Erweitert'
-        ClientHeight = 515
+        ClientHeight = 514
         ClientWidth = 558
         TabVisible = False
         object ErwTopPanel: TPanel
@@ -2633,6 +2975,10 @@ object AdressForm: TAdressForm
               Color = clWindow
               DataField = 'VERTRETER_ID'
               DataSource = KS_DS
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'Microsoft Sans Serif'
+              Font.Quality = fqAntialiased
               KeyField = 'VERTRETER_ID'
               ListField = 'NAME;VNAME'
               ListFieldIndex = 0
@@ -2642,6 +2988,7 @@ object AdressForm: TAdressForm
               OnExit = matchExit
               OnKeyDown = matchKeyDown
               OnKeyPress = matchKeyPress
+              ParentFont = False
               TabOrder = 10
             end
             object BRUTTO_CB: TDBCheckBox
@@ -2937,22 +3284,22 @@ object AdressForm: TAdressForm
         end
         object Panel7: TPanel
           Left = 0
-          Height = 155
+          Height = 154
           Top = 360
           Width = 558
           Align = alClient
           BevelOuter = bvNone
-          ClientHeight = 155
+          ClientHeight = 154
           ClientWidth = 558
           TabOrder = 3
           object CaoGroupBox10: TGroupBox
             Left = 0
-            Height = 155
+            Height = 154
             Top = 0
             Width = 558
             Align = alClient
             Caption = 'Lieferanschriften'
-            ClientHeight = 137
+            ClientHeight = 136
             ClientWidth = 554
             Font.Color = clWindowText
             Font.Height = -11
@@ -2963,7 +3310,7 @@ object AdressForm: TAdressForm
             TabOrder = 0
             object KunLiefAddrGrid: TDBGrid
               Left = 0
-              Height = 109
+              Height = 108
               Top = 0
               Width = 554
               Align = alClient
@@ -3019,7 +3366,7 @@ object AdressForm: TAdressForm
             object Panel12: TPanel
               Left = 0
               Height = 6
-              Top = 109
+              Top = 108
               Width = 554
               Align = alBottom
               BevelOuter = bvNone
@@ -3033,7 +3380,7 @@ object AdressForm: TAdressForm
             object ToolBar1: TToolBar
               Left = 0
               Height = 22
-              Top = 115
+              Top = 114
               Width = 554
               Align = alBottom
               AutoSize = True
@@ -3063,7 +3410,7 @@ object AdressForm: TAdressForm
               end
               object ToolButton4: TToolButton
                 Left = 88
-                Height = 5
+                Height = 22
                 Top = 0
                 Caption = 'ToolButton4'
                 Style = tbsDivider
@@ -3078,7 +3425,7 @@ object AdressForm: TAdressForm
               end
               object ToolButton6: TToolButton
                 Left = 180
-                Height = 5
+                Height = 22
                 Top = 0
                 Caption = 'ToolButton6'
                 Style = tbsDivider
@@ -3098,7 +3445,7 @@ object AdressForm: TAdressForm
       object ASP_TS: TTabSheet
         Tag = 3
         Caption = 'Ansprechpartner'
-        ClientHeight = 515
+        ClientHeight = 514
         ClientWidth = 558
         TabVisible = False
         object ASPTopPanel: TPanel
@@ -3273,7 +3620,7 @@ object AdressForm: TAdressForm
                 Height = 21
                 Hint = 'anrufen (über Tapi)'
                 Top = 8
-                Width = 192
+                Width = 165
                 DataField = 'TELEFON'
                 DataSource = APDS
                 Font.Color = clWindowText
@@ -3282,7 +3629,6 @@ object AdressForm: TAdressForm
                 Font.Quality = fqAntialiased
                 ItemHeight = 13
                 MaxLength = 0
-                OnClick = tele1ButtonClick
                 OnEnter = matchEnter
                 OnExit = matchExit
                 OnKeyDown = matchKeyDown
@@ -3297,8 +3643,8 @@ object AdressForm: TAdressForm
                 Left = 80
                 Height = 21
                 Hint = 'anrufen (über Tapi)'
-                Top = 32
-                Width = 192
+                Top = 31
+                Width = 165
                 Color = clWindow
                 DataField = 'TELEPRIVAT'
                 DataSource = APDS
@@ -3308,7 +3654,6 @@ object AdressForm: TAdressForm
                 Font.Quality = fqAntialiased
                 ItemHeight = 13
                 MaxLength = 0
-                OnClick = tele1ButtonClick
                 OnEnter = matchEnter
                 OnExit = matchExit
                 OnKeyDown = matchKeyDown
@@ -3324,7 +3669,7 @@ object AdressForm: TAdressForm
                 Height = 21
                 Hint = 'anrufen (über Tapi)'
                 Top = 80
-                Width = 192
+                Width = 165
                 Color = clWindow
                 DataField = 'MOBILFUNK'
                 DataSource = APDS
@@ -3346,11 +3691,11 @@ object AdressForm: TAdressForm
               end
               object APemail: TDBComboBox
                 Tag = 1
-                Left = 80
+                Left = 79
                 Height = 21
                 Hint = 'neue EMail mit dieser Adresse erstellen'
                 Top = 104
-                Width = 192
+                Width = 165
                 AutoSelect = False
                 Color = clWindow
                 DataField = 'EMAIL'
@@ -3361,7 +3706,6 @@ object AdressForm: TAdressForm
                 Font.Quality = fqAntialiased
                 ItemHeight = 13
                 MaxLength = 0
-                OnClick = AsPEMailLabClick
                 OnEnter = matchEnter
                 OnExit = matchExit
                 OnKeyDown = matchKeyDown
@@ -3377,7 +3721,7 @@ object AdressForm: TAdressForm
                 Height = 21
                 Hint = 'neue EMail mit dieser Adresse erstellen'
                 Top = 128
-                Width = 192
+                Width = 165
                 AutoSelect = False
                 Color = clWindow
                 DataField = 'EMAIL2'
@@ -3388,7 +3732,6 @@ object AdressForm: TAdressForm
                 Font.Quality = fqAntialiased
                 ItemHeight = 13
                 MaxLength = 0
-                OnClick = AsPEMailLab2Click
                 OnEnter = matchEnter
                 OnExit = matchEnter
                 OnKeyDown = matchKeyDown
@@ -3422,6 +3765,229 @@ object AdressForm: TAdressForm
                 TabOrder = 6
                 DataField = 'GEBDATUM'
                 DataSource = APDS
+              end
+              object APTelefonBtn: TSpeedButton
+                Left = 249
+                Height = 22
+                Top = 7
+                Width = 23
+                Glyph.Data = {
+                  36040000424D3604000000000000360000002800000010000000100000000100
+                  2000000000000004000064000000640000000000000000000000000080000000
+                  8000000080000000800000008000000080000000800000008000000080000000
+                  8000000080000000800000008000000080000000800000008000000080000000
+                  8000000080000000800000008000000000FF000000FF000000FF000080000000
+                  8000000080000000800000008000000080000000800000008000000080000000
+                  800000008000000000FF000000FF808000FFFFFF00FF808000FF000000FF0000
+                  00FF000080000000800000008000000080000000800000008000000080000000
+                  00FF000000FF808000FFFFFF00FFFFFF00FFFFFF00FF808000FF808000FF8080
+                  00FF000000FF000000FF00008000000080000000800000008000808000FF8080
+                  00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFFFFFFC0C0C0FF808000FF8080
+                  00FF808000FF808000FF000000FF000000FF0000800000008000808000FFFFFF
+                  00FFFFFF00FFFFFF00FFFFFFFFFFFFFFFFFFC0C0C0FFFFFF00FFC0C0C0FF8080
+                  00FF808000FF808000FF000000FF000000FF000000FF00008000808000FFFFFF
+                  00FFFFFFFFFFFFFFFFFFC0C0C0FF808000FF808000FFC0C0C0FFFFFF00FFC0C0
+                  C0FF808000FF000000FFFFFF00FFC0C0C0FF808000FF000000FF000080008080
+                  00FFFFFF00FFC0C0C0FF808000FFC0C0C0FF808000FF808000FFC0C0C0FFFFFF
+                  00FFC0C0C0FF000000FFFFFFFFFFFFFF00FF808000FF000000FF000080000000
+                  8000808000FFFFFF00FFC0C0C0FF808000FFC0C0C0FF808000FFC0C0C0FFFFFF
+                  00FFC0C0C0FFC0C0C0FFFFFF00FFC0C0C0FF808000FF000000FF000080000000
+                  800000008000808000FFFFFF00FFC0C0C0FFC0C0C0FFFFFF00FFFFFF00FFFFFF
+                  FFFF000000FF000000FFC0C0C0FFFFFF00FFC0C0C0FF808000FF000080000000
+                  800000008000808000FF808000FFFFFFFFFFFFFF00FFFFFFFFFF000000FF8080
+                  80FF000000FFFFFFFFFFFFFF00FFC0C0C0FF808000FF00008000000080000000
+                  8000808000FF000000FF808000FF000000FFC0C0C0FF000000FF808080FF8080
+                  80FFFFFF00FFFFFF00FFC0C0C0FF808000FF0000800000008000000080000000
+                  8000808000FFC0C0C0FFFFFF00FF808080FF808080FF000000FFFFFF00FFFFFF
+                  00FFC0C0C0FF808000FF808000FF000080000000800000008000000080000000
+                  800000008000808000FFC0C0C0FFFFFF00FFFFFFFFFFFFFF00FFC0C0C0FF8080
+                  00FF808000FF0000800000008000000080000000800000008000000080000000
+                  80000000800000008000808000FF808000FF808000FF808000FF808000FF0000
+                  8000000080000000800000008000000080000000800000008000000080000000
+                  8000000080000000800000008000000080000000800000008000000080000000
+                  8000000080000000800000008000000080000000800000008000
+                }
+                OnClick = tele1ButtonClick
+              end
+              object APTelPrivBtn: TSpeedButton
+                Left = 249
+                Height = 22
+                Top = 31
+                Width = 23
+                Glyph.Data = {
+                  36040000424D3604000000000000360000002800000010000000100000000100
+                  2000000000000004000064000000640000000000000000000000000080000000
+                  8000000080000000800000008000000080000000800000008000000080000000
+                  8000000080000000800000008000000080000000800000008000000080000000
+                  8000000080000000800000008000000000FF000000FF000000FF000080000000
+                  8000000080000000800000008000000080000000800000008000000080000000
+                  800000008000000000FF000000FF808000FFFFFF00FF808000FF000000FF0000
+                  00FF000080000000800000008000000080000000800000008000000080000000
+                  00FF000000FF808000FFFFFF00FFFFFF00FFFFFF00FF808000FF808000FF8080
+                  00FF000000FF000000FF00008000000080000000800000008000808000FF8080
+                  00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFFFFFFC0C0C0FF808000FF8080
+                  00FF808000FF808000FF000000FF000000FF0000800000008000808000FFFFFF
+                  00FFFFFF00FFFFFF00FFFFFFFFFFFFFFFFFFC0C0C0FFFFFF00FFC0C0C0FF8080
+                  00FF808000FF808000FF000000FF000000FF000000FF00008000808000FFFFFF
+                  00FFFFFFFFFFFFFFFFFFC0C0C0FF808000FF808000FFC0C0C0FFFFFF00FFC0C0
+                  C0FF808000FF000000FFFFFF00FFC0C0C0FF808000FF000000FF000080008080
+                  00FFFFFF00FFC0C0C0FF808000FFC0C0C0FF808000FF808000FFC0C0C0FFFFFF
+                  00FFC0C0C0FF000000FFFFFFFFFFFFFF00FF808000FF000000FF000080000000
+                  8000808000FFFFFF00FFC0C0C0FF808000FFC0C0C0FF808000FFC0C0C0FFFFFF
+                  00FFC0C0C0FFC0C0C0FFFFFF00FFC0C0C0FF808000FF000000FF000080000000
+                  800000008000808000FFFFFF00FFC0C0C0FFC0C0C0FFFFFF00FFFFFF00FFFFFF
+                  FFFF000000FF000000FFC0C0C0FFFFFF00FFC0C0C0FF808000FF000080000000
+                  800000008000808000FF808000FFFFFFFFFFFFFF00FFFFFFFFFF000000FF8080
+                  80FF000000FFFFFFFFFFFFFF00FFC0C0C0FF808000FF00008000000080000000
+                  8000808000FF000000FF808000FF000000FFC0C0C0FF000000FF808080FF8080
+                  80FFFFFF00FFFFFF00FFC0C0C0FF808000FF0000800000008000000080000000
+                  8000808000FFC0C0C0FFFFFF00FF808080FF808080FF000000FFFFFF00FFFFFF
+                  00FFC0C0C0FF808000FF808000FF000080000000800000008000000080000000
+                  800000008000808000FFC0C0C0FFFFFF00FFFFFFFFFFFFFF00FFC0C0C0FF8080
+                  00FF808000FF0000800000008000000080000000800000008000000080000000
+                  80000000800000008000808000FF808000FF808000FF808000FF808000FF0000
+                  8000000080000000800000008000000080000000800000008000000080000000
+                  8000000080000000800000008000000080000000800000008000000080000000
+                  8000000080000000800000008000000080000000800000008000
+                }
+                OnClick = tele1ButtonClick
+              end
+              object APMobilfunkBtn: TSpeedButton
+                Left = 249
+                Height = 22
+                Top = 79
+                Width = 23
+                Glyph.Data = {
+                  36040000424D3604000000000000360000002800000010000000100000000100
+                  2000000000000004000064000000640000000000000000000000000080000000
+                  8000000080000000800000008000000080000000800000008000000080000000
+                  8000000080000000800000008000000080000000800000008000000080000000
+                  8000000080000000800000008000000000FF000000FF000000FF000080000000
+                  8000000080000000800000008000000080000000800000008000000080000000
+                  800000008000000000FF000000FF808000FFFFFF00FF808000FF000000FF0000
+                  00FF000080000000800000008000000080000000800000008000000080000000
+                  00FF000000FF808000FFFFFF00FFFFFF00FFFFFF00FF808000FF808000FF8080
+                  00FF000000FF000000FF00008000000080000000800000008000808000FF8080
+                  00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFFFFFFC0C0C0FF808000FF8080
+                  00FF808000FF808000FF000000FF000000FF0000800000008000808000FFFFFF
+                  00FFFFFF00FFFFFF00FFFFFFFFFFFFFFFFFFC0C0C0FFFFFF00FFC0C0C0FF8080
+                  00FF808000FF808000FF000000FF000000FF000000FF00008000808000FFFFFF
+                  00FFFFFFFFFFFFFFFFFFC0C0C0FF808000FF808000FFC0C0C0FFFFFF00FFC0C0
+                  C0FF808000FF000000FFFFFF00FFC0C0C0FF808000FF000000FF000080008080
+                  00FFFFFF00FFC0C0C0FF808000FFC0C0C0FF808000FF808000FFC0C0C0FFFFFF
+                  00FFC0C0C0FF000000FFFFFFFFFFFFFF00FF808000FF000000FF000080000000
+                  8000808000FFFFFF00FFC0C0C0FF808000FFC0C0C0FF808000FFC0C0C0FFFFFF
+                  00FFC0C0C0FFC0C0C0FFFFFF00FFC0C0C0FF808000FF000000FF000080000000
+                  800000008000808000FFFFFF00FFC0C0C0FFC0C0C0FFFFFF00FFFFFF00FFFFFF
+                  FFFF000000FF000000FFC0C0C0FFFFFF00FFC0C0C0FF808000FF000080000000
+                  800000008000808000FF808000FFFFFFFFFFFFFF00FFFFFFFFFF000000FF8080
+                  80FF000000FFFFFFFFFFFFFF00FFC0C0C0FF808000FF00008000000080000000
+                  8000808000FF000000FF808000FF000000FFC0C0C0FF000000FF808080FF8080
+                  80FFFFFF00FFFFFF00FFC0C0C0FF808000FF0000800000008000000080000000
+                  8000808000FFC0C0C0FFFFFF00FF808080FF808080FF000000FFFFFF00FFFFFF
+                  00FFC0C0C0FF808000FF808000FF000080000000800000008000000080000000
+                  800000008000808000FFC0C0C0FFFFFF00FFFFFFFFFFFFFF00FFC0C0C0FF8080
+                  00FF808000FF0000800000008000000080000000800000008000000080000000
+                  80000000800000008000808000FF808000FF808000FF808000FF808000FF0000
+                  8000000080000000800000008000000080000000800000008000000080000000
+                  8000000080000000800000008000000080000000800000008000000080000000
+                  8000000080000000800000008000000080000000800000008000
+                }
+                OnClick = tele1ButtonClick
+              end
+              object APemailBtn: TSpeedButton
+                Left = 249
+                Height = 22
+                Top = 103
+                Width = 23
+                Glyph.Data = {
+                  BA040000424DBA04000000000000360000002800000011000000110000000100
+                  20000000000084040000640000006400000000000000000000000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB00000000FF000000FF000000FF000000FF000000FF0000
+                  00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+                  00FF000000FF0000BB000000BB00000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                  FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                  FFFFFFFFFFFF000000FF0000BB000000BB00000000FFFFFFFFFFFFFFFFFFFFFF
+                  FFFFFFFFFFFFBF0000FFBF0000FFBF0000FFBF0000FFBF0000FFFFFFFFFFFFFF
+                  FFFFFFFFFFFFFFFFFFFF000000FF0000BB000000BB00000000FFFFFFFFFFFFFF
+                  FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                  FFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF0000BB000000BB00000000FFFFFF
+                  FFFFFFFFFFFFFFFFFFFFFFFFFFFFBF0000FFBF0000FFBF0000FFBF0000FFBF00
+                  00FFBF0000FFFFFFFFFFFFFFFFFFFFFFFFFF000000FF0000BB000000BB000000
+                  00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                  FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF0000BB000000
+                  BB00000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                  FFFFFFFFFFFFFFFFFFFFFFFFFFFF0000BFFF0000BFFFFFFFFFFF000000FF0000
+                  BB000000BB00000000FFFFFFFFFF000000FF000000FF000000FF000000FFFFFF
+                  FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000BFFF0000BFFFFFFFFFFF0000
+                  00FF0000BB000000BB00000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                  FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                  FFFF000000FF0000BB000000BB00000000FF000000FF000000FF000000FF0000
+                  00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+                  00FF000000FF000000FF0000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB00
+                }
+                OnClick = AsPEMailLabClick
+              end
+              object APEmail2Btn: TSpeedButton
+                Left = 249
+                Height = 22
+                Top = 128
+                Width = 23
+                Glyph.Data = {
+                  BA040000424DBA04000000000000360000002800000011000000110000000100
+                  20000000000084040000640000006400000000000000000000000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB00000000FF000000FF000000FF000000FF000000FF0000
+                  00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+                  00FF000000FF0000BB000000BB00000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                  FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                  FFFFFFFFFFFF000000FF0000BB000000BB00000000FFFFFFFFFFFFFFFFFFFFFF
+                  FFFFFFFFFFFFBF0000FFBF0000FFBF0000FFBF0000FFBF0000FFFFFFFFFFFFFF
+                  FFFFFFFFFFFFFFFFFFFF000000FF0000BB000000BB00000000FFFFFFFFFFFFFF
+                  FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                  FFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF0000BB000000BB00000000FFFFFF
+                  FFFFFFFFFFFFFFFFFFFFFFFFFFFFBF0000FFBF0000FFBF0000FFBF0000FFBF00
+                  00FFBF0000FFFFFFFFFFFFFFFFFFFFFFFFFF000000FF0000BB000000BB000000
+                  00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                  FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF0000BB000000
+                  BB00000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                  FFFFFFFFFFFFFFFFFFFFFFFFFFFF0000BFFF0000BFFFFFFFFFFF000000FF0000
+                  BB000000BB00000000FFFFFFFFFF000000FF000000FF000000FF000000FFFFFF
+                  FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000BFFF0000BFFFFFFFFFFF0000
+                  00FF0000BB000000BB00000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                  FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                  FFFF000000FF0000BB000000BB00000000FF000000FF000000FF000000FF0000
+                  00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+                  00FF000000FF000000FF0000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB000000
+                  BB000000BB000000BB000000BB000000BB000000BB000000BB000000BB00
+                }
+                OnClick = AsPEMailLab2Click
               end
             end
             object CaoGroupBox9: TGroupBox
@@ -3770,7 +4336,7 @@ object AdressForm: TAdressForm
               Left = 72
               Height = 21
               Top = 32
-              Width = 199
+              Width = 197
               ButtonWidth = 17
               Color = clWindow
               ComboProps.ComboItems.Strings = (
@@ -3786,7 +4352,12 @@ object AdressForm: TAdressForm
               DataField = 'ANREDE'
               DataSource = APDS
               DialogStyle = vdsCombo
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'Microsoft Sans Serif'
+              Font.Quality = fqAntialiased
               MaxLength = 0
+              ParentFont = False
               TabOrder = 1
               OnEnter = matchEnter
               OnExit = matchExit
@@ -3797,12 +4368,12 @@ object AdressForm: TAdressForm
         end
         object CaoGroupBox3: TGroupBox
           Left = 0
-          Height = 199
+          Height = 198
           Top = 316
           Width = 558
           Align = alClient
           Caption = 'Liste der Ansprechpartner'
-          ClientHeight = 181
+          ClientHeight = 180
           ClientWidth = 554
           Font.Color = clWindowText
           Font.Height = -11
@@ -3813,7 +4384,7 @@ object AdressForm: TAdressForm
           TabOrder = 2
           object ASPGrid: TDBGrid
             Left = 0
-            Height = 181
+            Height = 180
             Top = 0
             Width = 554
             Align = alClient
@@ -3875,7 +4446,7 @@ object AdressForm: TAdressForm
       object KFZ_TS: TTabSheet
         Tag = 4
         Caption = 'KFZ'
-        ClientHeight = 515
+        ClientHeight = 514
         ClientWidth = 558
         TabVisible = False
         object KFZTopPanel: TPanel
@@ -3889,12 +4460,12 @@ object AdressForm: TAdressForm
         end
         object CaoGroupBox5: TGroupBox
           Left = 0
-          Height = 412
+          Height = 411
           Top = 80
           Width = 558
           Align = alClient
           Caption = 'Kundenfahrzeuge'
-          ClientHeight = 394
+          ClientHeight = 393
           ClientWidth = 554
           Font.Color = clWindowText
           Font.Height = -11
@@ -3905,7 +4476,7 @@ object AdressForm: TAdressForm
           TabOrder = 0
           object KFZGrid: TDBGrid
             Left = 0
-            Height = 394
+            Height = 393
             Top = 0
             Width = 554
             Align = alClient
@@ -3984,7 +4555,7 @@ object AdressForm: TAdressForm
         object StatusBar2: TStatusBar
           Left = 0
           Height = 23
-          Top = 492
+          Top = 491
           Width = 558
           Color = clBtnFace
           Font.Color = clBtnText
@@ -4016,7 +4587,7 @@ object AdressForm: TAdressForm
       object Link_TS: TTabSheet
         Tag = 5
         Caption = 'Dateien'
-        ClientHeight = 515
+        ClientHeight = 514
         ClientWidth = 558
         TabVisible = False
         object DateiTopPanel: TPanel
@@ -4033,12 +4604,12 @@ object AdressForm: TAdressForm
         end
         object CaoGroupBox11: TGroupBox
           Left = 0
-          Height = 435
+          Height = 434
           Top = 80
           Width = 558
           Align = alClient
           Caption = 'Datei-Link''s'
-          ClientHeight = 417
+          ClientHeight = 416
           ClientWidth = 554
           Font.Color = clWindowText
           Font.Height = -11
@@ -4049,7 +4620,7 @@ object AdressForm: TAdressForm
           TabOrder = 1
           object LinkPanel: TPanel
             Left = 0
-            Height = 417
+            Height = 416
             Top = 0
             Width = 554
             Align = alClient
@@ -4173,7 +4744,7 @@ object AdressForm: TAdressForm
             end
             object ToolButton3: TToolButton
               Left = 224
-              Height = 5
+              Height = 21
               Top = 2
               Caption = 'ToolButton3'
               Style = tbsDivider
@@ -4208,7 +4779,7 @@ object AdressForm: TAdressForm
             end
             object ToolButton5: TToolButton
               Left = 347
-              Height = 5
+              Height = 21
               Top = 2
               Caption = 'ToolButton5'
               Style = tbsDivider
@@ -4228,7 +4799,7 @@ object AdressForm: TAdressForm
             end
             object ToolButton7: TToolButton
               Left = 435
-              Height = 5
+              Height = 21
               Top = 2
               Caption = 'ToolButton7'
               Style = tbsDivider
@@ -4508,12 +5079,12 @@ object AdressForm: TAdressForm
       object Such_TS: TTabSheet
         Tag = 7
         Caption = 'Liste'
-        ClientHeight = 515
+        ClientHeight = 514
         ClientWidth = 558
         TabVisible = False
         object KunSuchGrid: TDBGrid
           Left = 0
-          Height = 515
+          Height = 514
           Top = 0
           Width = 558
           Align = alClient
@@ -5841,7 +6412,7 @@ object AdressForm: TAdressForm
       ReadOnly = False
       Required = False
     end
-    object KSQueryNET_SKONTO: TZDoubleField
+    object KSQueryNET_SKONTO: TFloatField
       FieldKind = fkData
       FieldName = 'NET_SKONTO'
       Index = 36
@@ -5884,7 +6455,7 @@ object AdressForm: TAdressForm
       Required = False
       Size = 5
     end
-    object KSQueryINFO: TZRawCLobField
+    object KSQueryINFO: TBlobField
       FieldKind = fkData
       FieldName = 'INFO'
       Index = 40
@@ -5892,10 +6463,8 @@ object AdressForm: TAdressForm
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      BlobType = ftMemo
-      Transliterate = False
     end
-    object KSQueryGRABATT: TZDoubleField
+    object KSQueryGRABATT: TFloatField
       DisplayLabel = 'Rab.'
       FieldKind = fkData
       FieldName = 'GRABATT'
@@ -5907,7 +6476,7 @@ object AdressForm: TAdressForm
       DisplayFormat = '0.0%'
       EditFormat = '0.0'
     end
-    object KSQueryKUN_KRDLIMIT: TZDoubleField
+    object KSQueryKUN_KRDLIMIT: TFloatField
       DisplayLabel = 'Kreditlim.'
       FieldKind = fkData
       FieldName = 'KUN_KRDLIMIT'
@@ -6041,8 +6610,7 @@ object AdressForm: TAdressForm
       DisplayFormat = 'Kunde seit'
       InvalidDisplayText = 'NAD'
     end
-    object KSQueryBRUTTO_FLAG: TZRawStringField
-      DisplayWidth = 5
+    object KSQueryBRUTTO_FLAG: TBooleanField
       FieldKind = fkData
       FieldName = 'BRUTTO_FLAG'
       Index = 54
@@ -6050,9 +6618,9 @@ object AdressForm: TAdressForm
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
-      Size = 5
+      DisplayValues = 'True;False'
     end
-    object KSQueryMWST_FREI_FLAG: TZRawStringField
+    object KSQueryMWST_FREI_FLAG: TBooleanField
       FieldKind = fkData
       FieldName = 'MWST_FREI_FLAG'
       Index = 55
@@ -6060,7 +6628,7 @@ object AdressForm: TAdressForm
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
-      Size = 5
+      DisplayValues = 'True;False'
     end
     object KSQueryUST_NUM: TZRawStringField
       FieldKind = fkData
@@ -6092,7 +6660,7 @@ object AdressForm: TAdressForm
       Required = False
       DisplayFormat = '0;-;-'
     end
-    object KSQueryPROVIS_PROZ: TZDoubleField
+    object KSQueryPROVIS_PROZ: TFloatField
       DisplayLabel = 'Provision'
       DisplayWidth = 5
       FieldKind = fkData
@@ -6104,7 +6672,6 @@ object AdressForm: TAdressForm
       Required = True
       DisplayFormat = '0.00" %"'
       EditFormat = '0.00'
-      Precision = 5
     end
     object KSQuerySHOP_ID: TZShortIntField
       FieldKind = fkData
@@ -6142,8 +6709,7 @@ object AdressForm: TAdressForm
       ReadOnly = False
       Required = True
     end
-    object KSQuerySHOP_DEL_FLAG: TZRawStringField
-      DisplayWidth = 5
+    object KSQuerySHOP_DEL_FLAG: TBooleanField
       FieldKind = fkData
       FieldName = 'SHOP_DEL_FLAG'
       Index = 64
@@ -6151,7 +6717,7 @@ object AdressForm: TAdressForm
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
-      Size = 5
+      DisplayValues = 'True;False'
     end
   end
   object AddrUpdSQL: TZUpdateSQL
