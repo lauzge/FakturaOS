@@ -3410,7 +3410,7 @@ object AdressForm: TAdressForm
               end
               object ToolButton4: TToolButton
                 Left = 88
-                Height = 22
+                Height = 5
                 Top = 0
                 Caption = 'ToolButton4'
                 Style = tbsDivider
@@ -3425,7 +3425,7 @@ object AdressForm: TAdressForm
               end
               object ToolButton6: TToolButton
                 Left = 180
-                Height = 22
+                Height = 5
                 Top = 0
                 Caption = 'ToolButton6'
                 Style = tbsDivider
@@ -4744,7 +4744,7 @@ object AdressForm: TAdressForm
             end
             object ToolButton3: TToolButton
               Left = 224
-              Height = 21
+              Height = 5
               Top = 2
               Caption = 'ToolButton3'
               Style = tbsDivider
@@ -4779,7 +4779,7 @@ object AdressForm: TAdressForm
             end
             object ToolButton5: TToolButton
               Left = 347
-              Height = 21
+              Height = 5
               Top = 2
               Caption = 'ToolButton5'
               Style = tbsDivider
@@ -4799,7 +4799,7 @@ object AdressForm: TAdressForm
             end
             object ToolButton7: TToolButton
               Left = 435
-              Height = 21
+              Height = 5
               Top = 2
               Caption = 'ToolButton7'
               Style = tbsDivider
@@ -6876,7 +6876,7 @@ object AdressForm: TAdressForm
       Required = True
       Size = 40
     end
-    object KunLiefTabINFO: TZRawCLobField
+    object KunLiefTabINFO: TMemoField
       FieldKind = fkData
       FieldName = 'INFO'
       Index = 10
@@ -6885,7 +6885,6 @@ object AdressForm: TAdressForm
       ReadOnly = False
       Required = False
       BlobType = ftMemo
-      Transliterate = False
     end
     object KunLiefTabNAME3: TZRawStringField
       FieldKind = fkData
@@ -7269,7 +7268,7 @@ object AdressForm: TAdressForm
       Required = False
       Visible = False
     end
-    object JourTabNSUMME: TZDoubleField
+    object JourTabNSUMME: TFloatField
       DisplayLabel = 'Netto'
       DisplayWidth = 12
       FieldKind = fkData
@@ -7281,7 +7280,7 @@ object AdressForm: TAdressForm
       Required = False
       DisplayFormat = ',###,##0.00 '
     end
-    object JourTabMSUMME: TZDoubleField
+    object JourTabMSUMME: TFloatField
       DisplayLabel = 'MwSt'
       DisplayWidth = 12
       FieldKind = fkData
@@ -7293,8 +7292,8 @@ object AdressForm: TAdressForm
       Required = False
       DisplayFormat = ',###,##0.00 '
     end
-    object JourTabBSUMME: TZDoubleField
-      DefaultExpression = ',###,##0.00 '
+    object JourTabBSUMME: TFloatField
+      DisplayLabel = 'Brutto'
       DisplayWidth = 12
       FieldKind = fkData
       FieldName = 'BSUMME'
@@ -7303,9 +7302,9 @@ object AdressForm: TAdressForm
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = 'Brutto'
+      DisplayFormat = ',###,##0.00 '
     end
-    object JourTabIST_BETRAG: TZDoubleField
+    object JourTabIST_BETRAG: TFloatField
       DisplayLabel = 'gezahlt'
       DisplayWidth = 14
       FieldKind = fkData
@@ -7374,7 +7373,7 @@ object AdressForm: TAdressForm
       Required = False
       Size = 100
     end
-    object JourTabMWST_0: TZDoubleField
+    object JourTabMWST_0: TFloatField
       FieldKind = fkData
       FieldName = 'MWST_0'
       Index = 20
@@ -7383,7 +7382,7 @@ object AdressForm: TAdressForm
       ReadOnly = False
       Required = False
     end
-    object JourTabMWST_1: TZDoubleField
+    object JourTabMWST_1: TFloatField
       FieldKind = fkData
       FieldName = 'MWST_1'
       Index = 21
@@ -7392,7 +7391,7 @@ object AdressForm: TAdressForm
       ReadOnly = False
       Required = False
     end
-    object JourTabMWST_2: TZDoubleField
+    object JourTabMWST_2: TFloatField
       FieldKind = fkData
       FieldName = 'MWST_2'
       Index = 22
@@ -7401,7 +7400,7 @@ object AdressForm: TAdressForm
       ReadOnly = False
       Required = False
     end
-    object JourTabMWST_3: TZDoubleField
+    object JourTabMWST_3: TFloatField
       FieldKind = fkData
       FieldName = 'MWST_3'
       Index = 23
@@ -7515,7 +7514,7 @@ object AdressForm: TAdressForm
       ReadOnly = False
       Required = False
     end
-    object JPosTabMENGE: TZDoubleField
+    object JPosTabMENGE: TFloatField
       DisplayLabel = 'Menge'
       DisplayWidth = 8
       FieldKind = fkData
@@ -7527,7 +7526,7 @@ object AdressForm: TAdressForm
       Required = False
       DisplayFormat = ',###,##0.0;-,###,##0.0; '
     end
-    object JPosTabEPREIS: TZDoubleField
+    object JPosTabEPREIS: TFloatField
       DisplayLabel = 'E-Preis'
       DisplayWidth = 15
       FieldKind = fkData
@@ -7539,7 +7538,7 @@ object AdressForm: TAdressForm
       Required = False
       DisplayFormat = ',###,##0.00 "DM";-,###,##0.00 "DM"; '
     end
-    object JPosTabRABATT: TZDoubleField
+    object JPosTabRABATT: TFloatField
       DisplayLabel = 'Rabatt'
       DisplayWidth = 7
       FieldKind = fkData
@@ -7561,7 +7560,7 @@ object AdressForm: TAdressForm
       Required = False
       DisplayFormat = '0"%";0"%"; '
     end
-    object JPosTabBEZEICHNUNG: TZRawCLobField
+    object JPosTabBEZEICHNUNG: TMemoField
       FieldKind = fkData
       FieldName = 'BEZEICHNUNG'
       Index = 12
@@ -7570,7 +7569,6 @@ object AdressForm: TAdressForm
       ReadOnly = False
       Required = False
       BlobType = ftMemo
-      Transliterate = False
     end
     object JPosTabSTEUER_CODE: TZShortIntField
       FieldKind = fkData

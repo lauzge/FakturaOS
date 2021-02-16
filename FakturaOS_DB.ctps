@@ -38,9 +38,8 @@
         <ComponentName Value="DM1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="1756"/>
+        <TopLine Value="1755"/>
         <CursorPos X="25" Y="1615"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
@@ -259,6 +258,7 @@
         <ComponentName Value="AdressForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <TopLine Value="2544"/>
         <CursorPos X="5" Y="2554"/>
@@ -698,7 +698,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="19"/>
         <CursorPos Y="40"/>
-        <UsageCount Value="185"/>
+        <UsageCount Value="186"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -711,7 +711,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="320"/>
         <CursorPos X="6" Y="338"/>
-        <UsageCount Value="55"/>
+        <UsageCount Value="56"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -724,7 +724,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="668"/>
         <CursorPos Y="677"/>
-        <UsageCount Value="44"/>
+        <UsageCount Value="45"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -737,7 +737,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="691"/>
         <CursorPos X="57" Y="708"/>
-        <UsageCount Value="34"/>
+        <UsageCount Value="35"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -874,64 +874,16 @@
     </Units>
     <JumpHistory HistoryIndex="29">
       <Position>
-        <Filename Value="src\CAO_DM.pas"/>
-        <Caret Line="5520" TopLine="5487"/>
+        <Filename Value="src\CAO_Kunde.pas"/>
+        <Caret Line="2554" Column="5" TopLine="2544"/>
       </Position>
       <Position>
         <Filename Value="src\CAO_Kunde.pas"/>
-        <Caret Line="755"/>
+        <Caret Line="2553" Column="5" TopLine="2543"/>
       </Position>
       <Position>
         <Filename Value="src\CAO_Kunde.pas"/>
-        <Caret Line="2542" Column="3" TopLine="2533"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_Kunde.pas"/>
-        <Caret Line="2543" Column="3" TopLine="2534"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_Kunde.pas"/>
-        <Caret Line="2542" Column="3" TopLine="2533"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_Kunde.pas"/>
-        <Caret Line="2543" Column="3" TopLine="2534"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_Kunde.pas"/>
-        <Caret Line="2544" Column="3" TopLine="2535"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_Kunde.pas"/>
-        <Caret Line="2545" Column="3" TopLine="2536"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_Kunde.pas"/>
-        <Caret Line="2546" Column="3" TopLine="2537"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_Kunde.pas"/>
-        <Caret Line="2547" Column="3" TopLine="2538"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_Kunde.pas"/>
-        <Caret Line="2548" Column="3" TopLine="2539"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_Kunde.pas"/>
-        <Caret Line="2549" Column="3" TopLine="2540"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_Kunde.pas"/>
-        <Caret Line="2550" Column="3" TopLine="2541"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_Kunde.pas"/>
-        <Caret Line="2551" Column="3" TopLine="2542"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_Kunde.pas"/>
-        <Caret Line="2552" Column="3" TopLine="2543"/>
+        <Caret Line="2554" Column="5" TopLine="2544"/>
       </Position>
       <Position>
         <Filename Value="src\CAO_Kunde.pas"/>
@@ -948,6 +900,54 @@
       <Position>
         <Filename Value="src\CAO_Kunde.pas"/>
         <Caret Line="2554" Column="5" TopLine="2544"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_Kunde.pas"/>
+        <Caret Line="2553" Column="5" TopLine="2543"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_Kunde.pas"/>
+        <Caret Line="2554" Column="5" TopLine="2544"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_Kunde.pas"/>
+        <Caret Line="2553" Column="5" TopLine="2543"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_Kunde.pas"/>
+        <Caret Line="2554" Column="5" TopLine="2544"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_Kunde.pas"/>
+        <Caret Line="2553" Column="5" TopLine="2543"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_Kunde.pas"/>
+        <Caret Line="2554" Column="5" TopLine="2544"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_Kunde.pas"/>
+        <Caret Line="2553" Column="5" TopLine="2543"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_Kunde.pas"/>
+        <Caret Line="2552" Column="5" TopLine="2542"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_Kunde.pas"/>
+        <Caret Line="2551" Column="5" TopLine="2541"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_Kunde.pas"/>
+        <Caret Line="2550" Column="5" TopLine="2540"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_Kunde.pas"/>
+        <Caret Line="2551" Column="5" TopLine="2541"/>
+      </Position>
+      <Position>
+        <Filename Value="src\CAO_Kunde.pas"/>
+        <Caret Line="2552" Column="5" TopLine="2542"/>
       </Position>
       <Position>
         <Filename Value="src\CAO_Kunde.pas"/>
