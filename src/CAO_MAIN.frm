@@ -6,7 +6,7 @@ object MainForm: TMainForm
   HorzScrollBar.Page = 105
   VertScrollBar.Page = 265
   AutoScroll = True
-  Caption = 'CAO-Faktura'
+  Caption = 'FakturaOS'
   ClientHeight = 670
   ClientWidth = 910
   Color = clBtnFace
