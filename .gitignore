@@ -34,3 +34,12 @@ lib/x86_64-win64/FakturaOS_DB.res
 lib/x86_64-win64/libimpCAO_TOOL1.a
 lib/x86_64-win64/msxml2_tlb.rsj
 lib/x86_64-win64/*.frm
+BACKUP/*.*
+BACKUP/Faktura/*.*
+DTA/*.*
+EXPORT/*.*
+LOG/*.*
+TMP/*.*
+DLLs/*.*
+DLLs/32bit/*.*
+DLLs/64bit/*.*

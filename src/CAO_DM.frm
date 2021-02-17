@@ -11,6 +11,7 @@ object DM1: TDM1
     Properties.Strings = (
       'RawStringEncoding=DB_CP'
     )
+    Connected = True
     HostName = 'suse152'
     Port = 3306
     Database = 'CAOFaktura'
@@ -121,7 +122,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object RegTabVAL_DOUBLE: TZDoubleField
+    object RegTabVAL_DOUBLE: TFloatField
       FieldKind = fkData
       FieldName = 'VAL_DOUBLE'
       Index = 7
@@ -129,9 +130,8 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Precision = 22
     end
-    object RegTabVAL_BLOB: TZRawCLobField
+    object RegTabVAL_BLOB: TBlobField
       FieldKind = fkData
       FieldName = 'VAL_BLOB'
       Index = 8
@@ -139,8 +139,6 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      BlobType = ftMemo
-      Transliterate = False
     end
     object RegTabVAL_BIN: TZBlobField
       FieldKind = fkData
@@ -3707,7 +3705,7 @@ object DM1: TDM1
       Required = False
       Size = 30
     end
-    object WhrungTabFAKTOR: TZDoubleField
+    object WhrungTabFAKTOR: TFloatField
       FieldKind = fkData
       FieldName = 'FAKTOR'
       Index = 2
@@ -3838,7 +3836,7 @@ object DM1: TDM1
     Params = <>
     Left = 152
     Top = 224
-    object ZahlartTabZAHL_ID: TZDoubleField
+    object ZahlartTabZAHL_ID: TFloatField
       FieldKind = fkData
       FieldName = 'ZAHL_ID'
       Index = 0
@@ -3847,7 +3845,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object ZahlartTabSKONTO_PROZ: TZDoubleField
+    object ZahlartTabSKONTO_PROZ: TFloatField
       FieldKind = fkData
       FieldName = 'SKONTO_PROZ'
       Index = 1
@@ -3877,8 +3875,10 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
+      EditFormat = '0'
     end
     object ZahlartTabLANGBEZ: TZRawStringField
+      DisplayWidth = 100
       FieldKind = fkData
       FieldName = 'LANGBEZ'
       Index = 4
@@ -3888,7 +3888,7 @@ object DM1: TDM1
       Required = False
       Size = 255
     end
-    object ZahlartTabTEXT: TZRawCLobField
+    object ZahlartTabTEXT: TMemoField
       FieldKind = fkData
       FieldName = 'TEXT'
       Index = 5
@@ -3923,7 +3923,7 @@ object DM1: TDM1
       Required = True
       Size = 100
     end
-    object ShopOrderStatusTabTEXT: TZRawCLobField
+    object ShopOrderStatusTabTEXT: TMemoField
       FieldKind = fkData
       FieldName = 'TEXT'
       Index = 1
@@ -4843,7 +4843,7 @@ object DM1: TDM1
       Required = False
       Size = 100
     end
-    object KGRTabSQL_STATEMENT: TZRawCLobField
+    object KGRTabSQL_STATEMENT: TMemoField
       FieldKind = fkData
       FieldName = 'SQL_STATEMENT'
       Index = 2
@@ -4913,7 +4913,7 @@ object DM1: TDM1
       Required = False
       Size = 250
     end
-    object WgrTabBESCHREIBUNG: TZRawCLobField
+    object WgrTabBESCHREIBUNG: TMemoField
       FieldKind = fkData
       FieldName = 'BESCHREIBUNG'
       Index = 3
@@ -4948,7 +4948,7 @@ object DM1: TDM1
       DisplayFormat = '00000;-;-'
       EditFormat = '0'
     end
-    object WgrTabVORGABEN: TZRawCLobField
+    object WgrTabVORGABEN: TMemoField
       FieldKind = fkData
       FieldName = 'VORGABEN'
       Index = 6
@@ -4969,7 +4969,7 @@ object DM1: TDM1
       Required = False
       MaxValue = 3
     end
-    object WgrTabVK1_FAKTOR: TZDoubleField
+    object WgrTabVK1_FAKTOR: TFloatField
       FieldKind = fkData
       FieldName = 'VK1_FAKTOR'
       Index = 8
@@ -4981,7 +4981,7 @@ object DM1: TDM1
       EditFormat = '0.00000'
       MaxValue = 99
     end
-    object WgrTabVK2_FAKTOR: TZDoubleField
+    object WgrTabVK2_FAKTOR: TFloatField
       FieldKind = fkData
       FieldName = 'VK2_FAKTOR'
       Index = 9
@@ -4993,7 +4993,7 @@ object DM1: TDM1
       EditFormat = '0.00000'
       MaxValue = 99
     end
-    object WgrTabVK3_FAKTOR: TZDoubleField
+    object WgrTabVK3_FAKTOR: TFloatField
       FieldKind = fkData
       FieldName = 'VK3_FAKTOR'
       Index = 10
@@ -5005,7 +5005,7 @@ object DM1: TDM1
       EditFormat = '0.00000'
       MaxValue = 99
     end
-    object WgrTabVK4_FAKTOR: TZDoubleField
+    object WgrTabVK4_FAKTOR: TFloatField
       FieldKind = fkData
       FieldName = 'VK4_FAKTOR'
       Index = 11
@@ -5017,7 +5017,7 @@ object DM1: TDM1
       EditFormat = '0.00000'
       MaxValue = 99
     end
-    object WgrTabVK5_FAKTOR: TZDoubleField
+    object WgrTabVK5_FAKTOR: TFloatField
       FieldKind = fkData
       FieldName = 'VK5_FAKTOR'
       Index = 12
@@ -5118,7 +5118,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = True
     end
-    object KunRabGrpRABATT1: TZDoubleField
+    object KunRabGrpRABATT1: TFloatField
       FieldKind = fkData
       FieldName = 'RABATT1'
       Index = 4
@@ -5126,9 +5126,8 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
-      Precision = 6
     end
-    object KunRabGrpRABATT2: TZDoubleField
+    object KunRabGrpRABATT2: TFloatField
       FieldKind = fkData
       FieldName = 'RABATT2'
       Index = 5
@@ -5136,9 +5135,8 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
-      Precision = 6
     end
-    object KunRabGrpRABATT3: TZDoubleField
+    object KunRabGrpRABATT3: TFloatField
       FieldKind = fkData
       FieldName = 'RABATT3'
       Index = 6
@@ -5146,7 +5144,6 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
-      Precision = 6
     end
     object KunRabGrpADDR_ID: TZIntegerField
       FieldKind = fkData
@@ -5156,16 +5153,6 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
-    end
-    object KunRabGrpBESCHREIBUNG: TZRawStringField
-      FieldKind = fkData
-      FieldName = 'BESCHREIBUNG'
-      Index = 8
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      Size = 250
     end
   end
   object KasBuch: TZQuery
@@ -5226,16 +5213,16 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object KasBuchZU_ABGANG: TZDoubleField
+    object KasBuchZU_ABGANG: TFloatField
       FieldKind = fkData
       FieldName = 'ZU_ABGANG'
       Index = 4
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
+      Required = False
     end
-    object KasBuchBTXT: TZRawCLobField
+    object KasBuchBTXT: TMemoField
       FieldKind = fkData
       FieldName = 'BTXT'
       Index = 5
@@ -5265,7 +5252,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object KasBuchSKONTO: TZDoubleField
+    object KasBuchSKONTO: TFloatField
       FieldKind = fkData
       FieldName = 'SKONTO'
       Index = 8
@@ -5322,7 +5309,8 @@ object DM1: TDM1
       ReadOnly = False
       Required = True
     end
-    object LiefRabGrpRABATT1: TZDoubleField
+    object LiefRabGrpRABATT1: TFloatField
+      DisplayWidth = 5
       FieldKind = fkData
       FieldName = 'RABATT1'
       Index = 4
@@ -5330,9 +5318,10 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
-      Precision = 6
+      DisplayFormat = '0"%"'
     end
-    object LiefRabGrpRABATT2: TZDoubleField
+    object LiefRabGrpRABATT2: TFloatField
+      DisplayWidth = 5
       FieldKind = fkData
       FieldName = 'RABATT2'
       Index = 5
@@ -5340,9 +5329,10 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
-      Precision = 6
+      DisplayFormat = '0"%"'
     end
-    object LiefRabGrpRABATT3: TZDoubleField
+    object LiefRabGrpRABATT3: TFloatField
+      DisplayWidth = 5
       FieldKind = fkData
       FieldName = 'RABATT3'
       Index = 6
@@ -5350,7 +5340,7 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
-      Precision = 6
+      DisplayFormat = '0"%"'
     end
     object LiefRabGrpADDR_ID: TZIntegerField
       FieldKind = fkData
@@ -5362,6 +5352,7 @@ object DM1: TDM1
       Required = True
     end
     object LiefRabGrpBESCHREIBUNG: TZRawStringField
+      DisplayWidth = 52
       FieldKind = fkData
       FieldName = 'BESCHREIBUNG'
       Index = 8
@@ -5369,7 +5360,7 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Size = 250
+      Size = 100
     end
   end
   object HerstellerTab: TZQuery
@@ -5417,10 +5408,66 @@ object DM1: TDM1
         ParamType = ptInput
         Value = 2591
       end>
+    object JourTabREC_ID: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'REC_ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object JourTabQUELLE: TZShortIntField
+      FieldKind = fkData
+      FieldName = 'QUELLE'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object JourTabVRENUM: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'VRENUM'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object JourTabRDATUM: TZDateField
+      FieldKind = fkData
+      FieldName = 'RDATUM'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      InvalidDisplayText = 'NAD'
+    end
+    object JourTabKUN_NAME1: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'KUN_NAME1'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+    object JourTabADDR_ID: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'ADDR_ID'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
     object JourTabLIEF_ADDR_ID: TZIntegerField
       FieldKind = fkData
       FieldName = 'LIEF_ADDR_ID'
-      Index = 0
+      Index = 6
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5429,55 +5476,52 @@ object DM1: TDM1
     object JourTabKFZ_ID: TZIntegerField
       FieldKind = fkData
       FieldName = 'KFZ_ID'
-      Index = 1
+      Index = 7
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
     end
-    object JourTabTERM_ID: TZCardinalField
+    object JourTabKM_STAND: TZIntegerField
       FieldKind = fkData
-      FieldName = 'TERM_ID'
-      Index = 2
+      FieldName = 'KM_STAND'
+      Index = 8
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
+      Required = False
     end
-    object JourTabNSUMME: TZDoubleField
+    object JourTabNSUMME: TFloatField
       FieldKind = fkData
       FieldName = 'NSUMME'
-      Index = 3
+      Index = 9
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Precision = 10
+      Required = False
     end
-    object JourTabMSUMME: TZDoubleField
+    object JourTabMSUMME: TFloatField
       FieldKind = fkData
       FieldName = 'MSUMME'
-      Index = 4
+      Index = 10
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Precision = 10
+      Required = False
     end
-    object JourTabBSUMME: TZDoubleField
+    object JourTabBSUMME: TFloatField
       FieldKind = fkData
       FieldName = 'BSUMME'
-      Index = 5
+      Index = 11
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Precision = 10
+      Required = False
     end
     object JourTabSTADIUM: TZShortIntField
       FieldKind = fkData
       FieldName = 'STADIUM'
-      Index = 6
+      Index = 12
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5486,7 +5530,7 @@ object DM1: TDM1
     object JourTabPROJEKT: TZRawStringField
       FieldKind = fkData
       FieldName = 'PROJEKT'
-      Index = 7
+      Index = 13
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5496,7 +5540,7 @@ object DM1: TDM1
     object JourTabORGNUM: TZRawStringField
       FieldKind = fkData
       FieldName = 'ORGNUM'
-      Index = 8
+      Index = 14
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5505,7 +5549,7 @@ object DM1: TDM1
     object JourTabWAEHRUNG: TZRawStringField
       FieldKind = fkData
       FieldName = 'WAEHRUNG'
-      Index = 9
+      Index = 15
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5515,7 +5559,7 @@ object DM1: TDM1
     object JourTabZAHLART: TZShortIntField
       FieldKind = fkData
       FieldName = 'ZAHLART'
-      Index = 10
+      Index = 16
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5524,26 +5568,25 @@ object DM1: TDM1
     object JourTabSOLL_STAGE: TZShortIntField
       FieldKind = fkData
       FieldName = 'SOLL_STAGE'
-      Index = 11
+      Index = 17
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
     end
-    object JourTabSOLL_SKONTO: TZDoubleField
+    object JourTabSOLL_SKONTO: TFloatField
       FieldKind = fkData
       FieldName = 'SOLL_SKONTO'
-      Index = 12
+      Index = 18
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Precision = 5
+      Required = False
     end
     object JourTabSOLL_NTAGE: TZShortIntField
       FieldKind = fkData
       FieldName = 'SOLL_NTAGE'
-      Index = 13
+      Index = 19
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5552,56 +5595,52 @@ object DM1: TDM1
     object JourTabSOLL_RATEN: TZShortIntField
       FieldKind = fkData
       FieldName = 'SOLL_RATEN'
-      Index = 14
+      Index = 20
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
     end
-    object JourTabSOLL_RATBETR: TZDoubleField
+    object JourTabSOLL_RATBETR: TFloatField
       FieldKind = fkData
       FieldName = 'SOLL_RATBETR'
-      Index = 15
+      Index = 21
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Precision = 10
+      Required = False
     end
     object JourTabSOLL_RATINTERVALL: TZIntegerField
       FieldKind = fkData
       FieldName = 'SOLL_RATINTERVALL'
-      Index = 16
+      Index = 22
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
     end
-    object JourTabIST_ANZAHLUNG: TZDoubleField
+    object JourTabIST_ANZAHLUNG: TFloatField
       FieldKind = fkData
       FieldName = 'IST_ANZAHLUNG'
-      Index = 17
+      Index = 23
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Precision = 10
     end
-    object JourTabIST_SKONTO: TZDoubleField
+    object JourTabIST_SKONTO: TFloatField
       FieldKind = fkData
       FieldName = 'IST_SKONTO'
-      Index = 18
+      Index = 24
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = '0.0 %'
-      Precision = 10
     end
     object JourTabIST_ZAHLDAT: TZDateField
       FieldKind = fkData
       FieldName = 'IST_ZAHLDAT'
-      Index = 19
+      Index = 25
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5609,20 +5648,19 @@ object DM1: TDM1
       DisplayFormat = 'dd.mm.yyyy'
       InvalidDisplayText = 'NAD'
     end
-    object JourTabIST_BETRAG: TZDoubleField
+    object JourTabIST_BETRAG: TFloatField
       FieldKind = fkData
       FieldName = 'IST_BETRAG'
-      Index = 20
+      Index = 26
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = ',###,##0.00'
     end
     object JourTabKONTOAUSZUG: TZIntegerField
       FieldKind = fkData
       FieldName = 'KONTOAUSZUG'
-      Index = 21
+      Index = 27
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5631,7 +5669,7 @@ object DM1: TDM1
     object JourTabBANK_ID: TZIntegerField
       FieldKind = fkData
       FieldName = 'BANK_ID'
-      Index = 22
+      Index = 28
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5640,7 +5678,7 @@ object DM1: TDM1
     object JourTabUW_NUM: TZIntegerField
       FieldKind = fkData
       FieldName = 'UW_NUM'
-      Index = 23
+      Index = 29
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5649,7 +5687,7 @@ object DM1: TDM1
     object JourTabGEGENKONTO: TZIntegerField
       FieldKind = fkData
       FieldName = 'GEGENKONTO'
-      Index = 24
+      Index = 30
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5658,7 +5696,7 @@ object DM1: TDM1
     object JourTabKUN_NUM: TZRawStringField
       FieldKind = fkData
       FieldName = 'KUN_NUM'
-      Index = 25
+      Index = 31
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5667,7 +5705,7 @@ object DM1: TDM1
     object JourTabKUN_ANREDE: TZRawStringField
       FieldKind = fkData
       FieldName = 'KUN_ANREDE'
-      Index = 26
+      Index = 32
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5677,7 +5715,7 @@ object DM1: TDM1
     object JourTabKUN_NAME2: TZRawStringField
       FieldKind = fkData
       FieldName = 'KUN_NAME2'
-      Index = 27
+      Index = 33
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5687,7 +5725,7 @@ object DM1: TDM1
     object JourTabKUN_NAME3: TZRawStringField
       FieldKind = fkData
       FieldName = 'KUN_NAME3'
-      Index = 28
+      Index = 34
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5697,7 +5735,7 @@ object DM1: TDM1
     object JourTabKUN_ABTEILUNG: TZRawStringField
       FieldKind = fkData
       FieldName = 'KUN_ABTEILUNG'
-      Index = 29
+      Index = 35
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5707,7 +5745,7 @@ object DM1: TDM1
     object JourTabKUN_STRASSE: TZRawStringField
       FieldKind = fkData
       FieldName = 'KUN_STRASSE'
-      Index = 30
+      Index = 36
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5717,7 +5755,7 @@ object DM1: TDM1
     object JourTabKUN_LAND: TZRawStringField
       FieldKind = fkData
       FieldName = 'KUN_LAND'
-      Index = 31
+      Index = 37
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5727,7 +5765,7 @@ object DM1: TDM1
     object JourTabKUN_PLZ: TZRawStringField
       FieldKind = fkData
       FieldName = 'KUN_PLZ'
-      Index = 32
+      Index = 38
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5737,7 +5775,7 @@ object DM1: TDM1
     object JourTabKUN_ORT: TZRawStringField
       FieldKind = fkData
       FieldName = 'KUN_ORT'
-      Index = 33
+      Index = 39
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5747,7 +5785,7 @@ object DM1: TDM1
     object JourTabIST_SKONTO_BETR: TFloatField
       FieldKind = fkCalculated
       FieldName = 'IST_SKONTO_BETR'
-      Index = 34
+      Index = 40
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5757,7 +5795,7 @@ object DM1: TDM1
     object JourTabVLSNUM: TZIntegerField
       FieldKind = fkData
       FieldName = 'VLSNUM'
-      Index = 35
+      Index = 41
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5766,7 +5804,7 @@ object DM1: TDM1
     object JourTabLDATUM: TZDateField
       FieldKind = fkData
       FieldName = 'LDATUM'
-      Index = 36
+      Index = 42
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5776,165 +5814,154 @@ object DM1: TDM1
     object JourTabLIEFART: TZShortIntField
       FieldKind = fkData
       FieldName = 'LIEFART'
-      Index = 37
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-    end
-    object JourTabKOST_NETTO: TZDoubleField
-      FieldKind = fkData
-      FieldName = 'KOST_NETTO'
-      Index = 38
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Precision = 10
-    end
-    object JourTabWERT_NETTO: TZDoubleField
-      FieldKind = fkData
-      FieldName = 'WERT_NETTO'
-      Index = 39
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Precision = 10
-    end
-    object JourTabQUELLE_SUB: TZShortIntField
-      FieldKind = fkData
-      FieldName = 'QUELLE_SUB'
-      Index = 40
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-    end
-    object JourTabMAHNKOSTEN: TZDoubleField
-      FieldKind = fkData
-      FieldName = 'MAHNKOSTEN'
-      Index = 41
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Precision = 10
-    end
-    object JourTabFREIGABE1_FLAG: TZRawStringField
-      FieldKind = fkData
-      FieldName = 'FREIGABE1_FLAG'
-      Index = 42
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Size = 1
-    end
-    object JourTabBRUTTO_FLAG: TZRawStringField
-      FieldKind = fkData
-      FieldName = 'BRUTTO_FLAG'
       Index = 43
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
-      Size = 1
     end
-    object JourTabMWST_FREI_FLAG: TZRawStringField
+    object JourTabKOST_NETTO: TFloatField
       FieldKind = fkData
-      FieldName = 'MWST_FREI_FLAG'
+      FieldName = 'KOST_NETTO'
       Index = 44
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Size = 1
+      Required = False
     end
-    object JourTabMWST_0: TZDoubleField
+    object JourTabWERT_NETTO: TFloatField
       FieldKind = fkData
-      FieldName = 'MWST_0'
+      FieldName = 'WERT_NETTO'
       Index = 45
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Precision = 10
+      Required = False
     end
-    object JourTabMWST_1: TZDoubleField
+    object JourTabQUELLE_SUB: TZShortIntField
       FieldKind = fkData
-      FieldName = 'MWST_1'
+      FieldName = 'QUELLE_SUB'
       Index = 46
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Precision = 10
+      Required = False
     end
-    object JourTabMWST_2: TZDoubleField
+    object JourTabMAHNKOSTEN: TFloatField
       FieldKind = fkData
-      FieldName = 'MWST_2'
+      FieldName = 'MAHNKOSTEN'
       Index = 47
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Precision = 10
+      Required = False
     end
-    object JourTabMWST_3: TZDoubleField
+    object JourTabFREIGABE1_FLAG: TBooleanField
       FieldKind = fkData
-      FieldName = 'MWST_3'
+      FieldName = 'FREIGABE1_FLAG'
       Index = 48
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
-      Precision = 10
+      DisplayValues = 'True;False'
     end
-    object JourTabMSUMME_0: TZDoubleField
+    object JourTabBRUTTO_FLAG: TBooleanField
       FieldKind = fkData
-      FieldName = 'MSUMME_0'
+      FieldName = 'BRUTTO_FLAG'
       Index = 49
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
-      Precision = 10
+      DisplayValues = 'True;False'
     end
-    object JourTabMSUMME_1: TZDoubleField
+    object JourTabMWST_FREI_FLAG: TBooleanField
       FieldKind = fkData
-      FieldName = 'MSUMME_1'
+      FieldName = 'MWST_FREI_FLAG'
       Index = 50
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
-      Precision = 10
+      DisplayValues = 'True;False'
     end
-    object JourTabMSUMME_2: TZDoubleField
+    object JourTabMWST_0: TFloatField
       FieldKind = fkData
-      FieldName = 'MSUMME_2'
+      FieldName = 'MWST_0'
       Index = 51
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Precision = 10
+      Required = False
     end
-    object JourTabMSUMME_3: TZDoubleField
+    object JourTabMWST_1: TFloatField
       FieldKind = fkData
-      FieldName = 'MSUMME_3'
+      FieldName = 'MWST_1'
       Index = 52
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Precision = 10
+      Required = False
+    end
+    object JourTabMWST_2: TFloatField
+      FieldKind = fkData
+      FieldName = 'MWST_2'
+      Index = 53
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object JourTabMWST_3: TFloatField
+      FieldKind = fkData
+      FieldName = 'MWST_3'
+      Index = 54
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object JourTabMSUMME_0: TFloatField
+      FieldKind = fkData
+      FieldName = 'MSUMME_0'
+      Index = 55
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object JourTabMSUMME_1: TFloatField
+      FieldKind = fkData
+      FieldName = 'MSUMME_1'
+      Index = 56
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object JourTabMSUMME_2: TFloatField
+      FieldKind = fkData
+      FieldName = 'MSUMME_2'
+      Index = 57
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object JourTabMSUMME_3: TFloatField
+      FieldKind = fkData
+      FieldName = 'MSUMME_3'
+      Index = 58
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
     end
     object JourTabSHOP_ID: TZShortIntField
       FieldKind = fkData
       FieldName = 'SHOP_ID'
-      Index = 53
+      Index = 59
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -5943,498 +5970,11 @@ object DM1: TDM1
     object JourTabSHOP_ORDERID: TZIntegerField
       FieldKind = fkData
       FieldName = 'SHOP_ORDERID'
-      Index = 54
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-    end
-    object JourTabMA_ID: TZIntegerField
-      FieldKind = fkData
-      FieldName = 'MA_ID'
-      Index = 55
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-    end
-    object JourTabQUELLE: TZShortIntField
-      FieldKind = fkData
-      FieldName = 'QUELLE'
-      Index = 56
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-    end
-    object JourTabREC_ID: TZIntegerField
-      FieldKind = fkData
-      FieldName = 'REC_ID'
-      Index = 57
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-    end
-    object JourTabADDR_ID: TZIntegerField
-      FieldKind = fkData
-      FieldName = 'ADDR_ID'
-      Index = 58
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-    end
-    object JourTabATRNUM: TZIntegerField
-      FieldKind = fkData
-      FieldName = 'ATRNUM'
-      Index = 59
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-    end
-    object JourTabVRENUM: TZIntegerField
-      FieldKind = fkData
-      FieldName = 'VRENUM'
       Index = 60
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = True
-    end
-    object JourTabKM_STAND: TZIntegerField
-      FieldKind = fkData
-      FieldName = 'KM_STAND'
-      Index = 61
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-    end
-    object JourTabFOLGENR: TZIntegerField
-      FieldKind = fkData
-      FieldName = 'FOLGENR'
-      Index = 62
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-    end
-    object JourTabVERTRETER_ID: TZIntegerField
-      FieldKind = fkData
-      FieldName = 'VERTRETER_ID'
-      Index = 63
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-    end
-    object JourTabGLOBRABATT: TZDoubleField
-      FieldKind = fkData
-      FieldName = 'GLOBRABATT'
-      Index = 64
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Precision = 10
-    end
-    object JourTabJAHR: TZDateField
-      FieldKind = fkData
-      FieldName = 'JAHR'
-      Index = 65
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      InvalidDisplayText = 'NAD'
-    end
-    object JourTabADATUM: TZDateField
-      FieldKind = fkData
-      FieldName = 'ADATUM'
-      Index = 66
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      InvalidDisplayText = 'NAD'
-    end
-    object JourTabRDATUM: TZDateField
-      FieldKind = fkData
-      FieldName = 'RDATUM'
-      Index = 67
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      InvalidDisplayText = 'NAD'
-    end
-    object JourTabKLASSE_ID: TZByteField
-      FieldKind = fkData
-      FieldName = 'KLASSE_ID'
-      Index = 68
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-    end
-    object JourTabTERMIN: TZDateField
-      FieldKind = fkData
-      FieldName = 'TERMIN'
-      Index = 69
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      InvalidDisplayText = 'NAD'
-    end
-    object JourTabPR_EBENE: TZShortIntField
-      FieldKind = fkData
-      FieldName = 'PR_EBENE'
-      Index = 70
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-    end
-    object JourTabGEWICHT: TZDoubleField
-      FieldKind = fkData
-      FieldName = 'GEWICHT'
-      Index = 71
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Precision = 10
-    end
-    object JourTabLOHN: TZDoubleField
-      FieldKind = fkData
-      FieldName = 'LOHN'
-      Index = 72
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Precision = 10
-    end
-    object JourTabWARE: TZDoubleField
-      FieldKind = fkData
-      FieldName = 'WARE'
-      Index = 73
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Precision = 10
-    end
-    object JourTabTKOST: TZDoubleField
-      FieldKind = fkData
-      FieldName = 'TKOST'
-      Index = 74
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Precision = 10
-    end
-    object JourTabROHGEWINN: TZDoubleField
-      FieldKind = fkData
-      FieldName = 'ROHGEWINN'
-      Index = 75
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Precision = 10
-    end
-    object JourTabNSUMME_0: TZDoubleField
-      FieldKind = fkData
-      FieldName = 'NSUMME_0'
-      Index = 76
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Precision = 10
-    end
-    object JourTabNSUMME_1: TZDoubleField
-      FieldKind = fkData
-      FieldName = 'NSUMME_1'
-      Index = 77
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Precision = 10
-    end
-    object JourTabNSUMME_2: TZDoubleField
-      FieldKind = fkData
-      FieldName = 'NSUMME_2'
-      Index = 78
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Precision = 10
-    end
-    object JourTabNSUMME_3: TZDoubleField
-      FieldKind = fkData
-      FieldName = 'NSUMME_3'
-      Index = 79
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Precision = 10
-    end
-    object JourTabBSUMME_0: TZDoubleField
-      FieldKind = fkData
-      FieldName = 'BSUMME_0'
-      Index = 80
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Precision = 10
-    end
-    object JourTabBSUMME_1: TZDoubleField
-      FieldKind = fkData
-      FieldName = 'BSUMME_1'
-      Index = 81
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Precision = 10
-    end
-    object JourTabBSUMME_2: TZDoubleField
-      FieldKind = fkData
-      FieldName = 'BSUMME_2'
-      Index = 82
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Precision = 10
-    end
-    object JourTabBSUMME_3: TZDoubleField
-      FieldKind = fkData
-      FieldName = 'BSUMME_3'
-      Index = 83
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Precision = 10
-    end
-    object JourTabATSUMME: TZDoubleField
-      FieldKind = fkData
-      FieldName = 'ATSUMME'
-      Index = 84
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Precision = 10
-    end
-    object JourTabATMSUMME: TZDoubleField
-      FieldKind = fkData
-      FieldName = 'ATMSUMME'
-      Index = 85
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Precision = 10
-    end
-    object JourTabPROVIS_WERT: TZDoubleField
-      FieldKind = fkData
-      FieldName = 'PROVIS_WERT'
-      Index = 86
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Precision = 10
-    end
-    object JourTabERSTELLT: TZDateField
-      FieldKind = fkData
-      FieldName = 'ERSTELLT'
-      Index = 87
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      InvalidDisplayText = 'NAD'
-    end
-    object JourTabERST_NAME: TZRawStringField
-      FieldKind = fkData
-      FieldName = 'ERST_NAME'
-      Index = 88
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-    end
-    object JourTabKUN_NAME1: TZRawStringField
-      FieldKind = fkData
-      FieldName = 'KUN_NAME1'
-      Index = 89
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      Size = 40
-    end
-    object JourTabUSR1: TZRawStringField
-      FieldKind = fkData
-      FieldName = 'USR1'
-      Index = 90
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      Size = 80
-    end
-    object JourTabUSR2: TZRawStringField
-      FieldKind = fkData
-      FieldName = 'USR2'
-      Index = 91
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      Size = 80
-    end
-    object JourTabKOPFTEXT: TZRawCLobField
-      FieldKind = fkData
-      FieldName = 'KOPFTEXT'
-      Index = 92
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      BlobType = ftMemo
-      Transliterate = False
-    end
-    object JourTabFUSSTEXT: TZRawCLobField
-      FieldKind = fkData
-      FieldName = 'FUSSTEXT'
-      Index = 93
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      BlobType = ftMemo
-      Transliterate = False
-    end
-    object JourTabBEST_NAME: TZRawStringField
-      FieldKind = fkData
-      FieldName = 'BEST_NAME'
-      Index = 94
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      Size = 40
-    end
-    object JourTabBEST_CODE: TZShortIntField
-      FieldKind = fkData
-      FieldName = 'BEST_CODE'
-      Index = 95
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-    end
-    object JourTabBEST_DATUM: TZDateField
-      FieldKind = fkData
-      FieldName = 'BEST_DATUM'
-      Index = 96
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      InvalidDisplayText = 'NAD'
-    end
-    object JourTabINFO: TZRawCLobField
-      FieldKind = fkData
-      FieldName = 'INFO'
-      Index = 97
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      BlobType = ftMemo
-      Transliterate = False
-    end
-    object JourTabMAHNSTUFE: TZShortIntField
-      FieldKind = fkData
-      FieldName = 'MAHNSTUFE'
-      Index = 98
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-    end
-    object JourTabMAHNDATUM: TZDateField
-      FieldKind = fkData
-      FieldName = 'MAHNDATUM'
-      Index = 99
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      InvalidDisplayText = 'NAD'
-    end
-    object JourTabMAHNPRINT: TZShortIntField
-      FieldKind = fkData
-      FieldName = 'MAHNPRINT'
-      Index = 100
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-    end
-    object JourTabPRINT_FLAG: TZRawStringField
-      FieldKind = fkData
-      FieldName = 'PRINT_FLAG'
-      Index = 101
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Size = 1
-    end
-    object JourTabPROVIS_BERECHNET: TZRawStringField
-      FieldKind = fkData
-      FieldName = 'PROVIS_BERECHNET'
-      Index = 102
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Size = 1
-    end
-    object JourTabSHOP_STATUS: TZByteField
-      FieldKind = fkData
-      FieldName = 'SHOP_STATUS'
-      Index = 103
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-    end
-    object JourTabSHOP_CHANGE_FLAG: TZRawStringField
-      FieldKind = fkData
-      FieldName = 'SHOP_CHANGE_FLAG'
-      Index = 104
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Size = 1
     end
   end
   object JPosTab: TZQuery
@@ -6593,7 +6133,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object JPosTabMENGE: TZDoubleField
+    object JPosTabMENGE: TFloatField
       FieldKind = fkData
       FieldName = 'MENGE'
       Index = 15
@@ -6629,7 +6169,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object JPosTabGEWICHT: TZDoubleField
+    object JPosTabGEWICHT: TFloatField
       FieldKind = fkData
       FieldName = 'GEWICHT'
       Index = 19
@@ -6648,7 +6188,7 @@ object DM1: TDM1
       Required = False
       Size = 10
     end
-    object JPosTabPR_EINHEIT: TZDoubleField
+    object JPosTabPR_EINHEIT: TFloatField
       FieldKind = fkData
       FieldName = 'PR_EINHEIT'
       Index = 21
@@ -6657,7 +6197,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object JPosTabEPREIS: TZDoubleField
+    object JPosTabEPREIS: TFloatField
       FieldKind = fkData
       FieldName = 'EPREIS'
       Index = 22
@@ -6666,7 +6206,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object JPosTabE_RGEWINN: TZDoubleField
+    object JPosTabE_RGEWINN: TFloatField
       FieldKind = fkData
       FieldName = 'E_RGEWINN'
       Index = 23
@@ -6675,7 +6215,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object JPosTabRABATT: TZDoubleField
+    object JPosTabRABATT: TFloatField
       FieldKind = fkData
       FieldName = 'RABATT'
       Index = 24
@@ -6684,7 +6224,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object JPosTabRABATT2: TZDoubleField
+    object JPosTabRABATT2: TFloatField
       FieldKind = fkData
       FieldName = 'RABATT2'
       Index = 25
@@ -6693,7 +6233,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object JPosTabRABATT3: TZDoubleField
+    object JPosTabRABATT3: TFloatField
       FieldKind = fkData
       FieldName = 'RABATT3'
       Index = 26
@@ -6711,7 +6251,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object JPosTabALTTEIL_PROZ: TZDoubleField
+    object JPosTabALTTEIL_PROZ: TFloatField
       FieldKind = fkData
       FieldName = 'ALTTEIL_PROZ'
       Index = 28
@@ -6738,7 +6278,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object JPosTabBEZEICHNUNG: TZRawCLobField
+    object JPosTabBEZEICHNUNG: TMemoField
       FieldKind = fkData
       FieldName = 'BEZEICHNUNG'
       Index = 31
@@ -6974,7 +6514,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = True
     end
-    object STListTabMENGE: TZDoubleField
+    object STListTabMENGE: TFloatField
       DisplayLabel = 'Menge'
       FieldKind = fkData
       FieldName = 'MENGE'
@@ -6984,7 +6524,6 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
       DisplayFormat = '0.00'
-      Precision = 5
     end
     object STListTabName: TStringField
       DisplayLabel = 'Artikelname'
@@ -7126,7 +6665,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = True
     end
-    object ArtInfoTabEK_PREIS: TZDoubleField
+    object ArtInfoTabEK_PREIS: TFloatField
       FieldKind = fkData
       FieldName = 'EK_PREIS'
       Index = 2
@@ -7134,9 +6673,8 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Precision = 10
     end
-    object ArtInfoTabVK1: TZDoubleField
+    object ArtInfoTabVK1: TFloatField
       FieldKind = fkData
       FieldName = 'VK1'
       Index = 3
@@ -7144,9 +6682,8 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Precision = 10
     end
-    object ArtInfoTabVK2: TZDoubleField
+    object ArtInfoTabVK2: TFloatField
       FieldKind = fkData
       FieldName = 'VK2'
       Index = 4
@@ -7154,9 +6691,8 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Precision = 10
     end
-    object ArtInfoTabVK3: TZDoubleField
+    object ArtInfoTabVK3: TFloatField
       FieldKind = fkData
       FieldName = 'VK3'
       Index = 5
@@ -7164,9 +6700,8 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Precision = 10
     end
-    object ArtInfoTabVK4: TZDoubleField
+    object ArtInfoTabVK4: TFloatField
       FieldKind = fkData
       FieldName = 'VK4'
       Index = 6
@@ -7174,9 +6709,8 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Precision = 10
     end
-    object ArtInfoTabVK5: TZDoubleField
+    object ArtInfoTabVK5: TFloatField
       FieldKind = fkData
       FieldName = 'VK5'
       Index = 7
@@ -7184,57 +6718,51 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Precision = 10
     end
-    object ArtInfoTabVK1B: TZDoubleField
+    object ArtInfoTabVK1B: TFloatField
       FieldKind = fkData
       FieldName = 'VK1B'
       Index = 8
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Precision = 10
+      Required = False
     end
-    object ArtInfoTabVK2B: TZDoubleField
+    object ArtInfoTabVK2B: TFloatField
       FieldKind = fkData
       FieldName = 'VK2B'
       Index = 9
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Precision = 10
+      Required = False
     end
-    object ArtInfoTabVK3B: TZDoubleField
+    object ArtInfoTabVK3B: TFloatField
       FieldKind = fkData
       FieldName = 'VK3B'
       Index = 10
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Precision = 10
+      Required = False
     end
-    object ArtInfoTabVK4B: TZDoubleField
+    object ArtInfoTabVK4B: TFloatField
       FieldKind = fkData
       FieldName = 'VK4B'
       Index = 11
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Precision = 10
+      Required = False
     end
-    object ArtInfoTabVK5B: TZDoubleField
+    object ArtInfoTabVK5B: TFloatField
       FieldKind = fkData
       FieldName = 'VK5B'
       Index = 12
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Precision = 10
+      Required = False
     end
     object ArtInfoTabPREIS_TYP: TZByteField
       FieldKind = fkData
@@ -7245,93 +6773,88 @@ object DM1: TDM1
       ReadOnly = False
       Required = True
     end
-    object ArtInfoTabPREIS: TZDoubleField
+    object ArtInfoTabPREIS: TFloatField
       FieldKind = fkData
       FieldName = 'PREIS'
       Index = 14
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Precision = 10
+      Required = False
     end
-    object ArtInfoTabMENGE2: TZCardinalField
+    object ArtInfoTabMENGE2: TLongintField
       FieldKind = fkData
       FieldName = 'MENGE2'
       Index = 15
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
+      Required = False
     end
-    object ArtInfoTabPREIS2: TZDoubleField
+    object ArtInfoTabPREIS2: TFloatField
       FieldKind = fkData
       FieldName = 'PREIS2'
       Index = 16
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Precision = 10
+      Required = False
     end
-    object ArtInfoTabMENGE3: TZCardinalField
+    object ArtInfoTabMENGE3: TLongintField
       FieldKind = fkData
       FieldName = 'MENGE3'
       Index = 17
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
+      Required = False
     end
-    object ArtInfoTabPREIS3: TZDoubleField
+    object ArtInfoTabPREIS3: TFloatField
       FieldKind = fkData
       FieldName = 'PREIS3'
       Index = 18
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Precision = 10
+      Required = False
     end
-    object ArtInfoTabMENGE4: TZCardinalField
+    object ArtInfoTabMENGE4: TLongintField
       FieldKind = fkData
       FieldName = 'MENGE4'
       Index = 19
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
+      Required = False
     end
-    object ArtInfoTabPREIS4: TZDoubleField
+    object ArtInfoTabPREIS4: TFloatField
       FieldKind = fkData
       FieldName = 'PREIS4'
       Index = 20
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Precision = 10
+      Required = False
     end
-    object ArtInfoTabMENGE5: TZCardinalField
+    object ArtInfoTabMENGE5: TLongintField
       FieldKind = fkData
       FieldName = 'MENGE5'
       Index = 21
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
+      Required = False
     end
-    object ArtInfoTabPREIS5: TZDoubleField
+    object ArtInfoTabPREIS5: TFloatField
       FieldKind = fkData
       FieldName = 'PREIS5'
       Index = 22
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Precision = 10
+      Required = False
     end
-    object ArtInfoTabMENGE_AKT: TZDoubleField
+    object ArtInfoTabMENGE_AKT: TFloatField
       FieldKind = fkData
       FieldName = 'MENGE_AKT'
       Index = 23
@@ -7339,7 +6862,6 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Precision = 10
     end
     object ArtInfoTabRABGRP_ID: TZRawStringField
       FieldKind = fkData
@@ -7351,7 +6873,7 @@ object DM1: TDM1
       Required = False
       Size = 10
     end
-    object ArtInfoTabMENGE_BESTELLT: TZDoubleField
+    object ArtInfoTabMENGE_BESTELLT: TFloatField
       FieldKind = fkData
       FieldName = 'MENGE_BESTELLT'
       Index = 25
@@ -7359,9 +6881,8 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Precision = 10
     end
-    object ArtInfoTabMENGE_RESERVIERT: TZDoubleField
+    object ArtInfoTabMENGE_RESERVIERT: TFloatField
       FieldKind = fkData
       FieldName = 'MENGE_RESERVIERT'
       Index = 26
@@ -7369,16 +6890,15 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Precision = 10
     end
-    object ArtInfoTabPROVIS_PROZ: TZDoubleField
+    object ArtInfoTabPROVIS_PROZ: TFloatField
       FieldKind = fkData
       FieldName = 'PROVIS_PROZ'
       Index = 27
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
+      Required = False
     end
     object ArtInfoTabSTEUER_CODE: TZShortIntField
       FieldKind = fkData
@@ -7483,7 +7003,7 @@ object DM1: TDM1
       Required = False
       Size = 10
     end
-    object ArtInfoTabPR_EINHEIT: TZDoubleField
+    object ArtInfoTabPR_EINHEIT: TFloatField
       FieldKind = fkData
       FieldName = 'PR_EINHEIT'
       Index = 39
@@ -7519,15 +7039,14 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object ArtInfoTabGEWICHT: TZDoubleField
+    object ArtInfoTabGEWICHT: TFloatField
       FieldKind = fkData
       FieldName = 'GEWICHT'
       Index = 43
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Precision = 10
+      Required = False
     end
     object ArtInfoTabKURZNAME: TZRawStringField
       FieldKind = fkData
@@ -7539,7 +7058,7 @@ object DM1: TDM1
       Required = False
       Size = 80
     end
-    object ArtInfoTabLANGNAME: TZRawCLobField
+    object ArtInfoTabLANGNAME: TMemoField
       FieldKind = fkData
       FieldName = 'LANGNAME'
       Index = 45
@@ -7550,65 +7069,65 @@ object DM1: TDM1
       BlobType = ftMemo
       Transliterate = False
     end
-    object ArtInfoTabALTTEIL_FLAG: TZRawStringField
+    object ArtInfoTabALTTEIL_FLAG: TBooleanField
       FieldKind = fkData
       FieldName = 'ALTTEIL_FLAG'
       Index = 46
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Size = 1
+      Required = False
+      DisplayValues = 'True;False'
     end
-    object ArtInfoTabNO_RABATT_FLAG: TZRawStringField
+    object ArtInfoTabNO_RABATT_FLAG: TBooleanField
       FieldKind = fkData
       FieldName = 'NO_RABATT_FLAG'
       Index = 47
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Size = 1
+      Required = False
+      DisplayValues = 'True;False'
     end
-    object ArtInfoTabNO_PROVISION_FLAG: TZRawStringField
+    object ArtInfoTabNO_PROVISION_FLAG: TBooleanField
       FieldKind = fkData
       FieldName = 'NO_PROVISION_FLAG'
       Index = 48
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Size = 1
+      Required = False
+      DisplayValues = 'True;False'
     end
-    object ArtInfoTabNO_BEZEDIT_FLAG: TZRawStringField
+    object ArtInfoTabNO_BEZEDIT_FLAG: TBooleanField
       FieldKind = fkData
       FieldName = 'NO_BEZEDIT_FLAG'
       Index = 49
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Size = 1
+      Required = False
+      DisplayValues = 'True;False'
     end
-    object ArtInfoTabNO_VK_FLAG: TZRawStringField
+    object ArtInfoTabNO_VK_FLAG: TBooleanField
       FieldKind = fkData
       FieldName = 'NO_VK_FLAG'
       Index = 50
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Size = 1
+      Required = False
+      DisplayValues = 'True;False'
     end
-    object ArtInfoTabSN_FLAG: TZRawStringField
+    object ArtInfoTabSN_FLAG: TBooleanField
       FieldKind = fkData
       FieldName = 'SN_FLAG'
       Index = 51
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Size = 1
+      Required = False
+      DisplayValues = 'True;False'
     end
     object ArtInfoTabVPE: TZIntegerField
       FieldKind = fkData
@@ -7619,7 +7138,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object ArtInfoTabMENGE_LIEF: TZBCDField
+    object ArtInfoTabMENGE_LIEF: TFloatField
       FieldKind = fkData
       FieldName = 'MENGE_LIEF'
       Index = 53
@@ -7627,25 +7146,15 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Precision = 3
-      Currency = False
-      MaxValue = 0
-      MinValue = 0
-      Size = 2
     end
-    object ArtInfoTabMENGE_SOLL: TZBCDField
+    object ArtInfoTabMENGE_SOLL: TFloatField
       FieldKind = fkData
       FieldName = 'MENGE_SOLL'
       Index = 54
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
-      Precision = 3
-      Currency = False
-      MaxValue = 0
-      MinValue = 0
-      Size = 2
+      Required = False
     end
     object ArtInfoTabJID: TZIntegerField
       FieldKind = fkData
@@ -7786,7 +7295,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabGLOBRABATT: TZDoubleField
+    object CpySrcKopfTabGLOBRABATT: TFloatField
       FieldKind = fkData
       FieldName = 'GLOBRABATT'
       Index = 11
@@ -7862,7 +7371,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabKOST_NETTO: TZDoubleField
+    object CpySrcKopfTabKOST_NETTO: TFloatField
       FieldKind = fkData
       FieldName = 'KOST_NETTO'
       Index = 19
@@ -7871,7 +7380,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabWERT_NETTO: TZDoubleField
+    object CpySrcKopfTabWERT_NETTO: TFloatField
       FieldKind = fkData
       FieldName = 'WERT_NETTO'
       Index = 20
@@ -7880,7 +7389,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabLOHN: TZDoubleField
+    object CpySrcKopfTabLOHN: TFloatField
       FieldKind = fkData
       FieldName = 'LOHN'
       Index = 21
@@ -7889,7 +7398,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabWARE: TZDoubleField
+    object CpySrcKopfTabWARE: TFloatField
       FieldKind = fkData
       FieldName = 'WARE'
       Index = 22
@@ -7898,7 +7407,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabTKOST: TZDoubleField
+    object CpySrcKopfTabTKOST: TFloatField
       FieldKind = fkData
       FieldName = 'TKOST'
       Index = 23
@@ -7907,7 +7416,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabMWST_0: TZDoubleField
+    object CpySrcKopfTabMWST_0: TFloatField
       FieldKind = fkData
       FieldName = 'MWST_0'
       Index = 24
@@ -7916,7 +7425,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabMWST_1: TZDoubleField
+    object CpySrcKopfTabMWST_1: TFloatField
       FieldKind = fkData
       FieldName = 'MWST_1'
       Index = 25
@@ -7925,7 +7434,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabMWST_2: TZDoubleField
+    object CpySrcKopfTabMWST_2: TFloatField
       FieldKind = fkData
       FieldName = 'MWST_2'
       Index = 26
@@ -7934,7 +7443,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabMWST_3: TZDoubleField
+    object CpySrcKopfTabMWST_3: TFloatField
       FieldKind = fkData
       FieldName = 'MWST_3'
       Index = 27
@@ -7943,7 +7452,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabNSUMME: TZDoubleField
+    object CpySrcKopfTabNSUMME: TFloatField
       FieldKind = fkData
       FieldName = 'NSUMME'
       Index = 28
@@ -7952,7 +7461,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabMSUMME_0: TZDoubleField
+    object CpySrcKopfTabMSUMME_0: TFloatField
       FieldKind = fkData
       FieldName = 'MSUMME_0'
       Index = 29
@@ -7961,7 +7470,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabMSUMME_1: TZDoubleField
+    object CpySrcKopfTabMSUMME_1: TFloatField
       FieldKind = fkData
       FieldName = 'MSUMME_1'
       Index = 30
@@ -7970,7 +7479,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabMSUMME_2: TZDoubleField
+    object CpySrcKopfTabMSUMME_2: TFloatField
       FieldKind = fkData
       FieldName = 'MSUMME_2'
       Index = 31
@@ -7979,7 +7488,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabMSUMME_3: TZDoubleField
+    object CpySrcKopfTabMSUMME_3: TFloatField
       FieldKind = fkData
       FieldName = 'MSUMME_3'
       Index = 32
@@ -7988,7 +7497,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabMSUMME: TZDoubleField
+    object CpySrcKopfTabMSUMME: TFloatField
       FieldKind = fkData
       FieldName = 'MSUMME'
       Index = 33
@@ -7997,7 +7506,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabBSUMME: TZDoubleField
+    object CpySrcKopfTabBSUMME: TFloatField
       FieldKind = fkData
       FieldName = 'BSUMME'
       Index = 34
@@ -8006,7 +7515,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabATSUMME: TZDoubleField
+    object CpySrcKopfTabATSUMME: TFloatField
       FieldKind = fkData
       FieldName = 'ATSUMME'
       Index = 35
@@ -8015,7 +7524,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabATMSUMME: TZDoubleField
+    object CpySrcKopfTabATMSUMME: TFloatField
       FieldKind = fkData
       FieldName = 'ATMSUMME'
       Index = 36
@@ -8052,7 +7561,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabSOLL_SKONTO: TZDoubleField
+    object CpySrcKopfTabSOLL_SKONTO: TFloatField
       FieldKind = fkData
       FieldName = 'SOLL_SKONTO'
       Index = 40
@@ -8079,7 +7588,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabSOLL_RATBETR: TZDoubleField
+    object CpySrcKopfTabSOLL_RATBETR: TFloatField
       FieldKind = fkData
       FieldName = 'SOLL_RATBETR'
       Index = 43
@@ -8097,7 +7606,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabIST_ANZAHLUNG: TZDoubleField
+    object CpySrcKopfTabIST_ANZAHLUNG: TFloatField
       FieldKind = fkData
       FieldName = 'IST_ANZAHLUNG'
       Index = 45
@@ -8106,7 +7615,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabIST_SKONTO: TZDoubleField
+    object CpySrcKopfTabIST_SKONTO: TFloatField
       FieldKind = fkData
       FieldName = 'IST_SKONTO'
       Index = 46
@@ -8125,7 +7634,7 @@ object DM1: TDM1
       Required = False
       InvalidDisplayText = 'NAD'
     end
-    object CpySrcKopfTabIST_BETRAG: TZDoubleField
+    object CpySrcKopfTabIST_BETRAG: TFloatField
       FieldKind = fkData
       FieldName = 'IST_BETRAG'
       Index = 48
@@ -8134,7 +7643,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabMAHNKOSTEN: TZDoubleField
+    object CpySrcKopfTabMAHNKOSTEN: TFloatField
       FieldKind = fkData
       FieldName = 'MAHNKOSTEN'
       Index = 49
@@ -8337,7 +7846,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabINFO: TZRawCLobField
+    object CpySrcKopfTabINFO: TMemoField
       FieldKind = fkData
       FieldName = 'INFO'
       Index = 70
@@ -8443,7 +7952,7 @@ object DM1: TDM1
       Required = True
       DisplayValues = 'True;False'
     end
-    object CpySrcKopfTabPROVIS_WERT: TZDoubleField
+    object CpySrcKopfTabPROVIS_WERT: TFloatField
       FieldKind = fkData
       FieldName = 'PROVIS_WERT'
       Index = 81
@@ -8452,23 +7961,23 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpySrcKopfTabGEWICHT: TZDoubleField
+    object CpySrcKopfTabGEWICHT: TFloatField
       FieldKind = fkData
       FieldName = 'GEWICHT'
       Index = 82
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
+      Required = False
     end
-    object CpySrcKopfTabROHGEWINN: TZDoubleField
+    object CpySrcKopfTabROHGEWINN: TFloatField
       FieldKind = fkData
       FieldName = 'ROHGEWINN'
       Index = 83
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = True
+      Required = False
     end
   end
   object CpyDstKopfTab: TZQuery
@@ -8579,7 +8088,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabGLOBRABATT: TZDoubleField
+    object CpyDstKopfTabGLOBRABATT: TFloatField
       FieldKind = fkData
       FieldName = 'GLOBRABATT'
       Index = 11
@@ -8655,7 +8164,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabKOST_NETTO: TZDoubleField
+    object CpyDstKopfTabKOST_NETTO: TFloatField
       FieldKind = fkData
       FieldName = 'KOST_NETTO'
       Index = 19
@@ -8664,7 +8173,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabWERT_NETTO: TZDoubleField
+    object CpyDstKopfTabWERT_NETTO: TFloatField
       FieldKind = fkData
       FieldName = 'WERT_NETTO'
       Index = 20
@@ -8673,7 +8182,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabLOHN: TZDoubleField
+    object CpyDstKopfTabLOHN: TFloatField
       FieldKind = fkData
       FieldName = 'LOHN'
       Index = 21
@@ -8682,7 +8191,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabWARE: TZDoubleField
+    object CpyDstKopfTabWARE: TFloatField
       FieldKind = fkData
       FieldName = 'WARE'
       Index = 22
@@ -8691,7 +8200,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabTKOST: TZDoubleField
+    object CpyDstKopfTabTKOST: TFloatField
       FieldKind = fkData
       FieldName = 'TKOST'
       Index = 23
@@ -8700,7 +8209,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabMWST_0: TZDoubleField
+    object CpyDstKopfTabMWST_0: TFloatField
       FieldKind = fkData
       FieldName = 'MWST_0'
       Index = 24
@@ -8709,7 +8218,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabMWST_1: TZDoubleField
+    object CpyDstKopfTabMWST_1: TFloatField
       FieldKind = fkData
       FieldName = 'MWST_1'
       Index = 25
@@ -8718,7 +8227,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabMWST_2: TZDoubleField
+    object CpyDstKopfTabMWST_2: TFloatField
       FieldKind = fkData
       FieldName = 'MWST_2'
       Index = 26
@@ -8727,7 +8236,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabMWST_3: TZDoubleField
+    object CpyDstKopfTabMWST_3: TFloatField
       FieldKind = fkData
       FieldName = 'MWST_3'
       Index = 27
@@ -8736,7 +8245,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabNSUMME: TZDoubleField
+    object CpyDstKopfTabNSUMME: TFloatField
       FieldKind = fkData
       FieldName = 'NSUMME'
       Index = 28
@@ -8745,7 +8254,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabMSUMME_0: TZDoubleField
+    object CpyDstKopfTabMSUMME_0: TFloatField
       FieldKind = fkData
       FieldName = 'MSUMME_0'
       Index = 29
@@ -8754,7 +8263,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabMSUMME_1: TZDoubleField
+    object CpyDstKopfTabMSUMME_1: TFloatField
       FieldKind = fkData
       FieldName = 'MSUMME_1'
       Index = 30
@@ -8763,7 +8272,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabMSUMME_2: TZDoubleField
+    object CpyDstKopfTabMSUMME_2: TFloatField
       FieldKind = fkData
       FieldName = 'MSUMME_2'
       Index = 31
@@ -8772,7 +8281,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabMSUMME_3: TZDoubleField
+    object CpyDstKopfTabMSUMME_3: TFloatField
       FieldKind = fkData
       FieldName = 'MSUMME_3'
       Index = 32
@@ -8781,7 +8290,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabMSUMME: TZDoubleField
+    object CpyDstKopfTabMSUMME: TFloatField
       FieldKind = fkData
       FieldName = 'MSUMME'
       Index = 33
@@ -8790,7 +8299,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabBSUMME: TZDoubleField
+    object CpyDstKopfTabBSUMME: TFloatField
       FieldKind = fkData
       FieldName = 'BSUMME'
       Index = 34
@@ -8799,7 +8308,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabATSUMME: TZDoubleField
+    object CpyDstKopfTabATSUMME: TFloatField
       FieldKind = fkData
       FieldName = 'ATSUMME'
       Index = 35
@@ -8808,7 +8317,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabATMSUMME: TZDoubleField
+    object CpyDstKopfTabATMSUMME: TFloatField
       FieldKind = fkData
       FieldName = 'ATMSUMME'
       Index = 36
@@ -8845,7 +8354,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabSOLL_SKONTO: TZDoubleField
+    object CpyDstKopfTabSOLL_SKONTO: TFloatField
       FieldKind = fkData
       FieldName = 'SOLL_SKONTO'
       Index = 40
@@ -8872,7 +8381,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabSOLL_RATBETR: TZDoubleField
+    object CpyDstKopfTabSOLL_RATBETR: TFloatField
       FieldKind = fkData
       FieldName = 'SOLL_RATBETR'
       Index = 43
@@ -8890,7 +8399,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabIST_ANZAHLUNG: TZDoubleField
+    object CpyDstKopfTabIST_ANZAHLUNG: TFloatField
       FieldKind = fkData
       FieldName = 'IST_ANZAHLUNG'
       Index = 45
@@ -8899,7 +8408,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabIST_SKONTO: TZDoubleField
+    object CpyDstKopfTabIST_SKONTO: TFloatField
       FieldKind = fkData
       FieldName = 'IST_SKONTO'
       Index = 46
@@ -8918,7 +8427,7 @@ object DM1: TDM1
       Required = False
       InvalidDisplayText = 'NAD'
     end
-    object CpyDstKopfTabIST_BETRAG: TZDoubleField
+    object CpyDstKopfTabIST_BETRAG: TFloatField
       FieldKind = fkData
       FieldName = 'IST_BETRAG'
       Index = 48
@@ -8927,7 +8436,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabMAHNKOSTEN: TZDoubleField
+    object CpyDstKopfTabMAHNKOSTEN: TFloatField
       FieldKind = fkData
       FieldName = 'MAHNKOSTEN'
       Index = 49
@@ -9130,7 +8639,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabINFO: TZRawCLobField
+    object CpyDstKopfTabINFO: TMemoField
       FieldKind = fkData
       FieldName = 'INFO'
       Index = 70
@@ -9236,7 +8745,7 @@ object DM1: TDM1
       Required = True
       DisplayValues = 'True;False'
     end
-    object CpyDstKopfTabPROVIS_WERT: TZDoubleField
+    object CpyDstKopfTabPROVIS_WERT: TFloatField
       FieldKind = fkData
       FieldName = 'PROVIS_WERT'
       Index = 81
@@ -9245,7 +8754,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabGEWICHT: TZDoubleField
+    object CpyDstKopfTabGEWICHT: TFloatField
       FieldKind = fkData
       FieldName = 'GEWICHT'
       Index = 82
@@ -9254,7 +8763,7 @@ object DM1: TDM1
       ReadOnly = False
       Required = False
     end
-    object CpyDstKopfTabROHGEWINN: TZDoubleField
+    object CpyDstKopfTabROHGEWINN: TFloatField
       FieldKind = fkData
       FieldName = 'ROHGEWINN'
       Index = 83

@@ -40,9 +40,10 @@
         <ComponentName Value="DM1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="1755"/>
-        <CursorPos X="25" Y="1615"/>
+        <TopLine Value="410"/>
+        <CursorPos X="32" Y="429"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -139,10 +140,12 @@
         <ComponentName Value="SetupForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="45"/>
-        <CursorPos X="17" Y="69"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="907"/>
+        <CursorPos X="29" Y="925"/>
         <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -261,8 +264,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="2544"/>
-        <CursorPos X="5" Y="2554"/>
+        <TopLine Value="847"/>
+        <CursorPos X="26" Y="864"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -352,8 +355,7 @@
         <ComponentName Value="MainForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="1"/>
         <TopLine Value="617"/>
         <CursorPos X="35" Y="634"/>
         <UsageCount Value="208"/>
@@ -530,10 +532,11 @@
         <ComponentName Value="ManKasBuchForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="19"/>
-        <CursorPos Y="37"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="113"/>
+        <CursorPos X="63" Y="131"/>
         <UsageCount Value="201"/>
+        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -543,10 +546,11 @@
         <ComponentName Value="ZEForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="20"/>
-        <CursorPos Y="36"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="292"/>
+        <CursorPos X="35" Y="310"/>
         <UsageCount Value="205"/>
+        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -569,10 +573,11 @@
         <ComponentName Value="MakeVKReForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="78"/>
-        <CursorPos X="3" Y="96"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="3642"/>
+        <CursorPos X="24" Y="3660"/>
         <UsageCount Value="243"/>
+        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -620,10 +625,11 @@
         <ComponentName Value="MakeVertragReForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="35"/>
-        <CursorPos X="84" Y="45"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="2299"/>
+        <CursorPos X="10" Y="2317"/>
         <UsageCount Value="208"/>
+        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -700,7 +706,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="19"/>
         <CursorPos Y="40"/>
-        <UsageCount Value="194"/>
+        <UsageCount Value="201"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -713,7 +719,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="320"/>
         <CursorPos X="6" Y="338"/>
-        <UsageCount Value="64"/>
+        <UsageCount Value="74"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -726,7 +732,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="668"/>
         <CursorPos Y="677"/>
-        <UsageCount Value="53"/>
+        <UsageCount Value="63"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -739,7 +745,19 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="691"/>
         <CursorPos X="57" Y="708"/>
-        <UsageCount Value="43"/>
+        <UsageCount Value="53"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\CAO_Journal_VKLIEF.pas"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="JournalVKLiefForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="634"/>
+        <CursorPos X="11" Y="657"/>
+        <UsageCount Value="35"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -761,14 +779,6 @@
         <TopLine Value="165"/>
         <CursorPos X="20" Y="52"/>
         <UsageCount Value="64"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\codetyphon\typhon\lcl\include\application.inc"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="2100"/>
-        <CursorPos Y="2121"/>
-        <UsageCount Value="0"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\pl_ZeosDBO\source\component\ZAbstractRODataset.pas"/>
@@ -801,55 +811,12 @@
         <UsageCount Value="7"/>
       </Unit>
       <Unit>
-        <Filename Value="C:\codetyphon\typhon\lcl\include\customform.inc"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="3172"/>
-        <CursorPos Y="3189"/>
-        <UsageCount Value="0"/>
-      </Unit>
-      <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\include\wincontrol.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="5662"/>
         <CursorPos Y="5679"/>
         <UsageCount Value="7"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\codetyphon\typhon\lcl\include\customcontrol.inc"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="58"/>
-        <CursorPos Y="75"/>
-        <UsageCount Value="0"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\codetyphon\typhon\lcl\dbctrls.pp"/>
-        <FRMtype Value="0"/>
-        <UnitName Value="DBCtrls"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="1634"/>
-        <CursorPos Y="1651"/>
-        <UsageCount Value="0"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\codetyphon\typhon\lcl\dbgrids.pas"/>
-        <FRMtype Value="0"/>
-        <UnitName Value="DBGrids"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="930"/>
-        <CursorPos Y="948"/>
-        <UsageCount Value="0"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\codetyphon\typhon\lcl\grids.pas"/>
-        <FRMtype Value="0"/>
-        <UnitName Value="Grids"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="5629"/>
-        <CursorPos Y="5647"/>
-        <UsageCount Value="0"/>
       </Unit>
       <Unit>
         <Filename Value="Komponenten\lz_SynEditDsg\source\SynDBEdit.pas"/>
@@ -873,141 +840,127 @@
         <UsageCount Value="8"/>
         <DefaultSyntaxHighlighter Value="FRM"/>
       </Unit>
-      <Unit>
-        <Filename Value="src\CAO_Journal_VKLIEF.pas"/>
-        <FRMtype Value="0"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="JournalVKLiefForm"/>
-        <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="634"/>
-        <CursorPos X="11" Y="657"/>
-        <UsageCount Value="25"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
       <Position>
-        <Filename Value="src\CAO_Journal_VKLIEF.pas"/>
-        <Caret Line="169" TopLine="154"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="221" Column="42" TopLine="197"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_Journal_VKLIEF.pas"/>
-        <Caret Line="302" TopLine="274"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="222" Column="42" TopLine="197"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_Journal_VKLIEF.pas"/>
-        <Caret Line="331" TopLine="295"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="223" Column="36" TopLine="197"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_Journal_VKLIEF.pas"/>
-        <Caret Line="270" TopLine="255"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="224" Column="36" TopLine="197"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_MAIN.pas"/>
-        <Caret Line="16" Column="17" TopLine="8"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="225" Column="37" TopLine="197"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_MAIN.pas"/>
-        <Caret Line="637" TopLine="614"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="236" Column="38" TopLine="203"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_MAIN.pas"/>
-        <Caret Line="919" TopLine="886"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="229" Column="25" TopLine="208"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_MAIN.pas"/>
-        <Caret Line="1690" TopLine="1655"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="244" Column="35" TopLine="214"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_MAIN.pas"/>
-        <Caret Line="634" Column="35" TopLine="617"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="138" Column="14" TopLine="125"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_MAIN.pas"/>
-        <Caret Line="635" Column="60" TopLine="617"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="491" Column="37" TopLine="465"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_MAIN.pas"/>
-        <Caret Line="636" Column="60" TopLine="617"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="64" Column="39" TopLine="56"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_MAIN.pas"/>
-        <Caret Line="915" Column="32" TopLine="886"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="536" Column="35" TopLine="505"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_MAIN.pas"/>
-        <Caret Line="916" Column="32" TopLine="887"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="8" Column="30"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_MAIN.pas"/>
-        <Caret Line="917" Column="32" TopLine="888"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="403" TopLine="371"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_MAIN.pas"/>
-        <Caret Line="918" Column="43" TopLine="889"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="321" Column="5" TopLine="291"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_MAIN.pas"/>
-        <Caret Line="1684" Column="27" TopLine="1655"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="316" Column="38" TopLine="298"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_MAIN.pas"/>
-        <Caret Line="634" Column="35" TopLine="617"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="101" Column="22" TopLine="93"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_MAIN.pas"/>
-        <Caret Line="635" Column="60" TopLine="617"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="417" Column="21" TopLine="581"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_MAIN.pas"/>
-        <Caret Line="636" Column="60" TopLine="617"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="3530" Column="45"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_MAIN.pas"/>
-        <Caret Line="915" Column="32" TopLine="886"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="11" Column="20"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_MAIN.pas"/>
-        <Caret Line="916" Column="32" TopLine="887"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="246" Column="39" TopLine="215"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_MAIN.pas"/>
-        <Caret Line="917" Column="32" TopLine="888"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="326" Column="39" TopLine="304"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_MAIN.pas"/>
-        <Caret Line="918" Column="43" TopLine="889"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="247" Column="41" TopLine="232"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_MAIN.pas"/>
-        <Caret Line="1684" Column="27" TopLine="1655"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="4" Column="49"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_MAIN.pas"/>
-        <Caret Line="634" Column="35" TopLine="617"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="656" Column="5" TopLine="630"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_Journal_VKLIEF.pas"/>
-        <Caret Line="326" Column="90" TopLine="307"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="393" Column="36" TopLine="382"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_Journal_VKLIEF.pas"/>
-        <Caret Line="593" TopLine="557"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="392" TopLine="374"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_Journal_VKLIEF.pas"/>
-        <Caret Line="457" Column="3" TopLine="438"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="402" Column="20" TopLine="382"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_Journal_VKLIEF.pas"/>
-        <Caret Line="567" Column="58" TopLine="549"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="137" Column="20" TopLine="121"/>
       </Position>
       <Position>
-        <Filename Value="src\CAO_Journal_VKLIEF.pas"/>
-        <Caret Line="656" Column="11" TopLine="633"/>
+        <Filename Value="src\CAO_DM.pas"/>
+        <Caret Line="339" Column="32" TopLine="307"/>
       </Position>
     </JumpHistory>
     <RunParams>
@@ -1303,146 +1256,6 @@
         <WatchKind Value="wpkWrite"/>
         <Source Value="src\CAO_Pim.pas"/>
         <Line Value="304"/>
-      </Item>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="src\CAO_Setup.pas"/>
-        <Line Value="573"/>
-      </Item>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="src\CAO_Setup.pas"/>
-        <Line Value="582"/>
-      </Item>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="src\CAO_Setup.pas"/>
-        <Line Value="583"/>
-      </Item>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="src\CAO_Setup.pas"/>
-        <Line Value="664"/>
-      </Item>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="src\CAO_Setup.pas"/>
-        <Line Value="666"/>
-      </Item>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="src\CAO_Setup.pas"/>
-        <Line Value="691"/>
-      </Item>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="src\CAO_Setup.pas"/>
-        <Line Value="704"/>
-      </Item>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="src\CAO_Setup.pas"/>
-        <Line Value="706"/>
-      </Item>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="src\CAO_Setup.pas"/>
-        <Line Value="708"/>
-      </Item>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="src\CAO_Setup.pas"/>
-        <Line Value="711"/>
-      </Item>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="src\CAO_Setup.pas"/>
-        <Line Value="718"/>
-      </Item>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="src\CAO_Setup.pas"/>
-        <Line Value="728"/>
-      </Item>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="src\CAO_Setup.pas"/>
-        <Line Value="757"/>
-      </Item>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="src\CAO_Setup.pas"/>
-        <Line Value="738"/>
-      </Item>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="src\CAO_Setup.pas"/>
-        <Line Value="787"/>
-      </Item>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="src\CAO_Setup.pas"/>
-        <Line Value="819"/>
-      </Item>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="src\CAO_Setup.pas"/>
-        <Line Value="857"/>
-      </Item>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="src\CAO_Setup.pas"/>
-        <Line Value="862"/>
-      </Item>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="src\CAO_Setup.pas"/>
-        <Line Value="870"/>
-      </Item>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="src\CAO_Setup.pas"/>
-        <Line Value="687"/>
       </Item>
       <Item>
         <Kind Value="bpkSource"/>

@@ -34,9 +34,10 @@ object SetupForm: TSetupForm
     TabOrder = 1
     object Nav1: TDBNavigator
       Left = 0
-      Height = 25
+      Height = 26
       Top = 0
-      Width = 241
+      Width = 264
+      Align = alLeft
       BevelOuter = bvNone
       ChildSizing.EnlargeHorizontal = crsScaleChilds
       ChildSizing.EnlargeVertical = crsScaleChilds
@@ -44,11 +45,12 @@ object SetupForm: TSetupForm
       ChildSizing.ShrinkVertical = crsScaleChilds
       ChildSizing.Layout = cclLeftToRightThenTopToBottom
       ChildSizing.ControlsPerLine = 100
-      ClientHeight = 25
-      ClientWidth = 241
+      ClientHeight = 26
+      ClientWidth = 264
       Flat = True
       Options = []
       TabOrder = 0
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbEdit, nbPost, nbCancel, nbRefresh]
     end
     object ShopSaveBtn: TSpeedButton
       Left = 272
@@ -114,9 +116,9 @@ object SetupForm: TSetupForm
     Height = 396
     Top = 0
     Width = 638
-    ActivePage = FirmDat1Tab
+    ActivePage = FirmDat2Tab
     Align = alClient
-    TabIndex = 1
+    TabIndex = 2
     TabOrder = 2
     OnChange = PC1Change
     OnChanging = PC1Changing
