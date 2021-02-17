@@ -259,7 +259,8 @@ uses
   CAO_RegEdit, CAO_Setup, Inifiles, shellapi, filectrl,  CAO_DBOptimize,
   Cao_Tool1, CAO_Pim, CAO_Export, CAO_Restore, CAO_Mitarbeiter, CAO_Vertreter,
   CAO_FibuKassenbuch, CAO_Journal_EKRE, CAO_MakeVKRech, CAO_MakeVertragRech,
-  CAO_MakeEKBest, CAO_Journal_VKKASSE, CAO_Journal_VKAGB, VolPeriod;
+  CAO_MakeEKBest, CAO_Journal_VKKASSE, CAO_Journal_VKAGB, CAO_Journal_VKLIEF,
+  VolPeriod;
 
 { TMainForm }
 
@@ -630,10 +631,10 @@ begin
                                           JournalVKAGBForm.FormDeactivate  (Sender);
                                           JournalVKAGBForm.OnUpdateStatusBar :=nil;
                                         end;
-//        if Owner=JournalVKLIEFForm then begin
-//                                          JournalVKLIEFForm.FormDeactivate (Sender);
-//                                          JournalVKLIEFForm.OnUpdateStatusBar :=nil;
-//                                        end;
+        if Owner=JournalVKLIEFForm then begin
+                                          JournalVKLIEFForm.FormDeactivate (Sender);
+                                          JournalVKLIEFForm.OnUpdateStatusBar :=nil;
+                                        end;
 //        if Owner=JournalEKBESTForm then begin
 //                                          JournalEKBESTForm.FormDeactivate (Sender);
 //                                          JournalEKBESTForm.OnUpdateStatusBar :=nil;
@@ -909,13 +910,13 @@ begin
               JournalVKAGBForm.FormActivate (Self);
               LastMenu :=JournalVKAGBForm.Mainmenu1;
          end;
-//         3030: //Lieferschein
-//         begin
-//              JournalVKLIEFForm.OnUpdateStatusBar :=OnUpdateStatusBar;
-//              JournalVKLIEFForm.JournalPanel.Parent := MainPanel;
-//              JournalVKLIEFForm.FormActivate (Self);
-//              LastMenu :=JournalVKLIEFForm.Mainmenu1;
-//         end;
+         3030: //Lieferschein
+         begin
+              JournalVKLIEFForm.OnUpdateStatusBar :=OnUpdateStatusBar;
+              JournalVKLIEFForm.JournalPanel.Parent := MainPanel;
+              JournalVKLIEFForm.FormActivate (Self);
+              LastMenu :=JournalVKLIEFForm.Mainmenu1;
+         end;
          3050: //Kasse
          begin
               JournalVKKasseForm.OnUpdateStatusBar :=OnUpdateStatusBar;
@@ -1680,13 +1681,13 @@ begin
     end;
 
     // Journale -- Lieferschein
-//    with JournalVKLiefForm do
-//    begin
-//        MainPanel.HelpContext       := 6650;
-//        Jourgrid.HelpContext        := 6650;
-//        Allgemein.HelpContext       := 6675;
-//        TabSheet1.HelpContext       := 6700;
-//    end;
+    with JournalVKLiefForm do
+    begin
+        MainPanel.HelpContext       := 6650;
+        Jourgrid.HelpContext        := 6650;
+        Allgemein.HelpContext       := 6675;
+        TabSheet1.HelpContext       := 6700;
+    end;
 
     // Journale -- Kasse
     with JournalVKKasseForm do
