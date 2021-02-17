@@ -3410,7 +3410,7 @@ object AdressForm: TAdressForm
               end
               object ToolButton4: TToolButton
                 Left = 88
-                Height = 5
+                Height = 22
                 Top = 0
                 Caption = 'ToolButton4'
                 Style = tbsDivider
@@ -3425,7 +3425,7 @@ object AdressForm: TAdressForm
               end
               object ToolButton6: TToolButton
                 Left = 180
-                Height = 5
+                Height = 22
                 Top = 0
                 Caption = 'ToolButton6'
                 Style = tbsDivider
@@ -4337,6 +4337,7 @@ object AdressForm: TAdressForm
               Height = 21
               Top = 32
               Width = 197
+              Anchors = [akTop, akLeft, akRight]
               ButtonWidth = 17
               Color = clWindow
               ComboProps.ComboItems.Strings = (
@@ -4744,7 +4745,7 @@ object AdressForm: TAdressForm
             end
             object ToolButton3: TToolButton
               Left = 224
-              Height = 5
+              Height = 21
               Top = 2
               Caption = 'ToolButton3'
               Style = tbsDivider
@@ -4779,7 +4780,7 @@ object AdressForm: TAdressForm
             end
             object ToolButton5: TToolButton
               Left = 347
-              Height = 5
+              Height = 21
               Top = 2
               Caption = 'ToolButton5'
               Style = tbsDivider
@@ -4799,7 +4800,7 @@ object AdressForm: TAdressForm
             end
             object ToolButton7: TToolButton
               Left = 435
-              Height = 5
+              Height = 21
               Top = 2
               Caption = 'ToolButton7'
               Style = tbsDivider
@@ -6885,6 +6886,7 @@ object AdressForm: TAdressForm
       ReadOnly = False
       Required = False
       BlobType = ftMemo
+      Transliterate = False
     end
     object KunLiefTabNAME3: TZRawStringField
       FieldKind = fkData
@@ -7569,6 +7571,7 @@ object AdressForm: TAdressForm
       ReadOnly = False
       Required = False
       BlobType = ftMemo
+      Transliterate = False
     end
     object JPosTabSTEUER_CODE: TZShortIntField
       FieldKind = fkData

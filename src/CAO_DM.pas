@@ -162,7 +162,9 @@ type
     ArtInfoTabSTEUER_CODE: TZShortIntField;
     ArtInfoTabVPE: TZIntegerField;
     ArtInfoTabWARENGRUPPE: TZIntegerField;
+
     CaoSecurity: tCaoSecurity;
+
     CpyDstKopfTabADATUM: TZDateField;
     CpyDstKopfTabADDR_ID: TZIntegerField;
     CpyDstKopfTabATRNUM: TZIntegerField;
@@ -344,6 +346,7 @@ type
     KunTabMWST_FREI_FLAG: TBooleanField;
     RabGrpDS: TDataSource;
     HerstellerDS: TDataSource;
+
     JourTabADDR_ID: TZIntegerField;
     JourTabBANK_ID: TZIntegerField;
     JourTabGEGENKONTO: TZIntegerField;
@@ -455,6 +458,7 @@ type
     LiefRabGrpRABATT1: TFloatField;
     LiefRabGrpRABATT2: TFloatField;
     LiefRabGrpRABATT3: TFloatField;
+
     ReKFZTabADDR_ID: TZIntegerField;
     ReKFZTabFGST_NUM: TZRawStringField;
     ReKFZTabKFZ_ID: TZIntegerField;
@@ -467,6 +471,7 @@ type
     ReKFZTabSCHL_ZU_3: TZRawStringField;
     ReKFZTabZULASSUNG: TZDateField;
     ShopOSDS: TDataSource;
+
     STListTabART_ID: TZIntegerField;
     STListTabERSTELLT: TZDateField;
     STListTabERST_NAME: TZRawStringField;
@@ -481,6 +486,7 @@ type
     WhrungDS: TDataSource;
     ZahlartDS: TDataSource;
     LiefArtDS: TDataSource;
+
     FirBankTabBLZ: TZIntegerField;
     FirBankTabFIBU_KTO: TZInt64Field;
     FirBankTabINHABER: TZRawStringField;
@@ -488,6 +494,7 @@ type
     FirBankTabKURZBEZ: TZRawStringField;
     FirBankTabMAINKEY: TZRawStringField;
     LandDS: TDataSource;
+
     NummerTabFORMAT: TZRawStringField;
     NummerTabMAINKEY: TZRawStringField;
     NummerTabMAXLEN: TZInt64Field;
@@ -511,6 +518,7 @@ type
     DBUpdTo1_07: TJvStrHolder;
     DCP_3des1: TDCP_3des;
     DCP_md5_1: TDCP_md5;
+
     FirmaTabABSENDER: TZRawStringField;
     FirmaTabANREDE: TZRawStringField;
     FirmaTabBANK1_BLZ: TZRawStringField;
@@ -545,10 +553,12 @@ type
     FirmaTabUST_ID: TZRawStringField;
     FirmaTabVORWAHL: TZRawStringField;
     FirmaTabWEBSEITE: TZRawStringField;
+
     KGRTabGR: TZIntegerField;
     KGRTabLANGBEZ: TZRawStringField;
     KGRTabMAINKEY: TZRawStringField;
     KGRTabSQL_STATEMENT: TMemoField;
+
     KunTabANREDE: TZRawStringField;
     KunTabBANK: TZRawStringField;
     KunTabBLZ: TZRawStringField;
@@ -574,6 +584,7 @@ type
     KunTabSTATUS: TZIntegerField;
     KunTabSTRASSE: TZRawStringField;
     KunTabUST_NUM: TZRawStringField;
+
     LandTabFORMAT: TZShortIntField;
     LandTabID: TZRawStringField;
     LandTabISO_CODE_3: TZRawStringField;
@@ -582,6 +593,7 @@ type
     LandTabSPRACHE: TZRawStringField;
     LandTabVORWAHL: TZRawStringField;
     LandTabWAEHRUNG: TZRawStringField;
+
     RegTab: TZQuery;
     RegTabMAINKEY: TZRawStringField;
     RegTabNAME: TZRawStringField;
@@ -594,11 +606,13 @@ type
     RegTabVAL_TYP: TZSmallIntField;
     RegTabVAL_BLOB: TBlobField;
     RegTabVAL_DOUBLE: TFloatField;
+
     ShopOrderStatusTabLANGBEZ: TZRawStringField;
     ShopOrderStatusTabMAINKEY: TZRawStringField;
     ShopOrderStatusTabORDERSTATUS_ID: TZIntegerField;
     UniQuery: TZQuery;
     Transact1: TZTransaction;
+
     WgrTabDEF_AKTO: TZIntegerField;
     WgrTabDEF_EKTO: TZIntegerField;
     WgrTabID: TZIntegerField;
@@ -612,6 +626,7 @@ type
     WgrTabVK5_FAKTOR : TFloatField;
     WhrungTabLANGBEZ: TZRawStringField;
     WhrungTabWAEHRUNG: TZRawStringField;
+
     ZahlartTabLANGBEZ: TZRawStringField;
     ZahlartTabNETTO_TAGE: TZInt64Field;
     ZahlartTabSKONTO_TAGE: TZIntegerField;
@@ -638,6 +653,7 @@ type
     JPosTab: TZQuery;
     ReKFZTab: TZQuery;
     STListTab: TZQuery;
+
     ArtInfoTab: TZQuery;
     ArtInfoTabMENGE_AKT: TFloatField;
     ArtInfoTabMENGE_BESTELLT: TFloatField;

@@ -260,7 +260,7 @@ uses
   Cao_Tool1, CAO_Pim, CAO_Export, CAO_Restore, CAO_Mitarbeiter, CAO_Vertreter,
   CAO_FibuKassenbuch, CAO_Journal_EKRE, CAO_MakeVKRech, CAO_MakeVertragRech,
   CAO_MakeEKBest, CAO_Journal_VKKASSE, CAO_Journal_VKAGB, CAO_Journal_VKLIEF,
-  VolPeriod;
+  CAO_Journal_VKRE, VolPeriod;
 
 { TMainForm }
 
@@ -619,10 +619,10 @@ begin
                                           EBBestVorForm.OnUpdateStatusBar :=nil;
                                         end;
         {$ENDIF}
-//        if Owner=JournalVKREForm   then begin
-//                                          JournalVKREForm.FormDeactivate   (Sender);
-//                                          JournalVKREForm.OnUpdateStatusBar :=nil;
-//                                        end;
+        if Owner=JournalVKREForm   then begin
+                                          JournalVKREForm.FormDeactivate   (Sender);
+                                          JournalVKREForm.OnUpdateStatusBar :=nil;
+                                        end;
         if Owner=JournalEKREForm   then begin
                                           JournalEKREForm.FormDeactivate   (Sender);
                                           JournalEKREForm.OnUpdateStatusBar :=nil;
@@ -924,13 +924,13 @@ begin
               JournalVKKasseForm.FormActivate (Self);
               LastMenu :=JournalVKKasseForm.Mainmenu1;
          end;
-//         3040: //Rechnung
-//         begin
-//              JournalVKREForm.OnUpdateStatusBar :=OnUpdateStatusBar;
-//              JournalVKREForm.JournalPanel.Parent := MainPanel;
-//              JournalVKREForm.FormActivate (Self);
-//              LastMenu :=JournalVKREForm.Mainmenu1;
-//         end;
+         3040: //Rechnung
+         begin
+              JournalVKREForm.OnUpdateStatusBar :=OnUpdateStatusBar;
+              JournalVKREForm.JournalPanel.Parent := MainPanel;
+              JournalVKREForm.FormActivate (Self);
+              LastMenu :=JournalVKREForm.Mainmenu1;
+         end;
          3100: //Einkauf
          begin
               JournalEKREForm.OnUpdateStatusBar :=OnUpdateStatusBar;
@@ -1698,14 +1698,14 @@ begin
     end;
 
     // Journale -- Rechnung
-//    with JournalVKREForm do
-//    begin
-//        MainPanel.HelpContext       := 6850;
-//        JourGrid.HelpContext        := 6850;
-//        Allgemein.HelpContext       := 6875;
-//        TabSheet1.HelpContext       := 6900;
-//        ReInfoTS.HelpContext        := 6950;
-//    end;
+    with JournalVKREForm do
+    begin
+        MainPanel.HelpContext       := 6850;
+        JourGrid.HelpContext        := 6850;
+        Allgemein.HelpContext       := 6875;
+        TabSheet1.HelpContext       := 6900;
+        ReInfoTS.HelpContext        := 6950;
+    end;
 
     // Journale -- Einkauf
     with JournalEKREForm do
@@ -1825,10 +1825,10 @@ begin
        Application.ProcessMessages;
        OLBarButtonClick (Self,3040);
        Application.ProcessMessages;
-//       JournalVKREForm.DatumAW.Year :=Jahr;
-//       JournalVKREForm.DatumAW.KindRange :=ksYear;
+       JournalVKREForm.DatumAW.Year :=Jahr;
+       JournalVKREForm.DatumAW.KindRange :=ksYear;
        Application.ProcessMessages;
-//       JournalVKREForm.JQuery.Locate ('REC_ID',Id,[]);
+       JournalVKREForm.JQuery.Locate ('REC_ID',Id,[]);
      end
         else
      if Modul=EK_RECH then
