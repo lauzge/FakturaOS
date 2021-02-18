@@ -32,7 +32,7 @@ History :
 - 11.05.2003 Unit erstellt
 
 -------------------------------------------------------------------------------------
-01.01.2021 - für FreePascal und CodeTyphon von Volker Stark lauzge@gmail.com portiert
+18.02.2021 - für FreePascal und CodeTyphon von Volker Stark lauzge@gmail.com portiert
 }
 
 unit cao_sn_auswahl;
