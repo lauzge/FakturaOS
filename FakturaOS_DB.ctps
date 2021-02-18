@@ -9,7 +9,6 @@
         <Filename Value="FakturaOS_DB.ppr"/>
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <TopLine Value="148"/>
         <CursorPos X="3" Y="181"/>
         <UsageCount Value="200"/>
@@ -41,6 +40,7 @@
         <ComponentName Value="DM1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
         <TopLine Value="5486"/>
         <CursorPos Y="5522"/>
@@ -859,7 +859,7 @@
         <DefaultSyntaxHighlighter Value="FRM"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="5">
+    <JumpHistory HistoryIndex="4">
       <Position>
         <Filename Value="src\CAO_MAIN.pas"/>
         <Caret Line="9" Column="33"/>
@@ -875,10 +875,6 @@
       <Position>
         <Filename Value="src\CAO_DM.pas"/>
         <Caret Line="5522" TopLine="5486"/>
-      </Position>
-      <Position>
-        <Filename Value="src\CAO_MAIN.pas"/>
-        <Caret Line="1726" TopLine="1734"/>
       </Position>
       <Position>
         <Filename Value="src\CAO_Kunde.pas"/>

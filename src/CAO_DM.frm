@@ -11,7 +11,6 @@ object DM1: TDM1
     Properties.Strings = (
       'RawStringEncoding=DB_CP'
     )
-    Connected = True
     HostName = 'suse152'
     Port = 3306
     Database = 'FakturaOS'
