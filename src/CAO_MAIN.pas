@@ -260,7 +260,7 @@ uses
   Cao_Tool1, CAO_Pim, CAO_Export, CAO_Restore, CAO_Mitarbeiter, CAO_Vertreter,
   CAO_FibuKassenbuch, CAO_Journal_EKRE, CAO_MakeVKRech, CAO_MakeVertragRech,
   CAO_MakeEKBest, CAO_Journal_VKKASSE, CAO_Journal_VKAGB, CAO_Journal_VKLIEF,
-  CAO_Journal_VKRE, VolPeriod;
+  CAO_Journal_VKRE, CAO_Journal_EKBEST, VolPeriod;
 
 { TMainForm }
 
@@ -635,15 +635,15 @@ begin
                                           JournalVKLIEFForm.FormDeactivate (Sender);
                                           JournalVKLIEFForm.OnUpdateStatusBar :=nil;
                                         end;
-//        if Owner=JournalEKBESTForm then begin
-//                                          JournalEKBESTForm.FormDeactivate (Sender);
-//                                          JournalEKBESTForm.OnUpdateStatusBar :=nil;
+        if Owner=JournalEKBESTForm then begin
+                                          JournalEKBESTForm.FormDeactivate (Sender);
+                                          JournalEKBESTForm.OnUpdateStatusBar :=nil;
                                           {
                                           try JournalEKBESTForm.Free; except end;
                                           JournalEKBESTForm :=nil;
                                           Continue;
                                           }
-//                                        end;
+                                        end;
         if Owner=JournalVKKasseForm then begin
                                           JournalVKKasseForm.FormDeactivate (Sender);
                                           JournalVKKasseForm.OnUpdateStatusBar :=nil;
@@ -938,13 +938,13 @@ begin
               JournalEKREForm.FormActivate (Self);
               LastMenu :=JournalEKREForm.Mainmenu1;
          end;
-//         3110: //EK-Bestellung
-//         begin
-//              JournalEKBESTForm.OnUpdateStatusBar :=OnUpdateStatusBar;
-//              JournalEKBESTForm.JournalPanel.Parent := MainPanel;
-//              JournalEKBESTForm.FormActivate (Self);
-//              LastMenu :=JournalEKBESTForm.Mainmenu1;
-//         end;
+         3110: //EK-Bestellung
+         begin
+              JournalEKBESTForm.OnUpdateStatusBar :=OnUpdateStatusBar;
+              JournalEKBESTForm.JournalPanel.Parent := MainPanel;
+              JournalEKBESTForm.FormActivate (Self);
+              LastMenu :=JournalEKBESTForm.Mainmenu1;
+         end;
          //Finanzen
          4010: //Kassenbuch
          begin
@@ -1717,13 +1717,13 @@ begin
     end;
 
     // Journale -- EK-Bestellung
-//    with JournalEKBestForm do
-//    begin
-//        MainPanel.HelpContext       := 7100;
-//        JourGrid.HelpContext        := 7100;
-//        Allgemein.HelpContext       := 7125;
-//        TabSheet1.HelpContext       := 7150;
-//    end;
+    with JournalEKBestForm do
+    begin
+        MainPanel.HelpContext       := 7100;
+        JourGrid.HelpContext        := 7100;
+        Allgemein.HelpContext       := 7125;
+        TabSheet1.HelpContext       := 7150;
+    end;
 
     // Finanzen -- Kassenbuch
     with KassenBuchForm do

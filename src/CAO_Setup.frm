@@ -4,7 +4,7 @@ object SetupForm: TSetupForm
   Top = 85
   Width = 638
   BorderStyle = bsDialog
-  Caption = 'CAO-Einstellungen'
+  Caption = 'FakturaOS-Einstellungen'
   ClientHeight = 445
   ClientWidth = 638
   Color = clBtnFace
@@ -116,9 +116,9 @@ object SetupForm: TSetupForm
     Height = 396
     Top = 0
     Width = 638
-    ActivePage = FirmDat2Tab
+    ActivePage = FirmDat1Tab
     Align = alClient
-    TabIndex = 2
+    TabIndex = 1
     TabOrder = 2
     OnChange = PC1Change
     OnChanging = PC1Changing

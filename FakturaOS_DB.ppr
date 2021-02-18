@@ -61,7 +61,7 @@ uses
   CAO_ManKassBuchungDlg, CAO_ZahlungseingangDlg, CAO_Journal_EKRE,
   CAO_MakeVKRech, cao_teillieferdlg, cao_adressen_lief, CAO_MakeVertragRech,
   CAO_MakeEKRech, CAO_MakeEKBest, CAO_Journal_VKKASSE, CAO_Journal_VKAGB,
-  CAO_Journal_VKLIEF, CAO_Journal_VKRE;
+  CAO_Journal_VKLIEF, CAO_Journal_VKRE, CAO_Journal_EKBEST;
 
 {$R *.res}
 
@@ -136,8 +136,8 @@ begin
   SScreen.PBar.Position :=23;  SScreen.Update;
   Application.CreateForm(TJournalVKREForm, JournalVKREForm);
   SScreen.PBar.Position :=24;  SScreen.Update;
-//  Application.CreateForm(TJournalEKBestForm, JournalEKBestForm);
-  SScreen.PBar.Position :=24;  SScreen.Update;
+  Application.CreateForm(TJournalEKBestForm, JournalEKBestForm);
+  SScreen.PBar.Position :=25;  SScreen.Update;
 
 
   // Belege

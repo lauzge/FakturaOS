@@ -14,7 +14,7 @@ object DM1: TDM1
     Connected = True
     HostName = 'suse152'
     Port = 3306
-    Database = 'CAOFaktura'
+    Database = 'FakturaOS'
     User = 'ssluser'
     Password = 'Natur2000'
     Protocol = 'mysql'

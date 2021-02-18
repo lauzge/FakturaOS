@@ -372,8 +372,8 @@ type
     { Public-Deklarationen }
   end;
 
-var
-  SetupForm: TSetupForm;
+//var
+//  SetupForm: TSetupForm;
 
 implementation
 

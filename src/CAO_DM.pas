@@ -862,6 +862,7 @@ type
     function Storno_Verkauf (Journal_ID : Integer):Boolean; // True, Wenn OK
     function Storno_Angebot (Journal_ID : Integer):Boolean; // True, Wenn OK
     function Storno_Lieferschein (Journal_ID : Integer):Boolean; // True, Wenn OK
+    function Storno_EKBestellung (Journal_ID : Integer):Boolean; // True, Wenn OK
 
     // Export-Funktionen
     procedure ExportDatasetToStream(Stream: TStream; Dataset : TDataset; Delimiter : String; Spaltennamen : Boolean = True; TextInHochKomma : Boolean = True; DosZeichenSatz : Boolean = False);
@@ -5469,6 +5470,51 @@ begin
         Result :=True;
      except
         MessageDlg ('Fehler beim Storno des Angebotes !',mterror,[mbok],0);
+        Result :=False;
+     end;
+end;
+//------------------------------------------------------------------------------
+function tDM1.Storno_EKBestellung (Journal_ID : Integer):Boolean; // True, Wenn OK
+begin
+     Result :=False;
+     try
+        JPosTab.Close;
+        JPosTab.ParamByName ('ID').Value :=Journal_ID;
+        JPosTab.Open;
+
+        while not JPosTab.Eof do
+        begin
+           // Bestellmenge aktualsieren
+           if (JPosTabArtikelTyp.Value='N')and
+              (JPosTabARTIKEL_ID.Value>-1) then
+           begin
+              // Menge nicht verändern !!!
+              ArtMengeTab.Close;
+              ArtMengeTab.ParamByName ('ID').Value :=JPosTabARTIKEL_ID.Value;
+              ArtMengeTab.ParamByName ('SUBMENGE').Value :=0;
+              //Bestellmenge erniedrigen
+              ArtMengeTab.ParamByName ('BMENGE').Value :=JPosTabMenge.Value; // Menge wird abgezogen
+              ArtMengeTab.ExecSql;
+           end;
+
+
+           // Position löschen
+           JPosTab.Delete;
+        end;
+        JPosTab.Close;
+
+        JourTab.Close;
+        JourTab.ParamByName ('ID').AsInteger :=Journal_ID;
+        JourTab.Open;
+        JourTab.Delete;
+        JourTab.Close;
+
+        //Datei-Links löschen
+        LinkForm.DelLinks (EK_BEST, JOURNAL_ID);
+
+        Result :=True;
+     except
+        MessageDlg ('Fehler beim Storno der EK-Bestellung !',mterror,[mbok],0);
         Result :=False;
      end;
 end;

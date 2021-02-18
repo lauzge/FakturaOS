@@ -586,6 +586,14 @@
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="JournalVKREForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\CAO_Journal_EKBEST.pas"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="JournalEKBestForm"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
     </Units>
