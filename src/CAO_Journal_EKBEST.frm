@@ -937,6 +937,7 @@ object JournalEKBestForm: TJournalEKBestForm
       ReadOnly = False
       Required = False
       BlobType = ftMemo
+      Transliterate = False
     end
     object JoArtTabMENGE: TFloatField
       DisplayLabel = 'Menge'
@@ -1211,14 +1212,17 @@ object JournalEKBestForm: TJournalEKBestForm
       object offen1: TMenuItem
         Tag = 1
         Caption = 'offen'
+        OnClick = vollgeliefert1Click
       end
       object teillieferung1: TMenuItem
         Tag = 2
         Caption = 'Teillieferung'
+        OnClick = vollgeliefert1Click
       end
       object vollgeliefert1: TMenuItem
         Tag = 3
         Caption = 'voll geliefert'
+        OnClick = vollgeliefert1Click
       end
     end
   end

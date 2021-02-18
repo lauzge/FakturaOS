@@ -40,6 +40,7 @@ object SNErfassenForm: TSNErfassenForm
     ClientHeight = 29
     ClientWidth = 426
     TabOrder = 1
+    OnResize = Panel1Resize
     object CloseBtn: TBitBtn
       Left = 344
       Height = 24

@@ -61,7 +61,8 @@ uses
   CAO_ManKassBuchungDlg, CAO_ZahlungseingangDlg, CAO_Journal_EKRE,
   CAO_MakeVKRech, cao_teillieferdlg, cao_adressen_lief, CAO_MakeVertragRech,
   CAO_MakeEKRech, CAO_MakeEKBest, CAO_Journal_VKKASSE, CAO_Journal_VKAGB,
-  CAO_Journal_VKLIEF, CAO_Journal_VKRE, CAO_Journal_EKBEST;
+  CAO_Journal_VKLIEF, CAO_Journal_VKRE, CAO_Journal_EKBEST, cao_sn_erfassen,
+  cao_sn_auswahl;
 
 {$R *.res}
 
@@ -145,9 +146,9 @@ begin
   SScreen.PBar.Position :=26;  SScreen.Update;
   Application.CreateForm(TMakeEKReForm, MakeEKReForm);
   SScreen.PBar.Position :=27;  SScreen.Update;
-//  Application.CreateForm(TSNErfassenForm, SNErfassenForm);
+  Application.CreateForm(TSNErfassenForm, SNErfassenForm);
   SScreen.PBar.Position :=28;  SScreen.Update;
-//  Application.CreateForm(TSNAuswahlForm, SNAuswahlForm);
+  Application.CreateForm(TSNAuswahlForm, SNAuswahlForm);
   SScreen.PBar.Position :=29;  SScreen.Update;
   Application.CreateForm(TMakeVertragReForm, MakeVertragReForm); //NEU
   SScreen.PBar.Position :=31;  SScreen.Update;
@@ -178,7 +179,6 @@ begin
   Application.CreateForm(TLogForm, LogForm);
 
   Screen.Cursor :=crDefault;
-
   Application.Run;
 end.
 

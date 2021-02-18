@@ -298,6 +298,7 @@ object MakeEKReForm: TMakeEKReForm
           DataSource = ReEdiDS
           DefaultRowHeight = 17
           Flat = True
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
           ReadOnly = True
           TabOrder = 0
           OnDblClick = DBGrid1DblClick

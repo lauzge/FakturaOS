@@ -52,7 +52,7 @@ interface
 uses
   Windows, Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, Menus,
   ExtCtrls, ComCtrls, Buttons, StdCtrls, DBCtrls, DBGrids, rxdbdateedit, RxDBGrid,
-  CAO_ARTIKEL1, CAO_Kunde, ZDataset, ZAbstractRODataset, ToolWin, cao_var_const;
+  CAO_ARTIKEL1, CAO_Kunde, ZDataset, ZAbstractRODataset, cao_var_const;
 
 type
 

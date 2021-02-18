@@ -191,6 +191,7 @@ type
       Canvas: TCanvas; State: TGridDrawState);
     procedure Kopieren1Click(Sender: TObject);
     procedure Layoutspeichern1Click(Sender: TObject);
+    procedure vollgeliefert1Click(Sender: TObject);
     procedure Positionen1Click(Sender: TObject);
     procedure Preis1Click(Sender: TObject);
     procedure PrintJournalBtn1Click(Sender: TObject);
@@ -577,6 +578,27 @@ procedure TJournalEKBestForm.Layoutspeichern1Click(Sender: TObject);
 begin
      dm1.GridSaveLayout (tDBGrid(JourGrid),'JOURNAL_KOPF_EKBEST',101);
      dm1.GridSaveLayout (tDBGrid(JourPosGrid),'JOURNAL_POS_EKBEST',101);
+end;
+//------------------------------------------------------------------------------
+procedure TJournalEKBestForm.vollgeliefert1Click(Sender: TObject);
+var ST : Integer;
+begin
+     if Sender is tMenuItem then
+     begin
+        case tMenuItem(Sender).Tag of
+             1: st :=20;
+             2: st :=30;
+             3: st :=100;
+           else st :=-1;
+        end;
+        if (jquery.recordcount>0) and (st>0) and
+           (jquerystadium.asinteger <> st) then
+        begin
+           if not (jquery.state in [dsEdit, dsInsert]) then JQuery.Edit;
+           JQueryStadium.AsInteger :=ST;
+           JQuery.Post;
+        end;
+     end;
 end;
 //------------------------------------------------------------------------------
 procedure TJournalEKBestForm.Positionen1Click(Sender: TObject);

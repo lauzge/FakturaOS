@@ -594,6 +594,7 @@
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="JournalEKBestForm"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
     </Units>

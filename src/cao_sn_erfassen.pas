@@ -67,6 +67,7 @@ type
     SB1: TStatusBar;
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure Panel1Resize(Sender: TObject);
     procedure SNAddBtnClick(Sender: TObject);
     procedure SNAddChange(Sender: TObject);
     procedure SNAddKeyPress(Sender: TObject; var Key: char);
@@ -105,6 +106,12 @@ begin
        Self.ScaleBy (96, Screen.PixelsPerInch);
        Refresh;
      end;
+end;
+//------------------------------------------------------------------------------
+procedure TSNErfassenForm.Panel1Resize(Sender: TObject);
+begin
+     CloseBtn.Left :=Panel1.Width - 5 - CloseBtn.Width;
+     ArtBez.Width  :=Panel3.Width - 5 - ArtBez.Left;
 end;
 //------------------------------------------------------------------------------
 procedure TSNErfassenForm.SNAddBtnClick(Sender: TObject);
