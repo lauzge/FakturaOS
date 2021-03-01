@@ -96,8 +96,8 @@ uses
   Windows, Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, ExtCtrls,
   ComCtrls, cao_var_const, Buttons, DBCtrls, StdCtrls, Menus, Spin, DBGrids,
   CheckLst, Grids, CaoSecurity, VolDBEdit, SynHighlighterHTML, SynEdit,
-  VirtualTrees, LSGrids, BGRASpeedButton, rxcurredit, RxDBGrid, ZDataset,
-  ZAbstractRODataset, ZSqlUpdate, ZAbstractDataset;
+  BGRASpeedButton, rxcurredit, ZDataset, ZAbstractRODataset, ZSqlUpdate,
+  ZAbstractDataset;
 
 type
   TAddArtikelEvent = procedure (ID : Integer; Menge : Double;

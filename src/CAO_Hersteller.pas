@@ -50,7 +50,7 @@ unit CAO_Hersteller;
 interface
 
 uses
-  Windows, Messages, Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, ExtCtrls, Menus,
+  Windows, Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, ExtCtrls, Menus,
   StdCtrls, DBGrids, DBCtrls, Buttons, rxdbcomb, ZDataset, ZAbstractRODataset;
 
 type

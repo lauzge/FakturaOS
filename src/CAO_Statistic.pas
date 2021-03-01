@@ -47,8 +47,7 @@ interface
 uses
   Windows, Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, ComCtrls,
   ExtCtrls, StdCtrls, Buttons, PrintersDlgs, TADbSource, TAGraph, TATools,
-  TAChartLiveView, TAIntervalSources, TAMultiSeries, rxcustomchartpanel,
-  cyVirtualChart, DateTimePicker, TAGUIConnectorAggPas, ZDataset;
+  TAMultiSeries, DateTimePicker, ZDataset;
 
 type
 

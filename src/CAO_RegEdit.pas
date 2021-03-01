@@ -50,8 +50,7 @@ interface
 
 uses
   Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, ComCtrls, ExtCtrls,
-  DBCtrls, DBGrids, StdCtrls, Buttons, FZDB, rxdbcomb, ZDataset,
-  ZAbstractRODataset;
+  DBCtrls, DBGrids, StdCtrls, Buttons, rxdbcomb, ZDataset, ZAbstractRODataset;
 
 type
 

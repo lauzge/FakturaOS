@@ -44,8 +44,8 @@ interface
 
 uses
   Windows, Messages, Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs,
-  ExtCtrls, ComCtrls, ToolWin, DBGrids, DBCtrls, StdCtrls, cao_var_const,
-  Buttons, ZDataset, ZAbstractRODataset;
+  ExtCtrls, ComCtrls, DBGrids, DBCtrls, StdCtrls, cao_var_const, Buttons, ZDataset,
+  ZAbstractRODataset;
 
 type
 

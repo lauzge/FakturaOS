@@ -48,7 +48,7 @@ unit CAO_Mitarbeiter;
 interface
 
 uses
-  Windows, Messages, Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs,
+  Windows, Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs,
   ExtCtrls, ComCtrls, DBGrids, StdCtrls, DBCtrls, Buttons, Menus, ZDataset,
   ZAbstractRODataset, CAO_VAR_CONST;
 

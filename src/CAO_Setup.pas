@@ -381,7 +381,7 @@ implementation
 
 uses
   {$IFDEF PRO}cao_liefexport_dlg,{$ENDIF}
-  CAO_DM, FileCtrl, cao_progress, CAO_Tool1;
+  CAO_DM, cao_progress, CAO_Tool1;
 { TSetupForm }
 
 procedure TSetupForm.FibuAufwKtoTabBeforePost(DataSet: TDataSet);

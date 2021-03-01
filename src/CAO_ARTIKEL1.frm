@@ -46,9 +46,9 @@ object ArtikelForm: TArtikelForm
       Height = 594
       Top = 27
       Width = 593
-      ActivePage = ShopTS
+      ActivePage = Allg_TS
       Align = alClient
-      TabIndex = 3
+      TabIndex = 0
       TabOrder = 1
       OnChange = Art_PCChange
       object Allg_TS: TTabSheet
@@ -1859,10 +1859,10 @@ object ArtikelForm: TArtikelForm
               Height = 469
               Top = 3
               Width = 579
-              ActivePage = LiefPreisTS
+              ActivePage = PreisStdTS
               Align = alClient
               Style = tsButtons
-              TabIndex = 3
+              TabIndex = 0
               TabOrder = 0
               OnChange = PreisPCChange
               OnChanging = PreisPCChanging
@@ -4834,7 +4834,7 @@ object ArtikelForm: TArtikelForm
       object Link_TS: TTabSheet
         Tag = 5
         Caption = 'Dateien'
-        ClientHeight = 569
+        ClientHeight = 568
         ClientWidth = 585
         TabVisible = False
         object ArtTopPanelDateien: TPanel
@@ -4848,12 +4848,12 @@ object ArtikelForm: TArtikelForm
         end
         object CaoGroupBox7: TGroupBox
           Left = 0
-          Height = 481
+          Height = 480
           Top = 88
           Width = 585
           Align = alClient
           Caption = 'Datei-Link''s'
-          ClientHeight = 463
+          ClientHeight = 462
           ClientWidth = 581
           Font.Color = clWindowText
           Font.Height = -11
@@ -4864,7 +4864,7 @@ object ArtikelForm: TArtikelForm
           TabOrder = 1
           object LinkPanel: TPanel
             Left = 0
-            Height = 463
+            Height = 462
             Top = 0
             Width = 581
             Align = alClient
@@ -4876,7 +4876,7 @@ object ArtikelForm: TArtikelForm
       object Hist_TS: TTabSheet
         Tag = 6
         Caption = 'Historie'
-        ClientHeight = 569
+        ClientHeight = 568
         ClientWidth = 585
         TabVisible = False
         object ArtTopPanelHistorie: TPanel
@@ -4891,7 +4891,7 @@ object ArtikelForm: TArtikelForm
         object HistSumBar: TStatusBar
           Left = 0
           Height = 23
-          Top = 546
+          Top = 545
           Width = 585
           Panels = <          
             item
@@ -5012,7 +5012,7 @@ object ArtikelForm: TArtikelForm
             end
             object ToolButton4: TToolButton
               Left = 237
-              Height = 5
+              Height = 22
               Top = 2
               Caption = 'ToolButton4'
               Style = tbsDivider
@@ -5040,7 +5040,7 @@ object ArtikelForm: TArtikelForm
             end
             object ToolButton5: TToolButton
               Left = 345
-              Height = 5
+              Height = 22
               Top = 2
               Caption = 'ToolButton5'
               Style = tbsDivider
@@ -5066,12 +5066,12 @@ object ArtikelForm: TArtikelForm
         end
         object CaoGroupBox4: TGroupBox
           Left = 0
-          Height = 427
+          Height = 426
           Top = 119
           Width = 585
           Align = alClient
           Caption = 'Vorgänge'
-          ClientHeight = 409
+          ClientHeight = 408
           ClientWidth = 581
           Font.Color = clWindowText
           Font.Height = -11
@@ -5082,7 +5082,7 @@ object ArtikelForm: TArtikelForm
           TabOrder = 4
           object HistGrid: TDBGrid
             Left = 0
-            Height = 409
+            Height = 408
             Top = 0
             Width = 581
             Align = alClient

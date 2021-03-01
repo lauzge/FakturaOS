@@ -48,8 +48,7 @@ interface
 
 uses
   windows, Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ComCtrls, Buttons, TplZipUnit, AbZipKit, AbComCtrls, AbBrowse, AbZipper,
-  AbZBrows, AbArcTyp, AbUtils;
+  ComCtrls, Buttons, AbBrowse, AbZipper, AbArcTyp, AbUtils;
 
 type
 
@@ -104,7 +103,7 @@ implementation
 {$R *.frm}
 
 uses
-  CAO_DM, DB, FileCtrl, CAO_Logging,CAO_Tool1;
+  CAO_DM, DB, CAO_Logging, CAO_Tool1;
 
 { TBackupForm }
 
