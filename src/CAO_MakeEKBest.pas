@@ -605,7 +605,7 @@ end;
 procedure TMakeEKBestForm.FormActivate(Sender: TObject);
 var Dummy : Boolean;
 begin
-     QueryTime :=GetTickCount;
+     QueryTime :=GetTickCount64;
      if first then
      begin
        first :=False;
@@ -1213,7 +1213,7 @@ end;
 procedure TMakeEKBestForm.PC1Changing(Sender: TObject;
   var AllowChange: Boolean);
 begin
-     QueryTime :=GetTickCount;
+     QueryTime :=GetTickCount64;
      if PosTab.ParamByName ('ID').Value<>ReEdiTabREC_ID.Value then
      begin
        //Loading :=True;
@@ -1243,7 +1243,7 @@ begin
        UpdateLieferAdresse (REEdiTabLief_Addr_ID.Value);
      end;
 
-     QueryTime :=GetTickCount - QueryTime;
+     QueryTime :=GetTickCount64 - QueryTime;
      UpdateStatus;
 
      if ReEdiTab.State in [dsEdit, dsInsert] then ReEdiTab.Post;
@@ -1563,7 +1563,7 @@ end;
 //------------------------------------------------------------------------------
 procedure TMakeEKBestForm.RechInfoMemoEnter(Sender: TObject);
 begin
-     tDBEdit(sender).Color :=DM1.EditColor;//$009FFF9F;
+     tDBEdit(sender).Color :=DM1.EditColor;   //  $009FFF9F;
 end;
 //------------------------------------------------------------------------------
 procedure TMakeEKBestForm.RechInfoMemoExit(Sender: TObject);

@@ -10,7 +10,7 @@ interface
 
 uses
   Windows, Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, ComCtrls,
-  DBCtrls, DBGrids, ExtCtrls, StdCtrls, rxdbcomb, VolDBEdit, ZDataset,
+  DBCtrls, DBGrids, ExtCtrls, StdCtrls, VolDBEdit, ZDataset,
   ZAbstractRODataset;
 
 type

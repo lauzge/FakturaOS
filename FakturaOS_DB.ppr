@@ -179,6 +179,7 @@ begin
   Application.CreateForm(TLogForm, LogForm);
 
   Screen.Cursor :=crDefault;
+
   Application.Run;
 end.
 

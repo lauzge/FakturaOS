@@ -48,8 +48,7 @@ interface
 
 uses
   Windows, Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  Menus, DBGrids, ComCtrls, StdCtrls, DBCtrls, VolPeriod, rxDateRangeEditUnit,
-  ZDataset, ZAbstractRODataset;
+  Menus, DBGrids, ComCtrls, StdCtrls, DBCtrls, VolPeriod, ZDataset, ZAbstractRODataset;
 
 type
 

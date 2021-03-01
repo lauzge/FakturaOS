@@ -47,8 +47,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, EditBtn, Buttons,
-  StdCtrls, IdBaseComponent, IdComponent, IdTCPConnection, IdTCPClient, IdHTTP,
-  CAO_ShopTrans;
+  StdCtrls, IdComponent, IdHTTP, CAO_ShopTrans;
 
 type
   TImageSize = (isDefault, isLarge, isMedium);

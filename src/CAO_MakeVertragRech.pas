@@ -943,7 +943,7 @@ end;
 //------------------------------------------------------------------------------
 procedure TMakeVertragReForm.KuNrEditEnter(Sender: TObject);
 begin
-     tDBEdit(sender).Color :=DM1.EditColor;//$009FFF9F;
+     tDBEdit(sender).Color :=DM1.EditColor;  // $009FFF9F;
 end;
 //------------------------------------------------------------------------------
 procedure TMakeVertragReForm.KuNrEditExit(Sender: TObject);
@@ -1367,7 +1367,7 @@ end;
 procedure TMakeVertragReForm.PC1Changing(Sender: TObject;
   var AllowChange: Boolean);
 begin
-     QueryTime :=GetTickCount;
+     QueryTime :=GetTickCount64;
      if PosTab.ParamByName ('ID').Value<>ReEdiTabREC_ID.Value then
      begin
        if DM1.ArtInfoTab.Active then DM1.ArtInfoTab.Close;
@@ -1399,7 +1399,7 @@ begin
        PosTab.Refresh;
      end;
 
-     QueryTime :=GetTickCount - QueryTime;
+     QueryTime :=GetTickCount64 - QueryTime;
      UpdateStatus;
      //mainform.SB1.Panels[1].Text :=FormatFloat ('0.00',(GetTickCount-LastTime)/1000)+' Sek.';
 
@@ -1539,7 +1539,7 @@ begin
 
        Loading :=False;
 
-       QueryTime :=GetTickCount;
+       QueryTime :=GetTickCount64;
 
        ReEdiTabNSUMME.DisplayFormat     :=',#0.00 "'+DM1.LeitWaehrung+' "';
        ReEdiTabMSUMME.DisplayFormat     :=',#0.00 "'+DM1.LeitWaehrung+' "';

@@ -1624,7 +1624,7 @@ begin
     then Artikelnr.Color :=clRed
     else
   if Artikelnr.Focused
-    then Artikelnr.Color :=DM1.EditColor//$009FFF9F
+    then Artikelnr.Color :=DM1.EditColor   // $009FFF9F
     else Artikelnr.Color :=clWindow;
 
   dm1.uniquery.close;
@@ -4062,7 +4062,7 @@ procedure TArtikelForm.PreisGridGetEditText(Sender: TObject; ACol,
 var P1, P2, PR : Double;
 begin
   if assigned(PreisGrid.InplaceEditor)
-   then PreisGrid.InplaceEditor.Brush.Color :=DM1.EditColor;//$009FFF9F;
+   then PreisGrid.InplaceEditor.Brush.Color :=DM1.EditColor; // $009FFF9F;
 
 
 
@@ -4141,7 +4141,7 @@ begin
      (gdFocused in aState) then
   begin
      if PreisGrid.Focused
-      then PreisGrid.Canvas.Brush.Color :=DM1.EditColor//$009FFF9F
+      then PreisGrid.Canvas.Brush.Color :=DM1.EditColor // $009FFF9F
       else PreisGrid.Canvas.Brush.Color :=clWindow;
 
      PreisGrid.Canvas.Font.Color :=clBlack;

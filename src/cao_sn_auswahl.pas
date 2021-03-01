@@ -43,7 +43,7 @@ interface
 
 uses
   Windows, Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  ComCtrls, StdCtrls, DBGrids, Buttons, BGRASpeedButton, ZDataset, ZAbstractRODataset;
+  ComCtrls, StdCtrls, DBGrids, Buttons, ZDataset, ZAbstractRODataset;
 
 type
 

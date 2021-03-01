@@ -46,9 +46,9 @@ object ArtikelForm: TArtikelForm
       Height = 594
       Top = 27
       Width = 593
-      ActivePage = Allg_TS
+      ActivePage = ShopTS
       Align = alClient
-      TabIndex = 0
+      TabIndex = 3
       TabOrder = 1
       OnChange = Art_PCChange
       object Allg_TS: TTabSheet
@@ -1859,10 +1859,10 @@ object ArtikelForm: TArtikelForm
               Height = 469
               Top = 3
               Width = 579
-              ActivePage = StaffelpreisTS
+              ActivePage = LiefPreisTS
               Align = alClient
               Style = tsButtons
-              TabIndex = 1
+              TabIndex = 3
               TabOrder = 0
               OnChange = PreisPCChange
               OnChanging = PreisPCChanging
@@ -2588,11 +2588,11 @@ object ArtikelForm: TArtikelForm
               object KunPreisTS: TTabSheet
                 Tag = 3
                 Caption = 'Kundenpreise'
-                ClientHeight = 441
+                ClientHeight = 440
                 ClientWidth = 571
                 object ArtKunPreisGrid: TDBGrid
                   Left = 0
-                  Height = 415
+                  Height = 414
                   Top = 0
                   Width = 571
                   Align = alClient
@@ -2632,7 +2632,7 @@ object ArtikelForm: TArtikelForm
                 object ToolBar4: TToolBar
                   Left = 0
                   Height = 22
-                  Top = 419
+                  Top = 418
                   Width = 571
                   Align = alBottom
                   AutoSize = True
@@ -2656,7 +2656,7 @@ object ArtikelForm: TArtikelForm
                   end
                   object ToolButton6: TToolButton
                     Left = 76
-                    Height = 5
+                    Height = 22
                     Top = 0
                     Caption = 'ToolButton6'
                     Style = tbsDivider
@@ -2671,7 +2671,7 @@ object ArtikelForm: TArtikelForm
                   end
                   object ToolButton7: TToolButton
                     Left = 156
-                    Height = 5
+                    Height = 22
                     Top = 0
                     Caption = 'ToolButton7'
                     Style = tbsDivider
@@ -2686,7 +2686,7 @@ object ArtikelForm: TArtikelForm
                   end
                   object ToolButton30: TToolButton
                     Left = 236
-                    Height = 5
+                    Height = 22
                     Top = 0
                     Caption = 'ToolButton30'
                     Style = tbsDivider
@@ -2702,7 +2702,7 @@ object ArtikelForm: TArtikelForm
                 object Panel21: TPanel
                   Left = 0
                   Height = 4
-                  Top = 415
+                  Top = 414
                   Width = 571
                   Align = alBottom
                   BevelOuter = bvNone
@@ -2712,12 +2712,12 @@ object ArtikelForm: TArtikelForm
               object LiefPreisTS: TTabSheet
                 Tag = 4
                 Caption = 'Lieferanten / Preise'
-                ClientHeight = 441
+                ClientHeight = 440
                 ClientWidth = 571
                 object ToolBar3: TToolBar
                   Left = 0
                   Height = 22
-                  Top = 419
+                  Top = 418
                   Width = 571
                   Align = alBottom
                   AutoSize = True
@@ -2741,7 +2741,7 @@ object ArtikelForm: TArtikelForm
                   end
                   object ToolButton9: TToolButton
                     Left = 76
-                    Height = 5
+                    Height = 22
                     Top = 0
                     Caption = 'ToolButton9'
                     Style = tbsDivider
@@ -2756,7 +2756,7 @@ object ArtikelForm: TArtikelForm
                   end
                   object ToolButton10: TToolButton
                     Left = 167
-                    Height = 5
+                    Height = 22
                     Top = 0
                     Caption = 'ToolButton10'
                     Style = tbsDivider
@@ -2771,7 +2771,7 @@ object ArtikelForm: TArtikelForm
                   end
                   object ToolButton11: TToolButton
                     Left = 247
-                    Height = 5
+                    Height = 22
                     Top = 0
                     Caption = 'ToolButton11'
                     Style = tbsDivider
@@ -2786,7 +2786,7 @@ object ArtikelForm: TArtikelForm
                   end
                   object ToolButton13: TToolButton
                     Left = 327
-                    Height = 5
+                    Height = 22
                     Top = 0
                     Caption = 'ToolButton13'
                     Style = tbsDivider
@@ -2802,7 +2802,7 @@ object ArtikelForm: TArtikelForm
                 end
                 object ArtLiefPreisGrid: TDBGrid
                   Left = 0
-                  Height = 419
+                  Height = 418
                   Top = 0
                   Width = 571
                   Align = alClient
@@ -2855,7 +2855,7 @@ object ArtikelForm: TArtikelForm
       object ErweitertTS: TTabSheet
         Tag = 3
         Caption = 'Erweitert'
-        ClientHeight = 569
+        ClientHeight = 568
         ClientWidth = 585
         TabVisible = False
         object ArtTopPanelErweitert: TPanel
@@ -2878,19 +2878,19 @@ object ArtikelForm: TArtikelForm
         end
         object ErweitertPC: TPageControl
           Left = 0
-          Height = 476
+          Height = 475
           Top = 93
           Width = 585
-          ActivePage = UserFelderTS
+          ActivePage = ErsatzteilTS
           Align = alClient
           Style = tsButtons
-          TabIndex = 0
+          TabIndex = 5
           TabOrder = 2
           OnChange = Art_PCChange
           object UserFelderTS: TTabSheet
             Tag = 1
             Caption = 'Benutzerfelder'
-            ClientHeight = 447
+            ClientHeight = 446
             ClientWidth = 577
             object Panel17: TPanel
               Left = 0
@@ -2903,12 +2903,12 @@ object ArtikelForm: TArtikelForm
             end
             object CaoGroupBox2: TGroupBox
               Left = 0
-              Height = 444
+              Height = 443
               Top = 3
               Width = 577
               Align = alClient
               Caption = 'Benutzerfelder'
-              ClientHeight = 426
+              ClientHeight = 425
               ClientWidth = 573
               Font.Color = clWindowText
               Font.Height = -11
@@ -3282,7 +3282,7 @@ object ArtikelForm: TArtikelForm
           object SerNoTS: TTabSheet
             Tag = 2
             Caption = 'Seriennummern'
-            ClientHeight = 447
+            ClientHeight = 446
             ClientWidth = 577
             object Panel7: TPanel
               Left = 0
@@ -3296,7 +3296,7 @@ object ArtikelForm: TArtikelForm
             object CaoGroupBox14: TGroupBox
               Left = 0
               Height = 53
-              Top = 394
+              Top = 393
               Width = 577
               Align = alBottom
               Caption = 'Erfassen'
@@ -3344,7 +3344,7 @@ object ArtikelForm: TArtikelForm
             object CaoGroupBox16: TGroupBox
               Left = 0
               Height = 70
-              Top = 324
+              Top = 323
               Width = 577
               Align = alBottom
               Caption = 'Details'
@@ -3358,12 +3358,12 @@ object ArtikelForm: TArtikelForm
             end
             object CaoGroupBox15: TGroupBox
               Left = 0
-              Height = 321
+              Height = 320
               Top = 3
               Width = 577
               Align = alClient
               Caption = 'Liste der Seriennummern'
-              ClientHeight = 303
+              ClientHeight = 302
               ClientWidth = 573
               Font.Color = clWindowText
               Font.Height = -11
@@ -3374,7 +3374,7 @@ object ArtikelForm: TArtikelForm
               TabOrder = 3
               object SerNoGrid: TDBGrid
                 Left = 0
-                Height = 303
+                Height = 302
                 Top = 0
                 Width = 573
                 Align = alClient
@@ -3418,12 +3418,12 @@ object ArtikelForm: TArtikelForm
           object StueckListTS: TTabSheet
             Tag = 3
             Caption = 'Stückliste'
-            ClientHeight = 447
+            ClientHeight = 446
             ClientWidth = 577
             object ToolBar2: TToolBar
               Left = 0
               Height = 22
-              Top = 425
+              Top = 424
               Width = 577
               Align = alBottom
               AutoSize = True
@@ -3487,7 +3487,7 @@ object ArtikelForm: TArtikelForm
             object CaoGroupBox18: TGroupBox
               Left = 0
               Height = 48
-              Top = 377
+              Top = 376
               Width = 577
               Align = alBottom
               Caption = 'Summe'
@@ -3564,12 +3564,12 @@ object ArtikelForm: TArtikelForm
             end
             object CaoGroupBox17: TGroupBox
               Left = 0
-              Height = 374
+              Height = 373
               Top = 3
               Width = 577
               Align = alClient
               Caption = 'Stückliste'
-              ClientHeight = 356
+              ClientHeight = 355
               ClientWidth = 573
               Font.Color = clWindowText
               Font.Height = -11
@@ -3580,7 +3580,7 @@ object ArtikelForm: TArtikelForm
               TabOrder = 3
               object STListGrid: TDBGrid
                 Left = 0
-                Height = 356
+                Height = 355
                 Top = 0
                 Width = 573
                 Align = alClient
@@ -3644,7 +3644,7 @@ object ArtikelForm: TArtikelForm
           object ZubehoerTS: TTabSheet
             Tag = 5
             Caption = 'Zubehör'
-            ClientHeight = 447
+            ClientHeight = 446
             ClientWidth = 577
             object Panel18: TPanel
               Left = 0
@@ -3657,12 +3657,12 @@ object ArtikelForm: TArtikelForm
             end
             object CaoGroupBox8: TGroupBox
               Left = 0
-              Height = 444
+              Height = 443
               Top = 3
               Width = 577
               Align = alClient
               Caption = 'Zubehör'
-              ClientHeight = 426
+              ClientHeight = 425
               ClientWidth = 573
               Font.Color = clWindowText
               Font.Height = -11
@@ -3673,7 +3673,7 @@ object ArtikelForm: TArtikelForm
               TabOrder = 1
               object ZubGrid: TDBGrid
                 Left = 0
-                Height = 426
+                Height = 425
                 Top = 0
                 Width = 573
                 Align = alClient
@@ -3721,7 +3721,7 @@ object ArtikelForm: TArtikelForm
           object ErsatzteilTS: TTabSheet
             Tag = 6
             Caption = 'Ersatzteile'
-            ClientHeight = 447
+            ClientHeight = 446
             ClientWidth = 577
             object Panel22: TPanel
               Left = 0
@@ -3734,12 +3734,12 @@ object ArtikelForm: TArtikelForm
             end
             object CaoGroupBox9: TGroupBox
               Left = 0
-              Height = 444
+              Height = 443
               Top = 3
               Width = 577
               Align = alClient
               Caption = 'Ersatzteile'
-              ClientHeight = 426
+              ClientHeight = 425
               ClientWidth = 573
               Font.Color = clWindowText
               Font.Height = -11
@@ -3750,7 +3750,7 @@ object ArtikelForm: TArtikelForm
               TabOrder = 1
               object ErsGrid: TDBGrid
                 Left = 0
-                Height = 426
+                Height = 425
                 Top = 0
                 Width = 573
                 Align = alClient
@@ -3800,7 +3800,7 @@ object ArtikelForm: TArtikelForm
       object ShopTS: TTabSheet
         Tag = 4
         Caption = 'Shop'
-        ClientHeight = 569
+        ClientHeight = 568
         ClientWidth = 585
         TabVisible = False
         object Panel6: TPanel
@@ -4292,12 +4292,12 @@ object ArtikelForm: TArtikelForm
         end
         object ShopBeschrGB: TGroupBox
           Left = 0
-          Height = 273
+          Height = 272
           Top = 296
           Width = 585
           Align = alClient
           Caption = 'Artikelbeschreibung:'
-          ClientHeight = 255
+          ClientHeight = 254
           ClientWidth = 581
           Color = clBtnFace
           Font.Color = clWindowText
@@ -4327,7 +4327,7 @@ object ArtikelForm: TArtikelForm
           end
           inline SynEdit1: TSynEdit
             Left = 0
-            Height = 255
+            Height = 254
             Top = 0
             Width = 581
             Align = alClient

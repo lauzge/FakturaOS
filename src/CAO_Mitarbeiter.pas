@@ -500,7 +500,7 @@ end;
 procedure TMitarbeiterForm.UpdateQuery;
 var LastTime : DWord;
 begin
-     LastTime :=GetTickCount;
+     LastTime :=GetTickCount64;
 
      if Mita_Tab.active then Mita_Tab.close;
      Mita_Tab.sql.clear;
@@ -513,7 +513,7 @@ begin
      finally
         Screen.Cursor :=crDefault;
      end;
-     QueryTime :=GetTickCount-LastTime;
+     QueryTime :=GetTickCount64-LastTime;
      UpdateStatus;
 end;
 //------------------------------------------------------------------------------

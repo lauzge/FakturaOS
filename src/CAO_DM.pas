@@ -904,8 +904,7 @@ implementation
 {$R *.frm}
 
 uses
-  inifiles, FileCtrl, cao_progress, CAO_SearchClass,
-  CAO_Link, Variants;
+  inifiles, cao_progress, CAO_SearchClass, CAO_Link, Variants;
 
 // aktuell verwendete Datenbank-Version (Struktur/Intern) = 1.09
 // wird mit der Version in der SQL-Registry verglichen

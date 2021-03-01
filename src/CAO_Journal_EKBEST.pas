@@ -512,7 +512,7 @@ var OldTime : DWord; I : Integer;
 begin
      Application.ProcessMessages;
      try
-        OldTime :=GetTickCount;
+        OldTime :=GetTickCount64;
         Screen.Cursor :=crSQLWait;
         JQuery.Close;
         JQuery.SQL.Clear;
@@ -553,7 +553,7 @@ begin
 
      finally
        Screen.Cursor :=crDefault;
-       QueryTime :=gettickcount-oldtime;
+       QueryTime :=gettickcount64-oldtime;
      end;
 end;
 //------------------------------------------------------------------------------

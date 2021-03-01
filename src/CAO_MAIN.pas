@@ -256,7 +256,7 @@ implementation
 
 uses
   cao_mandantaw, CAO_Info, cao_var_const, CAO_DM, CAO_Logging, CAO_PLZ, CAO_BLZ,
-  CAO_RegEdit, CAO_Setup, Inifiles, shellapi, filectrl,  CAO_DBOptimize,
+  CAO_RegEdit, CAO_Setup, shellapi,  CAO_DBOptimize,
   Cao_Tool1, CAO_Pim, CAO_Export, CAO_Restore, CAO_Mitarbeiter, CAO_Vertreter,
   CAO_FibuKassenbuch, CAO_Journal_EKRE, CAO_MakeVKRech, CAO_MakeVertragRech,
   CAO_MakeEKBest, CAO_Journal_VKKASSE, CAO_Journal_VKAGB, CAO_Journal_VKLIEF,
@@ -365,7 +365,7 @@ begin
      }
 
      DM1.C2Color   :=$00DDFFFF; // hellgelb
-     DM1.EditColor :=$00A0FFFF;//$009FFF9F; // Hellgrün
+     DM1.EditColor :=$00A0FFFF; // $009FFF9F; // Hellgrün
      // Statuszeile löschen
      OnUpdateStatusBar('', '', '', '', '');
 

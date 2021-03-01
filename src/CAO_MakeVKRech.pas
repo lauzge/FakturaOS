@@ -1804,7 +1804,7 @@ var I        : Integer;
     MyLastTS : tTabSheet;
 begin
      MyLastTS :=LastTS;
-     QueryTime :=GetTickCount;
+     QueryTime :=GetTickCount64;
      if First then
      begin
        First :=False;

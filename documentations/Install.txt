@@ -1,12 +1,28 @@
+Installation des Quellcodes:
+
+Falls du noch keinen Datenbankserver hast installiere MariaDB 10.4 von https://mariadb.org/download/ auf einen Rechner in deinem Intranet, das kann natürlich auch dein Entwickler-PC sein, oder ein virtueller PC.
+Erstelle dann auf diesem Datenbankserver einen Datenbankbenutzer und gib ihm alle Rechte
+Kopiere dann die Datei libmariadb.dll auf deinen Entwickler-PC in den Ordner C:\Windows\SysWOW64.
+Lade dir nun CodeTyphon 7.20 von https://www.pilotlogic.com/sitejoom/index.php/wiki/84-wiki/codetyphon-studio/80-codetyphon-download und installiere es nach Anleitung auf deinen Entwickler PC
+Stelle dabei sicher das du die Big-Version installierst
+Nun lade den Quellcode von https://github.com/lauzge/FakturaOS und entpacke ihn in dein Arbeitsverzeichnis, optional benenne "FakturaOS-main" in "FakturaOS" um.
+Danach gehe in das Verzeichnis FakturaOS und lösche die Datei "FakturaOS-DB.CFG"
+Starte nun Typhon64 und installiere dort nacheinander die Komponenten, die du im Quellcode findest.
+Lade nun die Datei C:\codetyphon\typhon\components\pl_JVCL\source\JvJCLUtils.pas und suche die Funktionen "DaysInAMonth" und "DaysPerMonth", diese musst du nun einschalten indem du sie entklammerst.
+Als letztes lade das Multiprojekt "FakturaOS.ctmpr"
+Jetzt kannst du das Projekt kopillieren
+Leider mußte ich im Nachhinein feststellen dass das Projekt nur auf einem 64bit System läuft da CodeTyphon Komponenten braucht die bei einem 32bit System miteinander nicht kompatiebel sind ;((
+
+  
 Install the sources:
 
-Download and install MariaDB 10.4 from https://mariadb.org/download/ on a host in your intranet
-copy on the client host the file libmariadb.dll in the directory C:\Windows\SysWOW64 on 64bit PC or in the directory C:\Windows\System32 on 32 bit PC
+Download and install MariaDB 10.4 from https://mariadb.org/download/ at your developer host in your intranet
 Create a user with all rights on the database server
+copy on the client host the file libmariadb.dll in the directory C:\Windows\SysWOW64.
 Download CodeTyphon 7.20 from https://www.pilotlogic.com/sitejoom/index.php/wiki/84-wiki/codetyphon-studio/80-codetyphon-download
-Install the BigVersion from CodeTyphon
-Download the Sources and install it on your work directory
-Modify or delete the file "FakturOS_DB.CFG"
+Make sure that you install the BigVersion from CodeTyphon
+Download the Sources and install it on your work directory on your developer pc
+Now please open the FakturaOS directory and delete the file "FakturOS_DB.CFG".
 Start CodeTyphon and install the component packages first
 Enable in the unit C:\codetyphon\typhon\components\pl_JVCL\source\JvJCLUtils.pas the function "DaysInAMonth" and the function "DaysPerMonth"
 Load the Multiproject "FakturaOS.ctmpr"

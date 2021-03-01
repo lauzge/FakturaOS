@@ -96,8 +96,8 @@ interface
 uses
   Windows, Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, ExtCtrls,
   ComCtrls, ClipBrd, cao_var_const, Buttons, Grids, DBCtrls, StdCtrls, Menus,
-  CheckLst, DBExtCtrls, DBGrids, DividerBevel, rxdbcomb, RxDBGrid, ZDataset,
-  ZSqlUpdate, ZAbstractRODataset, JvFunctions, VolDBEdit;
+  CheckLst, DBExtCtrls, DBGrids, DividerBevel, RxDBGrid, ZDataset, ZSqlUpdate,
+  ZAbstractRODataset, JvFunctions, VolDBEdit;
 
 type
 

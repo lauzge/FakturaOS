@@ -50,8 +50,8 @@ interface
 
 uses
   Windows, Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, ComCtrls,
-  ExtCtrls, StdCtrls, DBCtrls, Menus, Buttons, Messages, DBGrids, rxdbcomb,
-  rxdbdateedit, ZDataset, ZAbstractRODataset, cao_var_const, VolDBEdit;
+  ExtCtrls, StdCtrls, DBCtrls, Menus, Buttons, Messages, DBGrids, rxdbdateedit,
+  ZDataset, ZAbstractRODataset, cao_var_const, VolDBEdit;
 
 type
 
@@ -510,7 +510,7 @@ end;
 
 procedure TKFZForm.LeBesuchEdiEnter(Sender: TObject);
 begin
-  tDBEdit(sender).Color :=DM1.EditColor;//$009FFF9F;
+  tDBEdit(sender).Color :=DM1.EditColor;  //  $009FFF9F;
 end;
 
 procedure TKFZForm.LeBesuchEdiExit(Sender: TObject);
@@ -815,7 +815,7 @@ end;
 procedure TKFZForm.UpdateQuery;
 var LastTime : DWord;
 begin
-     LastTime :=GetTickCount;
+     LastTime :=GetTickCount64;
 
      if kfztab.active then kfztab.close;
      kfztab.sql.clear;
@@ -842,7 +842,7 @@ begin
      finally
         Screen.Cursor :=crDefault;
      end;
-     QueryTime :=GetTickCount-LastTime;
+     QueryTime :=GetTickCount64-LastTime;
      UpdateStatus;
 end;
 //------------------------------------------------------------------------------
