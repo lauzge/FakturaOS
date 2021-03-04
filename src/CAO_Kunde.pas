@@ -727,7 +727,7 @@ implementation
 uses
   CAO_MAIN, CAO_Tool1, CAO_PLZ, CAO_DM, CAO_Logging, CAO_Link, cao_progress,
   cao_plugin_def, cao_plugin_func, cao_dbgrid_layout, CAO_BLZ, CAO_Pim,
-  cao_adressen_lief;
+  cao_adressen_import, cao_adressen_lief;
 
 //----------------------------DLL-STUFF-----------------------------------------
 var SuchDLL          : tHandle;
@@ -1587,16 +1587,17 @@ begin
 end;
 //------------------------------------------------------------------------------
 procedure TAdressForm.ImportUpdate1Click(Sender: TObject);
+var KundenImportForm : TKundenImportForm;
 begin
-//  Application.CreateForm(TKundenImportForm,KundenImportForm);
-  try
-     MainForm.ZMonitor1.Active:=false; // Monitor aus !
-//     KundenImportForm.ShowModal;
-  finally
-//     KundenImportForm.Free;
-//     MainForm.ZMonitor1.Active:=true;
-  end;
-  if KSQuery.Active then KSQuery.Refresh;
+     Application.CreateForm(TKundenImportForm,KundenImportForm);
+     try
+//        MainForm.ZMonitor1.Transaction :=nil; // Monitor aus !
+        KundenImportForm.ShowModal;
+     finally
+        KundenImportForm.Free;
+//        MainForm.ZMonitor1.Transaction :=DM1.Transact1;
+     end;
+     if KSQuery.Active then KSQuery.Refresh;
 end;
 //------------------------------------------------------------------------------
 procedure TAdressForm.InternetBtnClick(Sender: TObject);

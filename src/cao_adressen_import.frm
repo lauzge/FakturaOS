@@ -1,60 +1,349 @@
 object KundenImportForm: TKundenImportForm
   Left = 330
-  Height = 442
+  Height = 416
   Top = 256
   Width = 553
   HelpContext = 110600
   BorderStyle = bsDialog
   Caption = 'Adressen - Import / Update'
-  ClientHeight = 442
+  ClientHeight = 416
   ClientWidth = 553
   Color = clBtnFace
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Microsoft Sans Serif'
   Font.Quality = fqAntialiased
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnShow = FormShow
   Position = poMainFormCenter
   LCLVersion = '7.2'
-  object Panel1: TPanel
-    Left = 0
-    Height = 32
-    Top = 410
-    Width = 553
-    Align = alBottom
-    BevelOuter = bvNone
-    TabOrder = 0
-  end
   object PC1: TPageControl
     Left = 0
-    Height = 410
+    Height = 384
     Top = 0
     Width = 553
     ActivePage = TabSheet6
     Align = alClient
     TabIndex = 0
-    TabOrder = 1
+    TabOrder = 0
+    OnChange = PC1Change
     object TabSheet6: TTabSheet
       Caption = 'Datei /Profil'
+      ClientHeight = 358
+      ClientWidth = 545
+      object Label1: TLabel
+        Left = 8
+        Height = 13
+        Top = 12
+        Width = 31
+        Caption = '&Datei :'
+        ParentColor = False
+      end
+      object FileEdit: TFileNameEdit
+        Left = 82
+        Height = 21
+        Top = 8
+        Width = 439
+        DialogOptions = [ofPathMustExist, ofFileMustExist, ofEnableSizing, ofViewDetail]
+        Filter = 'Text-Datei|*.txt|Alle Dateien|*.*'
+        FilterIndex = 0
+        HideDirectories = False
+        ButtonWidth = 23
+        NumGlyphs = 1
+        MaxLength = 0
+        TabOrder = 0
+        OnChange = FileEditChange
+      end
+      object Label9: TLabel
+        Left = 8
+        Height = 13
+        Top = 40
+        Width = 71
+        Caption = 'Trennzeichen :'
+        ParentColor = False
+      end
+      object DelimCB: TComboBox
+        Left = 82
+        Height = 21
+        Top = 36
+        Width = 100
+        AutoComplete = True
+        AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+        Color = clWindow
+        ItemHeight = 13
+        Items.Strings = (
+          'Tab'
+          'Komma'
+          'Semikolon'
+        )
+        OnChange = FileEditChange
+        Style = csDropDownList
+        TabOrder = 1
+      end
+      object KGRLabel: TLabel
+        Left = 189
+        Height = 13
+        Top = 40
+        Width = 113
+        Caption = 'Default-Kundengruppe :'
+        ParentColor = False
+      end
+      object Label10: TLabel
+        Left = 353
+        Height = 13
+        Top = 41
+        Width = 90
+        Caption = 'Zeile(n) ignorieren :'
+        ParentColor = False
+      end
+      object SpinEdit1: TSpinEdit
+        Left = 454
+        Height = 21
+        Top = 36
+        Width = 66
+        MaxValue = 9999
+        OnChange = FileEditChange
+        TabOrder = 2
+      end
+      object Bevel1: TDividerBevel
+        Left = 8
+        Height = 15
+        Top = 93
+        Width = 528
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Bevel2: TDividerBevel
+        Left = 8
+        Height = 15
+        Top = 204
+        Width = 528
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label7: TLabel
+        Left = 8
+        Height = 13
+        Top = 216
+        Width = 29
+        Caption = 'Profile'
+        ParentColor = False
+      end
+      object DBGrid1: TDBGrid
+        Left = 8
+        Height = 85
+        Top = 232
+        Width = 385
+        Color = clWindow
+        Columns = <        
+          item
+            Title.Caption = 'Beschreibung'
+            Width = 264
+            FieldName = 'NAME'
+          end        
+          item
+            Title.Caption = 'le. Änderung'
+            Width = 83
+            FieldName = 'LAST_CHANGE'
+          end>
+        DataSource = ProfDS
+        DefaultRowHeight = 16
+        Flat = True
+        Options = [dgTitles, dgIndicator, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
+        TabOrder = 3
+        OnDblClick = ProfLoadBtnClick
+      end
+      object ProfLoadBtn: TButton
+        Left = 413
+        Height = 25
+        Top = 232
+        Width = 123
+        Caption = 'Profil laden'
+        OnClick = ProfLoadBtnClick
+        TabOrder = 4
+      end
+      object ProfileEdit: TEdit
+        Left = 8
+        Height = 21
+        Top = 328
+        Width = 385
+        TabOrder = 5
+      end
+      object ProfSaveBtn: TButton
+        Left = 413
+        Height = 25
+        Top = 324
+        Width = 123
+        Caption = 'Profil speichern'
+        OnClick = ProfSaveBtnClick
+        TabOrder = 6
+      end
     end
     object TabSheet1: TTabSheet
       Caption = 'Feldzuweisung'
+      ClientHeight = 358
+      ClientWidth = 545
+      object ITab: TStringGrid
+        Left = 4
+        Height = 89
+        Top = 8
+        Width = 521
+        ColCount = 2
+        DefaultColWidth = 40
+        DefaultRowHeight = 17
+        Flat = True
+        RowCount = 2
+        TabOrder = 0
+      end
+      object Label2: TLabel
+        Left = 4
+        Height = 13
+        Top = 98
+        Width = 93
+        Caption = 'Importierbare Felder'
+        ParentColor = False
+      end
+      object Label3: TLabel
+        Left = 204
+        Height = 13
+        Top = 98
+        Width = 70
+        Caption = 'Feldzuordnung'
+        ParentColor = False
+      end
+      object LB1: TListBox
+        Left = 4
+        Height = 227
+        Top = 114
+        Width = 153
+        ItemHeight = 0
+        OnDblClick = SpeedButton1Click
+        TabOrder = 1
+      end
+      object SpeedButton1: TSpeedButton
+        Left = 168
+        Height = 22
+        Top = 120
+        Width = 23
+        Caption = '>'
+      end
+      object SpeedButton2: TSpeedButton
+        Left = 168
+        Height = 22
+        Top = 144
+        Width = 23
+        Caption = '-'
+      end
+      object FeldGrid: TStringGrid
+        Left = 204
+        Height = 227
+        Top = 114
+        Width = 321
+        ColCount = 2
+        DefaultColWidth = 148
+        DefaultRowHeight = 18
+        TabOrder = 2
+      end
     end
     object TabSheet3: TTabSheet
       Caption = 'Wertzuweisungen'
+      ClientHeight = 358
+      ClientWidth = 545
+      object Label6: TLabel
+        Left = 4
+        Height = 13
+        Top = 98
+        Width = 73
+        Caption = 'Wertzuordnung'
+        ParentColor = False
+      end
+      object WertGrid: TStringGrid
+        Left = 4
+        Height = 227
+        Top = 114
+        Width = 521
+        ColCount = 2
+        DefaultColWidth = 100
+        DefaultRowHeight = 18
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goSmoothScroll]
+        TabOrder = 0
+        OnSelectCell = WertGridSelectCell
+      end
     end
     object TabSheet5: TTabSheet
       Caption = 'Key-Zuweisungen'
+      ClientHeight = 358
+      ClientWidth = 545
+      object Label4: TLabel
+        Left = 4
+        Height = 13
+        Top = 98
+        Width = 93
+        Caption = 'Importierbare Felder'
+        ParentColor = False
+      end
+      object LB4: TListBox
+        Left = 4
+        Height = 227
+        Top = 114
+        Width = 153
+        ItemHeight = 0
+        OnDblClick = SpeedButton3Click
+        TabOrder = 0
+      end
+      object SpeedButton3: TSpeedButton
+        Left = 168
+        Height = 22
+        Top = 120
+        Width = 23
+        Caption = '>'
+        OnClick = SpeedButton3Click
+      end
+      object SpeedButton4: TSpeedButton
+        Left = 168
+        Height = 22
+        Top = 144
+        Width = 23
+        Caption = '-'
+        OnClick = SpeedButton4Click
+      end
+      object KeyGrid: TStringGrid
+        Left = 204
+        Height = 227
+        Top = 114
+        Width = 321
+        ColCount = 2
+        DefaultColWidth = 148
+        DefaultRowHeight = 18
+        RowCount = 8
+        TabOrder = 1
+      end
     end
     object TabSheet4: TTabSheet
       Caption = 'Import-Status'
+      ClientHeight = 358
+      ClientWidth = 545
+      object Sg2: TStringGrid
+        Left = 0
+        Height = 358
+        Top = 0
+        Width = 545
+        Align = alClient
+        DefaultRowHeight = 17
+        Flat = True
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goSmoothScroll]
+        RowCount = 2
+        TabOrder = 0
+      end
     end
     object Logbuch: TTabSheet
       Caption = 'Logbuch'
-      ClientHeight = 384
+      ClientHeight = 358
       ClientWidth = 545
       object Memo1: TMemo
         Left = 0
-        Height = 384
+        Height = 358
         Top = 0
         Width = 545
         Align = alClient
@@ -65,6 +354,44 @@ object KundenImportForm: TKundenImportForm
         ScrollBars = ssBoth
         TabOrder = 0
       end
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 32
+    Top = 384
+    Width = 553
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 32
+    ClientWidth = 553
+    TabOrder = 1
+    object pb1: TProgressBar
+      Left = 14
+      Height = 20
+      Top = 3
+      Width = 321
+      TabOrder = 0
+    end
+    object UpdateBtn: TBitBtn
+      Left = 344
+      Height = 25
+      Top = 0
+      Width = 75
+      Caption = '&Update'
+      Enabled = False
+      OnClick = UpdateBtnClick
+      TabOrder = 1
+    end
+    object CloseBtn: TBitBtn
+      Left = 428
+      Height = 25
+      Top = 0
+      Width = 93
+      DefaultCaption = True
+      Kind = bkClose
+      ModalResult = 11
+      TabOrder = 2
     end
   end
   object KunQuery: TZQuery
@@ -461,6 +788,7 @@ object KundenImportForm: TKundenImportForm
   end
   object ProfTab: TZQuery
     Connection = DM1.DB1
+    BeforePost = ProfTabBeforePost
     SQL.Strings = (
       'select * from REGISTERY '
       'where NAME !=''DEFAULT'' and MAINKEY=''MAIN\\IMPORT\\ADRESSEN'''

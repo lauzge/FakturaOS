@@ -36,7 +36,7 @@ uses
   Buttons, StdCtrls, Grids, JvTypes, RichMemo;
 
 const
-  JVCL_VERSIONSTRING ='7.2.1';   // gehört in eine externe unit!!!!
+  JVCL_VERSIONSTRING ='7.2.1';   // gehört in eine externe unit!!!!   Unit JVCLVer.pas ist nicht vorhanden
 
 type
 
@@ -83,7 +83,7 @@ var puffer  : array[0..255] of Char;
     FarbStr : String;
     m       : double;
     s       : tMEMORYSTATUS;
-//    ST      : String;
+    ST      : String;
     BackupForm : tBackupForm;
 begin
   PC1.ActivePage :=PC1.Pages[0];

@@ -2656,7 +2656,7 @@ object ArtikelForm: TArtikelForm
                   end
                   object ToolButton6: TToolButton
                     Left = 76
-                    Height = 22
+                    Height = 5
                     Top = 0
                     Caption = 'ToolButton6'
                     Style = tbsDivider
@@ -2671,7 +2671,7 @@ object ArtikelForm: TArtikelForm
                   end
                   object ToolButton7: TToolButton
                     Left = 156
-                    Height = 22
+                    Height = 5
                     Top = 0
                     Caption = 'ToolButton7'
                     Style = tbsDivider
@@ -2686,7 +2686,7 @@ object ArtikelForm: TArtikelForm
                   end
                   object ToolButton30: TToolButton
                     Left = 236
-                    Height = 22
+                    Height = 5
                     Top = 0
                     Caption = 'ToolButton30'
                     Style = tbsDivider
@@ -2741,7 +2741,7 @@ object ArtikelForm: TArtikelForm
                   end
                   object ToolButton9: TToolButton
                     Left = 76
-                    Height = 22
+                    Height = 5
                     Top = 0
                     Caption = 'ToolButton9'
                     Style = tbsDivider
@@ -2756,7 +2756,7 @@ object ArtikelForm: TArtikelForm
                   end
                   object ToolButton10: TToolButton
                     Left = 167
-                    Height = 22
+                    Height = 5
                     Top = 0
                     Caption = 'ToolButton10'
                     Style = tbsDivider
@@ -2771,7 +2771,7 @@ object ArtikelForm: TArtikelForm
                   end
                   object ToolButton11: TToolButton
                     Left = 247
-                    Height = 22
+                    Height = 5
                     Top = 0
                     Caption = 'ToolButton11'
                     Style = tbsDivider
@@ -2786,7 +2786,7 @@ object ArtikelForm: TArtikelForm
                   end
                   object ToolButton13: TToolButton
                     Left = 327
-                    Height = 22
+                    Height = 5
                     Top = 0
                     Caption = 'ToolButton13'
                     Style = tbsDivider
@@ -5012,7 +5012,7 @@ object ArtikelForm: TArtikelForm
             end
             object ToolButton4: TToolButton
               Left = 237
-              Height = 22
+              Height = 5
               Top = 2
               Caption = 'ToolButton4'
               Style = tbsDivider
@@ -5040,7 +5040,7 @@ object ArtikelForm: TArtikelForm
             end
             object ToolButton5: TToolButton
               Left = 345
-              Height = 22
+              Height = 5
               Top = 2
               Caption = 'ToolButton5'
               Style = tbsDivider

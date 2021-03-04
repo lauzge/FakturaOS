@@ -35,6 +35,9 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="pl_PascalSCADA"/>
+      </Item>
+      <Item>
         <PackageName Value="FakturaOS"/>
       </Item>
       <Item>
@@ -548,6 +551,7 @@
         <FRMtype Value="200"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="SerNumSuchForm"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
       <Unit>

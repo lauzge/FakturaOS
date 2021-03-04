@@ -135,8 +135,8 @@ type
     { Public-Deklarationen }
   end;
 
-var
-  SerNumSuchForm: TSerNumSuchForm;
+//var
+//  SerNumSuchForm: TSerNumSuchForm;
 
 implementation
 

@@ -3410,7 +3410,7 @@ object AdressForm: TAdressForm
               end
               object ToolButton4: TToolButton
                 Left = 88
-                Height = 22
+                Height = 5
                 Top = 0
                 Caption = 'ToolButton4'
                 Style = tbsDivider
@@ -3425,7 +3425,7 @@ object AdressForm: TAdressForm
               end
               object ToolButton6: TToolButton
                 Left = 180
-                Height = 22
+                Height = 5
                 Top = 0
                 Caption = 'ToolButton6'
                 Style = tbsDivider
@@ -4745,7 +4745,7 @@ object AdressForm: TAdressForm
             end
             object ToolButton3: TToolButton
               Left = 224
-              Height = 21
+              Height = 5
               Top = 2
               Caption = 'ToolButton3'
               Style = tbsDivider
@@ -4780,7 +4780,7 @@ object AdressForm: TAdressForm
             end
             object ToolButton5: TToolButton
               Left = 347
-              Height = 21
+              Height = 5
               Top = 2
               Caption = 'ToolButton5'
               Style = tbsDivider
@@ -4800,7 +4800,7 @@ object AdressForm: TAdressForm
             end
             object ToolButton7: TToolButton
               Left = 435
-              Height = 21
+              Height = 5
               Top = 2
               Caption = 'ToolButton7'
               Style = tbsDivider
